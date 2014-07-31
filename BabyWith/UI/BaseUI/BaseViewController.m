@@ -82,6 +82,19 @@
     self.navigationItem.leftBarButtonItem = leftItem;
 }
 
+-(void)rightButtonTitle:(NSString *)titleName
+{
+    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+    [navButton setTitle:titleName  forState:UIControlStateNormal];
+    [navButton setBackgroundColor:[UIColor whiteColor]];
+    [navButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    //[navButton setImage:[UIImage imageNamed:@"goMain_highlight.png"] forState:UIControlStateHighlighted];
+    [navButton addTarget:self action:@selector(skip:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+    self.navigationItem.rightBarButtonItem = leftItem;
+
+}
+
 - (void)rightButtonItemWithImageName:(NSString *)imageName
 {
     //右导航-主选择页面

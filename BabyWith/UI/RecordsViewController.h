@@ -12,7 +12,6 @@
 {
 
     ImagePickerController *_picker;
-    NSMutableArray *_imageArray;
     NSMutableArray *_yearArray;
     
     UICollectionView *_imageCollection;
@@ -38,11 +37,10 @@
 
     NSMutableDictionary * RowDictionary;
     NSMutableDictionary * statusDictionary;
-
+    NSMutableArray * deleteArray;
     NSMutableDictionary * arrayDictionary;
 
 }
-@property (nonatomic, copy) NSMutableArray *imageArray;
 @property (nonatomic,copy) UICollectionView *imageCollection;
 //-(void)DeleteRecord:(NSDictionary *)dic;
 //-(void)InsertRecord:(NSDictionary *)dic;

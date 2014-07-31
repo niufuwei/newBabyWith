@@ -19,8 +19,11 @@
 //#define REUSEABLE_CELL_IDENTITY @"CELL"
 #define REUSEABLE_HEADER @"HEADER"
 @interface RecordsViewController ()
-
+{
+    UIButton *leftButton;
+}
 @end
+
 int flag_monthList = 0;
 int pre_month=12;
 int ppre_month=13;
@@ -40,21 +43,24 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadCollentView) name:@"imageCollectionReload" object:nil];
     
-//    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
+    leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
-//    [navButton addTarget:self action:@selector(takePic:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
-//    self.navigationItem.rightBarButtonItem = rightItem;
-//    [navButton release];
+    [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
+    [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [leftButton setBackgroundColor:[UIColor whiteColor]];
+    [leftButton addTarget:self action:@selector(Edit:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc] initWithCustomView: leftButton];
+    self.navigationItem.leftBarButtonItem = LeftItem;
     
-    [self rightButtonItemWithImageName:@"拍照.png"];
+    [self rightButtonTitle:@"拍照"];
     self.delegate = self;
     
     [self titleSet:@"记录"];
     arrayDictionary = [[NSMutableDictionary alloc] init];
     statusDictionary = [[NSMutableDictionary alloc] init];
     RowDictionary = [[NSMutableDictionary alloc] init];
+    deleteArray = [[NSMutableArray alloc] init];
     
     _label = [[UILabel alloc] init];
     
@@ -88,13 +94,82 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     
 //    NSLog(@"viewwillAppear调用");
     [self performSelector:@selector(ShowRecordList) withObject:nil afterDelay:0.1];
-    
+}
+
+-(void)Edit:(id)sender
+{
+    if([leftButton.titleLabel.text isEqualToString:@"编辑"])
+    {
+        [leftButton setTitle:@"取消" forState:UIControlStateNormal];
+        [self rightButtonTitle:@"删除"];
+        [_imageCollection reloadData];
+    }
+    else
+    {
+        [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
+        [deleteArray removeAllObjects];
+        [self rightButtonTitle:@"拍照"];
+        [_imageCollection reloadData];
+
+    }
     
 }
 
 -(void)RightButtonClick
 {
-    NSLog(@"sdsdd");
+    if([leftButton.titleLabel.text isEqualToString:@"编辑"])
+    {
+        _picker = [[ImagePickerController alloc] init];
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+            _picker.customDelegate = self;
+            [self presentViewController:_picker animated:YES completion:^{
+                
+            }];
+        }
+
+    }
+    else
+    {
+        
+        NSLog(@"%@",deleteArray);
+        for(int i = 0 ;i<deleteArray.count;i++)
+        {
+            //删除选中图片
+            NSDictionary * dic = [deleteArray objectAtIndex:i];
+           
+            [appDelegate.sqliteManager removeRecordInfo:[[[deleteArray objectAtIndex:i] allKeys] objectAtIndex:0] deleteType:1];
+     
+            //看是否是有视频，有视频就删除视频
+            if ([[[dic objectForKey:[[[deleteArray objectAtIndex:i] allKeys] objectAtIndex:0]] objectForKey:@"is_vedio"] intValue]==1)
+            {
+                //删除视频
+                NSString *vedioPath = [NSString stringWithFormat:@"%@",[babywith_sandbox_address
+                                                                        stringByAppendingPathComponent:[[dic objectForKey:[[[deleteArray objectAtIndex:i] allKeys] objectAtIndex:0]] objectForKey:@"record_data_path"]]];
+                NSError *error = nil;
+                [[NSFileManager defaultManager] removeItemAtPath:vedioPath error:&error];
+                if (!error)
+                {
+                    NSLog(@"删除视频成功");
+                }
+            }
+           
+        }
+        [_sectionArray removeAllObjects];
+        [RowDictionary removeAllObjects];
+        [arrayDictionary removeAllObjects];
+        [_countForSectionArray removeAllObjects];
+        [self ShowRecordList];
+
+        
+        [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
+        [deleteArray removeAllObjects];
+        [self rightButtonTitle:@"拍照"];
+        
+        [_imageCollection reloadData];
+
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -109,8 +184,8 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
         }
     }
     isFirst=TRUE;
-    
 }
+
 -(void)reloadCollentView
 {
     
@@ -180,8 +255,6 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
        }
         else
         {
-        
-        
             _label.frame = CGRectMake(20, 200, 280, 60);
             _label.textAlignment = NSTextAlignmentCenter;
             _label.text =@"您还没有记录信息";
@@ -376,20 +449,20 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 }
 
 //进入拍照页面
--(void)takePic:(UIBarButtonItem *)item
-{
-
-    _picker = [[ImagePickerController alloc] init];
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-    {
-        [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-        _picker.customDelegate = self;
-        [self presentViewController:_picker animated:YES completion:^{
-            
-        }];
-    }
-
-}
+//-(void)takePic:(UIBarButtonItem *)item
+//{
+//
+//    _picker = [[ImagePickerController alloc] init];
+//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+//    {
+//        [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+//        _picker.customDelegate = self;
+//        [self presentViewController:_picker animated:YES completion:^{
+//            
+//        }];
+//    }
+//
+//}
 
 //这里要将新增加的照片数据显示出来
 //那么就要添加到数据库，从数据库取出来，显示到界面上
@@ -468,7 +541,6 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 }
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
     [_imageCollection registerClass:[myCollectionViewCell class] forCellWithReuseIdentifier:REUSEABLE_CELL_IDENTITY];
     myCollectionViewCell *cell = [_imageCollection dequeueReusableCellWithReuseIdentifier:REUSEABLE_CELL_IDENTITY forIndexPath:indexPath];
     NSDictionary *dic = [NSDictionary dictionaryWithDictionary:[[_sectionArray  objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
@@ -517,7 +589,42 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
         }
     }
     
-        return cell;
+    [cell.deleteImage setHidden:YES];
+    if([leftButton.titleLabel.text isEqualToString:@"取消"])
+    {
+        [cell.deleteImage setHidden:NO];
+        BOOL isExit = FALSE;
+        if(deleteArray.count ==0)
+        {
+            [cell.deleteImage setBackgroundColor:[UIColor grayColor]];
+        }
+        else
+        {
+            for(int i=0;i<deleteArray.count;i++)
+            {
+                if([[deleteArray objectAtIndex:i] objectForKey:[[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectForKey:@"id_record"]])
+                {
+                    NSLog(@"存在");
+                    isExit = TRUE;
+                    [cell.deleteImage setBackgroundColor:[UIColor redColor]];
+                    break;
+                }
+                else
+                {
+                    isExit = FALSE;
+                    //不存在
+                }
+            }
+            if(!isExit)
+            {
+                [cell.deleteImage setBackgroundColor:[UIColor grayColor]];
+
+            }
+
+        }
+    }
+    
+    return cell;
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
@@ -571,10 +678,65 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableArray *currentSectionPhoto = [_sectionArray objectAtIndex:indexPath.section];
     
-    PhotoScanViewController *photoController = [[PhotoScanViewController alloc] initWithArray:currentSectionPhoto Type:0 CurrentPage:indexPath.row Delegate:nil];
-    [self.navigationController pushViewController:photoController animated:YES];
+    myCollectionViewCell * cell = (myCollectionViewCell*)[_imageCollection cellForItemAtIndexPath:indexPath];
+    
+    if([leftButton.titleLabel.text isEqualToString:@"取消"])
+    {
+        [cell.deleteImage setHidden:NO];
+        BOOL isExit = FALSE;
+        if([deleteArray count] ==0)
+        {
+            NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
+            [dic setObject:[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]forKey:[[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectForKey:@"id_record"]];
+            
+            NSLog(@"已插入");
+            [cell.deleteImage setBackgroundColor:[UIColor redColor]];
+
+            [deleteArray addObject:dic];
+        }
+        else
+        {
+            for(int i=0;i<deleteArray.count;i++)
+            {
+                if([[deleteArray objectAtIndex:i] objectForKey:[[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectForKey:@"id_record"]])
+                {
+                    NSLog(@"存在");
+                    [cell.deleteImage setBackgroundColor:[UIColor grayColor]];
+
+                    [deleteArray removeObjectAtIndex:i];
+                    isExit = TRUE;
+                    break;
+
+                }
+                else
+                {
+                    isExit = FALSE;
+                }
+            }
+            if(!isExit)
+            {
+                NSMutableDictionary * temp_dic = [[NSMutableDictionary alloc] init];
+                [temp_dic setObject:[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]forKey:[[[_sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectForKey:@"id_record"]];
+                
+                [cell.deleteImage setBackgroundColor:[UIColor redColor]];
+                
+                [deleteArray addObject:temp_dic];
+            }
+
+        }
+        
+    }
+    else
+    {
+        NSMutableArray *currentSectionPhoto = [_sectionArray objectAtIndex:indexPath.section];
+        
+        PhotoScanViewController *photoController = [[PhotoScanViewController alloc] initWithArray:currentSectionPhoto Type:0 CurrentPage:indexPath.row Delegate:nil];
+        [self.navigationController pushViewController:photoController animated:YES];
+
+    }
+    
+    NSLog(@"%@",deleteArray);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {

@@ -23,6 +23,7 @@
 - (void)configurationForGreenButton:(UIButton *)button;   //把按钮配置为绿色
 - (void)leftButtonItemWithImageName:(NSString *)imageName;//导航条左item 的Image
 - (void)rightButtonItemWithImageName:(NSString *)imageName;
+- (void)rightButtonTitle:(NSString *)titleName;
 - (void)titleSet:(NSString *)aTitle;
 @property (nonatomic,strong) id<NavgationDelegate>delegate;
 

@@ -332,9 +332,6 @@
     
 }
 
-
-
-
 -(void)deletePic
 {
     
@@ -368,9 +365,6 @@
         {
             _photoScrollView.contentSize = CGSizeMake(320*(pageCount),self.view.frame.size.height-44-60-30);
         }
-        
-        
-        
         
         _currentPage =  (_photoScrollView.contentOffset.x /_photoScrollView.frame.size.width);
         NSLog(@"当前的currentPage是%d",_currentPage);

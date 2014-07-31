@@ -11,7 +11,7 @@
 @interface myCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic,retain) UIImageView * image;
-
+@property (nonatomic,retain) UIImageView * deleteImage;
 @property (nonatomic,retain) UIImageView * videoImage;
 
 @end
