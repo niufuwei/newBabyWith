@@ -291,6 +291,8 @@
 		EF8D1E211989E7AE00AC3EAD /* 通讯录.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1DBE1989E7AE00AC3EAD /* 通讯录.png */; };
 		EF8D1E221989E7AE00AC3EAD /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1DBF1989E7AE00AC3EAD /* 首页.png */; };
 		EF8D1E241989EA1400AC3EAD /* 主页摄像头.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1E231989EA1400AC3EAD /* 主页摄像头.png */; };
+		EF8D1E27198A16D600AC3EAD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D1E25198A098500AC3EAD /* AddressBook.framework */; };
+		EF8D1E29198A1E4800AC3EAD /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */; };
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F12F18D2E110002C1245 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12C18D2E110002C1245 /* Default.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -798,6 +800,8 @@
 		EF8D1DBE1989E7AE00AC3EAD /* 通讯录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通讯录.png"; sourceTree = "<group>"; };
 		EF8D1DBF1989E7AE00AC3EAD /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		EF8D1E231989EA1400AC3EAD /* 主页摄像头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页摄像头.png"; sourceTree = "<group>"; };
+		EF8D1E25198A098500AC3EAD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EF96F12D18D2E110002C1245 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -1107,6 +1111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8D1E29198A1E4800AC3EAD /* AddressBookUI.framework in Frameworks */,
+				EF8D1E27198A16D600AC3EAD /* AddressBook.framework in Frameworks */,
 				EFF53F811779BCBF00C4AEB4 /* QuartzCore.framework in Frameworks */,
 				EFF53F5F1779BC0600C4AEB4 /* AudioToolbox.framework in Frameworks */,
 				71AC54821904BD6F00DEBB46 /* AdSupport.framework in Frameworks */,
@@ -1674,6 +1680,8 @@
 		EFF53E4C1779B64F00C4AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */,
+				EF8D1E25198A098500AC3EAD /* AddressBook.framework */,
 				71AC54811904BD6F00DEBB46 /* AdSupport.framework */,
 				EFEA10A418272B4900B4B502 /* AdSupport.framework */,
 				EFF3FE8D179C7E23001845AE /* MessageUI.framework */,
@@ -2662,6 +2670,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				SDKROOT = iphoneos7.1;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -2688,6 +2698,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				SDKROOT = iphoneos7.1;
+				SUPPORTED_PLATFORMS = macosx;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
 			};

@@ -10,6 +10,10 @@
 #import "WebInfoManager.h"
 #import "MainAppDelegate.h"
 #import "Activity.h"
+
+
+
+
 @interface ShareDeviceViewController ()
 {
 
@@ -33,20 +37,97 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title  = @"分享账号";
+    
+    //圆角
+    self.phoneNumber.layer.cornerRadius=2.0;
+    
     // Do any additional setup after loading the view from its nib.
-     _submit= [[UIButton alloc] initWithFrame:CGRectMake(66, 123, 188, 30)];
-    [_submit setTitle:@"提交" forState:UIControlStateNormal];
-    [_submit setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
-    [_submit setBackgroundColor:babywith_green_color];
-    [_submit.layer setMasksToBounds:YES];
-    [_submit.layer setCornerRadius:5.0];
+     _submit= [[UIButton alloc] initWithFrame:CGRectMake(50, 123, 220, 35)];
+    [_submit setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
+//    [_submit setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
+//    [_submit setBackgroundColor:babywith_green_color];
+//    [_submit.layer setMasksToBounds:YES];
+//    [_submit.layer setCornerRadius:3.0];
     [_submit addTarget:self action:@selector(submitBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    
     [self.view addSubview:_submit];
     self.phoneNumber.delegate = self;
     
     
 
 }
+//添加通讯录
+- (IBAction)AddAdressBtn:(id)sender {
+    
+    
+    ABPeoplePickerNavigationController *peoplePicker = [[ABPeoplePickerNavigationController alloc] init];
+    peoplePicker.peoplePickerDelegate = self;
+    [self.navigationController presentViewController:peoplePicker animated:YES completion:nil];
+    
+    
+}
+#pragma mark - 
+#pragma mark ABPeoplePickerNavigationControllerDelegate
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    return YES;
+}
+
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    if (property == kABPersonPhoneProperty) {
+        
+        ABMutableMultiValueRef phoneMulti = ABRecordCopyValue(person, property);
+        
+        
+        
+        int index = ABMultiValueGetIndexForIdentifier(phoneMulti,identifier);
+        
+        
+        
+//        NSString *phone = (NSString*)ABMultiValueCopyValueAtIndex(phoneMulti, index);
+//        NSLog(@">>><<<<>>><>%@",ABMultiValueCopyLabelAtIndex(phoneMulti, index));
+        NSString *phone = (__bridge NSString *) ABMultiValueCopyValueAtIndex(phoneMulti, index);
+        NSLog(@">>>>>%@",phone);
+        //do something
+    
+        
+        
+        self.phoneNumber.text = phone;
+        
+        
+        
+
+        
+        [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+        
+        
+        
+    }
+    
+    
+    
+    return NO;
+    
+
+}
+
+
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+
+{
+    
+    // assigning control back to the main controller
+    
+    [peoplePicker dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
 
@@ -93,6 +174,7 @@
     NSLog(@"%d",phone_email_flag);
     if (phone_email_flag == 0 )
     {
+        _submit.enabled = YES;
         [activity stop];
         return;
     }
@@ -228,5 +310,6 @@
   [appDelegate.selectDeviceArr removeAllObjects];
 
 }
+
 
 @end

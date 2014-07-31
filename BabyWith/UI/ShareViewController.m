@@ -40,9 +40,6 @@
     _shareListTable.backgroundColor = [UIColor clearColor];
     _shareListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    NSLog(@"ooooooooooooooooo");
-    
-    
     
 }
 
@@ -59,7 +56,7 @@
         
         
         ShareCell *shareCell = (ShareCell *)[_shareListTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:j inSection:0]];
-        if (shareCell.chooseImage.image == [UIImage imageNamed:@"多选选中.png"] )
+        if (shareCell.chooseImage.image == [UIImage imageNamed:@"选择 (2).png"] )
         {
             
             
@@ -162,7 +159,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 80;
+    return 60;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -175,7 +172,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
-    
+    cell.backgroundColor = [UIColor whiteColor];
     NSInteger row = [indexPath row];
     cell.nameLabel.text = [[appDelegate.deviceConnectManager getDeviceInfoAtRow:row] objectForKey:@"name"];
     
@@ -186,9 +183,8 @@
         cell.bindTimeLabel.text =[NSString stringWithFormat:@"绑定时间：%@",[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@_time",[[appDelegate.deviceConnectManager getDeviceInfoAtRow:row] objectForKey:@"device_id"]]]];
     }
     
-    cell.imageCell.image = [UIImage imageNamed:@"设备.png"];
-    cell.chooseImage.image = [UIImage imageNamed:@"多选未选中.png"];
-    NSLog(@"hdxuwihdwiubgwibdg");
+//    cell.imageCell.image = [UIImage imageNamed:@"设备.png"];
+    cell.chooseImage.image = [UIImage imageNamed:@"选择 (1).png"];
     return cell;
     
 }
@@ -214,7 +210,7 @@
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
     _nextStepBtn.frame = CGRectMake(35, 30, 250, 40);
     [self configurationForGreenButton:_nextStepBtn];
-    [_nextStepBtn setTitle:@"下一步" forState:UIControlStateNormal];
+    [_nextStepBtn setBackgroundImage:[UIImage imageNamed:@"qietu_118.png"] forState:UIControlStateNormal];
     [_nextStepBtn addTarget:self action:@selector(nextStep) forControlEvents:UIControlEventTouchUpInside];
     _nextStepBtn.hidden = NO;
     [footerView addSubview:_nextStepBtn];
@@ -230,9 +226,9 @@
     
     ShareCell * cell = (ShareCell *)[_shareListTable cellForRowAtIndexPath:indexPath];
     
-    if (cell.chooseImage.image == [UIImage imageNamed:@"多选未选中.png"])
+    if (cell.chooseImage.image == [UIImage imageNamed:@"选择 (1).png"])
     {
-        cell.chooseImage.image = [UIImage imageNamed:@"多选选中.png"];
+        cell.chooseImage.image = [UIImage imageNamed:@"选择 (2).png"];
         
         
         
@@ -241,7 +237,7 @@
     }
     else
     {
-        cell.chooseImage.image = [UIImage imageNamed:@"多选未选中.png"];
+        cell.chooseImage.image = [UIImage imageNamed:@"选择 (1).png"];
         
 
     

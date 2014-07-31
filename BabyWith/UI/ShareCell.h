@@ -17,7 +17,7 @@
     UIImageView *_chooseImage;
 
 }
-@property (nonatomic,strong) UIImageView * imageCell;
+//@property (nonatomic,strong) UIImageView * imageCell;
 @property (nonatomic,strong) UILabel *nameLabel;
 @property (nonatomic,strong) UILabel *bindTimeLabel;
 @property (nonatomic,strong) UIImageView *chooseImage;
