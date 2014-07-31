@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 #import "ImagePickerController.h"
-@interface RecordsViewController : BaseViewController<ImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface RecordsViewController : BaseViewController<ImagePickerControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,NavgationDelegate>
 {
 
     ImagePickerController *_picker;

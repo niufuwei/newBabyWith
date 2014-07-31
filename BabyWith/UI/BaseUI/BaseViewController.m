@@ -81,6 +81,7 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
     self.navigationItem.leftBarButtonItem = leftItem;
 }
+
 - (void)rightButtonItemWithImageName:(NSString *)imageName
 {
     //右导航-主选择页面
@@ -90,6 +91,10 @@
     [navButton addTarget:self action:@selector(skip:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
     self.navigationItem.rightBarButtonItem = leftItem;
+}
+-(void)skip:(id)sender
+{
+    [_delegate RightButtonClick];
 }
 - (void)pop:(UIButton *)button
 {

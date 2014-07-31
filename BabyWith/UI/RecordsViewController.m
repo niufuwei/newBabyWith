@@ -40,13 +40,16 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadCollentView) name:@"imageCollectionReload" object:nil];
     
-    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
-    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
-    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
-    [navButton addTarget:self action:@selector(takePic:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
-    self.navigationItem.rightBarButtonItem = rightItem;
+//    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 40)];
+//    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
+//    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
+//    [navButton addTarget:self action:@selector(takePic:) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+//    self.navigationItem.rightBarButtonItem = rightItem;
 //    [navButton release];
+    
+    [self rightButtonItemWithImageName:@"拍照.png"];
+    self.delegate = self;
     
     [self titleSet:@"记录"];
     arrayDictionary = [[NSMutableDictionary alloc] init];
@@ -88,6 +91,12 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     
     
 }
+
+-(void)RightButtonClick
+{
+    NSLog(@"sdsdd");
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
      if (isFirst)

@@ -10,6 +10,13 @@
 #import "AppGlobal.h"
 #import "Configuration.h"
 #import "UIViewController+Alert.h"
+
+@protocol NavgationDelegate <NSObject>
+
+-(void)RightButtonClick;
+
+@end
+
 @interface BaseViewController : UIViewController
 
 //- (void)showAlertView:(NSString*)msg;
@@ -17,6 +24,6 @@
 - (void)leftButtonItemWithImageName:(NSString *)imageName;//导航条左item 的Image
 - (void)rightButtonItemWithImageName:(NSString *)imageName;
 - (void)titleSet:(NSString *)aTitle;
-
+@property (nonatomic,strong) id<NavgationDelegate>delegate;
 
 @end
