@@ -15,6 +15,7 @@
 @property (retain, nonatomic) IBOutlet UIView *topView;
 
 @property (nonatomic,retain) NSArray *cellNameArr;
+@property (nonatomic,retain) NSArray *cellLogoArr;
 @property (nonatomic,assign) int messageCount;
 
 - (IBAction)logOut:(id)sender;

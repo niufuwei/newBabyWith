@@ -15,10 +15,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
+        //状态
         _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 18, 120, 24)];
         [self addSubview:_statusLabel];
-        
+        //名字
+        _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 150, 30)];
+        _nameLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview:_nameLabel];
+        //logo
+        _logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 20, 20)];
+        [self addSubview:_logoImage];
         
     }
     return self;
