@@ -2724,11 +2724,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
-=======
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
->>>>>>> FETCH_HEAD
+
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2767,11 +2763,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
-=======
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
->>>>>>> FETCH_HEAD
+
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";
