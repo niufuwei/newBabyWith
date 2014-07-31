@@ -5,19 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>07119B86-9AB4-4EA8-9DD7-B506A1B6EA9A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BabyWith</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>365847FA-7363-4994-88EC-9365387A256D</key>
 		<string>https://github.com/niufuwei/newBabyWith.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BabyWith/BabyWith.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>365847FA-7363-4994-88EC-9365387A256D</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +22,12 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>365847FA-7363-4994-88EC-9365387A256D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>365847FA-7363-4994-88EC-9365387A256D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>newBabyWith</string>
 		</dict>
