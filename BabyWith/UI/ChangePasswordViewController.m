@@ -40,32 +40,37 @@
     // Do any additional setup after loading the view from its nib.
     
     
-     _firstBtn = [[UIButton alloc] initWithFrame:CGRectMake(200, 60, 92, 30)];
-    [_firstBtn setTitle:@"显示密码" forState:UIControlStateNormal];
-    [_firstBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
-    [_firstBtn setBackgroundColor:babywith_green_color];
-    [_firstBtn.layer setMasksToBounds:YES];
-    [_firstBtn.layer setCornerRadius:5.0];
-    [_firstBtn addTarget:self action:@selector(showPass1:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_firstBtn];
+//     _firstBtn = [[UIButton alloc] initWithFrame:CGRectMake(200, 60, 92, 30)];
+//    [_firstBtn setTitle:@"显示密码" forState:UIControlStateNormal];
+//    [_firstBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
+//    [_firstBtn setBackgroundColor:babywith_green_color];
+//    [_firstBtn.layer setMasksToBounds:YES];
+//    [_firstBtn.layer setCornerRadius:5.0];
+//    [_firstBtn addTarget:self action:@selector(showPass1:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:_firstBtn];
+//    
+//    
+//    _secondBtn = [[UIButton alloc] initWithFrame:CGRectMake(200, 108, 92, 30)];
+//    [_secondBtn setTitle:@"显示密码" forState:UIControlStateNormal];
+//    [_secondBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
+//    [_secondBtn setBackgroundColor:babywith_green_color];
+//    [_secondBtn.layer setMasksToBounds:YES];
+//    [_secondBtn.layer setCornerRadius:5.0];
+//    [_secondBtn addTarget:self action:@selector(showPass2:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:_secondBtn];
+    
+   //圆角
+    self.oldPass.layer.cornerRadius = 2.0;
+    self.freshPass.layer.cornerRadius = 2.0;
     
     
-    _secondBtn = [[UIButton alloc] initWithFrame:CGRectMake(200, 108, 92, 30)];
-    [_secondBtn setTitle:@"显示密码" forState:UIControlStateNormal];
-    [_secondBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
-    [_secondBtn setBackgroundColor:babywith_green_color];
-    [_secondBtn.layer setMasksToBounds:YES];
-    [_secondBtn.layer setCornerRadius:5.0];
-    [_secondBtn addTarget:self action:@selector(showPass2:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_secondBtn];
     
-    
-    _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(56, 199, 201, 30)];
-    [_submitBtn setTitle:@"提交" forState:UIControlStateNormal];
-    [_submitBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
-    [_submitBtn setBackgroundColor:babywith_green_color];
-    [_submitBtn.layer setMasksToBounds:YES];
-    [_submitBtn.layer setCornerRadius:5.0];
+    _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 180, 220, 35)];
+    [_submitBtn setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
+//    [_submitBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
+//    [_submitBtn setBackgroundColor:babywith_green_color];
+//    [_submitBtn.layer setMasksToBounds:YES];
+//    [_submitBtn.layer setCornerRadius:5.0];
     [_submitBtn addTarget:self action:@selector(submitChange:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_submitBtn];
     
@@ -86,6 +91,42 @@
     
    
 }
+
+//显示密码按钮
+
+- (IBAction)displayBtn:(id)sender {
+    
+    UIButton *btn = (UIButton *)sender;
+    
+    if (_oldPass.secureTextEntry == NO)
+    {
+        _oldPass.secureTextEntry = YES;
+        [btn setBackgroundImage:[UIImage imageNamed:@"选择 (1).png"] forState:UIControlStateNormal];
+        
+    }
+    else
+    {
+        _oldPass.secureTextEntry = NO;
+        [btn setBackgroundImage:[UIImage imageNamed:@"选择 (2).png"] forState:UIControlStateNormal];
+        
+    }
+    
+    
+    if (_freshPass.secureTextEntry == NO)
+    {
+        _freshPass.secureTextEntry = YES;
+       
+        [btn setBackgroundImage:[UIImage imageNamed:@"选择 (1).png"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        _freshPass.secureTextEntry = NO;
+         [btn setBackgroundImage:[UIImage imageNamed:@"选择 (2).png"] forState:UIControlStateNormal];
+    }
+
+
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
 
@@ -189,40 +230,8 @@
     BOOL basic = [string isEqualToString:filtered];
     return basic;
 }
-- (void)showPass1:(id)sender {
-    
-    if (_oldPass.secureTextEntry == NO)
-    {
-        _oldPass.secureTextEntry = YES;
-        [_firstBtn setTitle:[NSString stringWithFormat:@"显示密码"] forState:UIControlStateNormal];
 
-    }
-    else
-    {
-        _oldPass.secureTextEntry = NO;
-        [_firstBtn setTitle:[NSString stringWithFormat:@"隐藏密码"] forState:UIControlStateNormal];
-        
-    }
-    
-    
-    
-}
 
-- (void)showPass2:(id)sender {
-    
-    if (_freshPass.secureTextEntry == NO)
-    {
-        _freshPass.secureTextEntry = YES;
-        [_secondBtn setTitle:[NSString stringWithFormat:@"显示密码"] forState:UIControlStateNormal];
-
-    }
-    else
-    {
-        _freshPass.secureTextEntry = NO;
-        [_secondBtn setTitle:[NSString stringWithFormat:@"隐藏密码"] forState:UIControlStateNormal];
-
-    }
-}
 
 - (void)submitChange:(id)sender {
     
@@ -306,4 +315,5 @@
     
     
 }
+
 @end
