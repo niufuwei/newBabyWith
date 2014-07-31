@@ -217,7 +217,6 @@
 		EF8D1DD61989E7AE00AC3EAD /* 主页- 消息背景 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D721989E7AE00AC3EAD /* 主页- 消息背景 (1).png */; };
 		EF8D1DD71989E7AE00AC3EAD /* 主页- 消息背景 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D731989E7AE00AC3EAD /* 主页- 消息背景 (2).png */; };
 		EF8D1DD81989E7AE00AC3EAD /* 主页-消息.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D741989E7AE00AC3EAD /* 主页-消息.png */; };
-		EF8D1DD91989E7AE00AC3EAD /* 主页.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D751989E7AE00AC3EAD /* 主页.png */; };
 		EF8D1DDA1989E7AE00AC3EAD /* 全屏监控-未选 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D761989E7AE00AC3EAD /* 全屏监控-未选 (1).png */; };
 		EF8D1DDB1989E7AE00AC3EAD /* 全屏监控-未选 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D771989E7AE00AC3EAD /* 全屏监控-未选 (2).png */; };
 		EF8D1DDC1989E7AE00AC3EAD /* 全屏监控-未选 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1D781989E7AE00AC3EAD /* 全屏监控-未选 (3).png */; };
@@ -291,6 +290,7 @@
 		EF8D1E201989E7AE00AC3EAD /* 选择 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1DBD1989E7AE00AC3EAD /* 选择 (2).png */; };
 		EF8D1E211989E7AE00AC3EAD /* 通讯录.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1DBE1989E7AE00AC3EAD /* 通讯录.png */; };
 		EF8D1E221989E7AE00AC3EAD /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1DBF1989E7AE00AC3EAD /* 首页.png */; };
+		EF8D1E241989EA1400AC3EAD /* 主页摄像头.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8D1E231989EA1400AC3EAD /* 主页摄像头.png */; };
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F12F18D2E110002C1245 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12C18D2E110002C1245 /* Default.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -724,7 +724,6 @@
 		EF8D1D721989E7AE00AC3EAD /* 主页- 消息背景 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页- 消息背景 (1).png"; sourceTree = "<group>"; };
 		EF8D1D731989E7AE00AC3EAD /* 主页- 消息背景 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页- 消息背景 (2).png"; sourceTree = "<group>"; };
 		EF8D1D741989E7AE00AC3EAD /* 主页-消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页-消息.png"; sourceTree = "<group>"; };
-		EF8D1D751989E7AE00AC3EAD /* 主页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页.png"; sourceTree = "<group>"; };
 		EF8D1D761989E7AE00AC3EAD /* 全屏监控-未选 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全屏监控-未选 (1).png"; sourceTree = "<group>"; };
 		EF8D1D771989E7AE00AC3EAD /* 全屏监控-未选 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全屏监控-未选 (2).png"; sourceTree = "<group>"; };
 		EF8D1D781989E7AE00AC3EAD /* 全屏监控-未选 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全屏监控-未选 (3).png"; sourceTree = "<group>"; };
@@ -798,6 +797,7 @@
 		EF8D1DBD1989E7AE00AC3EAD /* 选择 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择 (2).png"; sourceTree = "<group>"; };
 		EF8D1DBE1989E7AE00AC3EAD /* 通讯录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通讯录.png"; sourceTree = "<group>"; };
 		EF8D1DBF1989E7AE00AC3EAD /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		EF8D1E231989EA1400AC3EAD /* 主页摄像头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页摄像头.png"; sourceTree = "<group>"; };
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EF96F12D18D2E110002C1245 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -1474,6 +1474,7 @@
 		EF8D1D5B1989E7AD00AC3EAD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF8D1E231989EA1400AC3EAD /* 主页摄像头.png */,
 				EF8D1D5C1989E7AD00AC3EAD /* qietu_118.png */,
 				EF8D1D5D1989E7AD00AC3EAD /* qietu_120.png */,
 				EF8D1D5E1989E7AD00AC3EAD /* qietu_122.png */,
@@ -1499,7 +1500,6 @@
 				EF8D1D721989E7AE00AC3EAD /* 主页- 消息背景 (1).png */,
 				EF8D1D731989E7AE00AC3EAD /* 主页- 消息背景 (2).png */,
 				EF8D1D741989E7AE00AC3EAD /* 主页-消息.png */,
-				EF8D1D751989E7AE00AC3EAD /* 主页.png */,
 				EF8D1D761989E7AE00AC3EAD /* 全屏监控-未选 (1).png */,
 				EF8D1D771989E7AE00AC3EAD /* 全屏监控-未选 (2).png */,
 				EF8D1D781989E7AE00AC3EAD /* 全屏监控-未选 (3).png */,
@@ -2276,7 +2276,6 @@
 				EF8D1DF61989E7AE00AC3EAD /* 导航栏背景.png in Resources */,
 				EFE60C5317983E03000D5537 /* imageEditReturn.png in Resources */,
 				EF8D1DCD1989E7AE00AC3EAD /* qietu_40.png in Resources */,
-				EF8D1DD91989E7AE00AC3EAD /* 主页.png in Resources */,
 				7196B06218D8314A00B8D8BB /* greenjiantou.png in Resources */,
 				EF04E92E18D6A10F00429681 /* BaseTabBar.xib in Resources */,
 				EFD666431834C0E000DD2A02 /* vertical_callButton_highlighted.png in Resources */,
@@ -2420,6 +2419,7 @@
 				EFD83C8917B0F759006CCF05 /* message_highlight.png in Resources */,
 				EF8D1DC21989E7AE00AC3EAD /* qietu_122.png in Resources */,
 				EF8D1E141989E7AE00AC3EAD /* 绑定设备-未选 (3).png in Resources */,
+				EF8D1E241989EA1400AC3EAD /* 主页摄像头.png in Resources */,
 				EF8D1DF41989E7AE00AC3EAD /* 关闭.png in Resources */,
 				EFD6664E1834CA6500DD2A02 /* vertical_switch_off.png in Resources */,
 				EFD83C8A17B0F759006CCF05 /* message.png in Resources */,
@@ -2724,7 +2724,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
+
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2763,7 +2763,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
+
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";
