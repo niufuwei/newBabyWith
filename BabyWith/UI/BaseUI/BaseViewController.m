@@ -22,7 +22,7 @@
 //        [self addNavBackButtonWithDefaultAction:@"后退"];
 //    }
     
-    self.view.backgroundColor = babywith_background_color;
+    self.view.backgroundColor = babywith_color(0xf5f5f5);
     self.navigationController.navigationBar.tintColor = babywith_green_color;
     if (IOS7_OR_LATER) {
         self.navigationController.navigationBar.barTintColor = babywith_green_color;
