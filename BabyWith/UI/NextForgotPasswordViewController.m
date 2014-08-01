@@ -46,9 +46,9 @@
     _passwordTF.secureTextEntry = YES;
     _passwordTF.delegate = self;
     
-    [self configurationForGreenButton:_getCheckCodeButton];
-    [self configurationForGreenButton:_showPasswordButton];
-    [self configurationForGreenButton:_submitButton];
+//    [self configurationForGreenButton:_getCheckCodeButton];
+//    [self configurationForGreenButton:_showPasswordButton];
+//    [self configurationForGreenButton:_submitButton];
    // NSLog(@"手机号码是%@",_configPhoneNum);
     
     activity = [[Activity alloc] initWithActivity:self.view];
@@ -116,16 +116,25 @@
     }
 }
 
-- (IBAction)showOrHidePassword:(id)sender {
-    if (!_isShowing) {
+//显示密码
+- (IBAction)showPassWordBtn:(id)sender {
+    
+    UIButton *btn = (UIButton *)sender;
+    
+    if (_passwordTF.secureTextEntry == YES)
+    {
         _passwordTF.secureTextEntry = NO;
-        [(UIButton *)sender setTitle:@"隐藏密码" forState:UIControlStateNormal];
-    } else {
-        _passwordTF.secureTextEntry = YES;
-        [(UIButton *)sender setTitle:@"显示密码" forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"退出系统 -显示密码.png"] forState:UIControlStateNormal];
     }
-    _isShowing = !_isShowing;
+    else
+    {
+        _passwordTF.secureTextEntry = YES;
+        [btn setBackgroundImage:[UIImage imageNamed:@"退出系统-取消显示.png"] forState:UIControlStateNormal];
+    }
+    
 }
+
+
 
 - (IBAction)submit:(id)sender {
     

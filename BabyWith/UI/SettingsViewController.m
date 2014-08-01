@@ -99,6 +99,7 @@
         cell = [[ListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.statusLabel.backgroundColor = [UIColor clearColor];
+        
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -114,20 +115,17 @@
     //修改昵称和系统消息的cell稍有不同
     if ([indexPath row] == 0) {
         
+        
         if (![[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@Appel_self",[appDelegate.appDefault objectForKey:@"Username"]]]  isEqual: @""] && [appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@Appel_self",[appDelegate.appDefault objectForKey:@"Username"]]])
         {
             cell.statusLabel.text = [NSString stringWithFormat:@"%@",[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@Appel_self",[appDelegate.appDefault objectForKey:@"Username"] ]]];
-            cell.statusLabel.textAlignment = NSTextAlignmentCenter;
 
         }
         else
         {
         
             cell.statusLabel.text = @"无";
-            cell.statusLabel.textAlignment = NSTextAlignmentCenter;
-
-
-        
+           
         }
     }
     else if([indexPath row] == 2)
