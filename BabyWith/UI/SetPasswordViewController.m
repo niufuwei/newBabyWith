@@ -37,17 +37,19 @@
     _passwordField.secureTextEntry = YES;
     _passwordField.delegate = self;
     
-    [self configurationForGreenButton:_hidePass];
+//    [self configurationForGreenButton:_hidePass];
     [self configurationForGreenButton:_submit];
     
     activity = [[Activity alloc] initWithActivity:self.view];
-    [self.hidePass setTitle:@"隐藏密码" forState:UIControlStateNormal];
-    [self.hidePass setTintColor:[UIColor whiteColor]];
-    [self.hidePass setBackgroundColor:babywith_green_color];
+    //圆角
+    self.passwordField.layer.cornerRadius = 2.0;
+//    [self.hidePass setTitle:@"隐藏密码" forState:UIControlStateNormal];
+//    [self.hidePass setTintColor:[UIColor whiteColor]];
+//    [self.hidePass setBackgroundColor:babywith_green_color];
     
-    [self.submit setTitle:@"提交" forState:UIControlStateNormal];
-    [self.submit setTintColor:[UIColor whiteColor]];
-    [self.submit setBackgroundColor:babywith_green_color];
+//    [self.submit setTitle:@"提交" forState:UIControlStateNormal];
+//    [self.submit setTintColor:[UIColor whiteColor]];
+//    [self.submit setBackgroundColor:babywith_green_color];
 
 
 }
@@ -87,28 +89,29 @@
 
 - (void)viewDidUnload {
     [self setPasswordField:nil];
-    [self setHidePass:nil];
     [self setSubmit:nil];
     [super viewDidUnload];
 }
 
-
-- (IBAction)hidePass:(id)sender {
+//显示密码
+- (IBAction)displayPassBtn:(id)sender {
+    
+    UIButton *btn = (UIButton *)sender;
     
     if (_passwordField.secureTextEntry == YES)
     {
         _passwordField.secureTextEntry = NO;
-        [_hidePass setTitle:@"显示密码" forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"退出系统 -显示密码.png"] forState:UIControlStateNormal];
     }
     else
     {
         _passwordField.secureTextEntry = YES;
-        [_hidePass setTitle:@"隐藏密码" forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"退出系统-取消显示.png"] forState:UIControlStateNormal];
     }
     
     
-    
 }
+
 
 - (IBAction)submitPass:(id)sender
 {
@@ -174,6 +177,7 @@
     
     
 }
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {

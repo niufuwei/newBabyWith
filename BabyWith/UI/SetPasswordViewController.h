@@ -10,9 +10,13 @@
 
 @interface SetPasswordViewController : BaseViewController<UITextFieldDelegate,UIAlertViewDelegate>
 @property (retain, nonatomic) IBOutlet UITextField *passwordField;
-@property (retain, nonatomic) IBOutlet UIButton *hidePass;
+
 @property (retain, nonatomic) IBOutlet UIButton *submit;
-- (IBAction)hidePass:(id)sender;
+
 - (IBAction)submitPass:(id)sender;
+
+
+- (IBAction)displayPassBtn:(id)sender;
+
 
 @end

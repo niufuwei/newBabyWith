@@ -11,8 +11,7 @@
 @interface ChangePasswordViewController : BaseViewController<UITextFieldDelegate,UIAlertViewDelegate>
 @property (retain, nonatomic) IBOutlet UITextField *oldPass;
 @property (retain, nonatomic) IBOutlet UITextField *freshPass;
-@property (retain, nonatomic)  UIButton *firstBtn;
-@property (retain, nonatomic)  UIButton *secondBtn;
 @property (retain, nonatomic)  UIButton *submitBtn;
+- (IBAction)displayBtn:(id)sender;
 
 @end

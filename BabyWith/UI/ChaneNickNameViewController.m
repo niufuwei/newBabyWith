@@ -35,13 +35,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //圆角
+    self.nickName.layer.cornerRadius = 2.0;
     
-    UIButton * subMit = [[UIButton alloc] initWithFrame:CGRectMake(66, 123, 188, 30)];
-    [subMit setTitle:@"提交" forState:UIControlStateNormal];
-    [subMit setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
-    [subMit setBackgroundColor:babywith_green_color];
-    [subMit.layer setMasksToBounds:YES];
-    [subMit.layer setCornerRadius:5.0];
+    
+    UIButton * subMit = [[UIButton alloc] initWithFrame:CGRectMake(50, 123, 220, 35)];
+    [subMit setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
+//    [subMit setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
+//    [subMit setBackgroundColor:babywith_green_color];
+//    [subMit.layer setMasksToBounds:YES];
+//    [subMit.layer setCornerRadius:5.0];
     [subMit addTarget:self action:@selector(submitNickName:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:subMit];
     

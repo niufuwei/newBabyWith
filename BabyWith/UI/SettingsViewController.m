@@ -135,10 +135,11 @@
         if ([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] > 0)
         {
             cell.statusLabel.hidden = NO;
-            cell.statusLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"信息提示背景.png"]];
-            cell.statusLabel.frame = CGRectMake(230, 18, 24, 24);
+            cell.statusLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"主页-消息.png"]];
+            cell.statusLabel.frame = CGRectMake(230, 15, 20, 20);
             cell.statusLabel.textAlignment = NSTextAlignmentCenter;
             cell.statusLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)[[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count]];
+            cell.statusLabel.textColor = [UIColor whiteColor];
         }
         else if([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] == 0)
         {
@@ -239,18 +240,18 @@
         {
              [activity stop];
             
-            if (![[appDelegate.appDefault objectForKey:@"Password"] isEqualToString:@""])
-            {
-                [appDelegate.appDefault setObject:@"" forKey:@"Username"];
-                [appDelegate.appDefault setObject:@"" forKey:@"Password"];
-                [NOTICECENTER postNotificationName:@"MoveToLogin" object:nil];
-            }
-            else
-            {
-                
+//            if (![[appDelegate.appDefault objectForKey:@"Password"] isEqualToString:@""])
+//            {
+//                [appDelegate.appDefault setObject:@"" forKey:@"Username"];
+//                [appDelegate.appDefault setObject:@"" forKey:@"Password"];
+//                [NOTICECENTER postNotificationName:@"MoveToLogin" object:nil];
+//            }
+//            else
+//            {
+            
                 SetPasswordViewController *setPass = [[SetPasswordViewController alloc] init];
                 [self.navigationController pushViewController:setPass animated:YES];
-            }
+//            }
             
             
         }

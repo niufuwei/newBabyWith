@@ -16,13 +16,19 @@
     if (self) {
         // Initialization code
         
-        _alertLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+        _alertLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 320, 75)];
+        _alertLabel.backgroundColor = [UIColor clearColor];
+        _timeLabel.font = [UIFont systemFontOfSize:15.0];
         _alertLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        _alertLabel.numberOfLines = 0;
         [self addSubview:_alertLabel];
         
         
-        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 20)];
+        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 320, 20)];
         _timeLabel.textAlignment = NSTextAlignmentLeft;
+        _timeLabel.backgroundColor = [UIColor clearColor];
+        _timeLabel.textColor = [UIColor grayColor];
+        _timeLabel.font = [UIFont systemFontOfSize:14.0];
         [self addSubview:_timeLabel];
         
         
