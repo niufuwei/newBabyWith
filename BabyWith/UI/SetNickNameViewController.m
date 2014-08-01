@@ -35,7 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _nextBtn= [[UIButton alloc] initWithFrame:CGRectMake(59, 107, 202, 30)];
+    _nextBtn= [[UIButton alloc] initWithFrame:CGRectMake(50, 123, 220, 35)];
     [_nextBtn setTitle:@"提交" forState:UIControlStateNormal];
     [_nextBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
     [_nextBtn setBackgroundColor:babywith_green_color];

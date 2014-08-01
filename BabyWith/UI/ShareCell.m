@@ -16,20 +16,21 @@
     if (self) {
         // Initialization code
         
-        _imageCell =[[UIImageView alloc] initWithFrame:CGRectMake(10, 25, 25, 30)];
-        [self addSubview:_imageCell];
+//        _imageCell =[[UIImageView alloc] initWithFrame:CGRectMake(10, 25, 25, 30)];
+//        [self addSubview:_imageCell];
         
-         _nameLabel =[[UILabel alloc] initWithFrame:CGRectMake(50, 10, 180, 40)];
+         _nameLabel =[[UILabel alloc] initWithFrame:CGRectMake(60, 3, 180, 40)];
         _nameLabel.font = [UIFont systemFontOfSize:20];
         [self addSubview:_nameLabel];
         
         
-        _bindTimeLabel =[[UILabel alloc] initWithFrame:CGRectMake(50, 55, 180, 18)];
+        _bindTimeLabel =[[UILabel alloc] initWithFrame:CGRectMake(60, 33, 180, 20)];
         _bindTimeLabel.font = [UIFont systemFontOfSize:15];
+        _bindTimeLabel.textColor = [UIColor grayColor];
         [self addSubview:_bindTimeLabel];
         
         
-        _chooseImage =[[UIImageView alloc] initWithFrame:CGRectMake(280, 25, 30, 30)];
+        _chooseImage =[[UIImageView alloc] initWithFrame:CGRectMake(10, 30-25/2, 25, 25)];
         [self addSubview:_chooseImage];
         
         

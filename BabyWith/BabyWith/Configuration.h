@@ -25,6 +25,10 @@
 #define babywith_green_color_hightlight [UIColor colorWithRed:147/255.0 green:213/255.0 blue:176/255.0 alpha:1.0]
 #define babywith_orange_color [UIColor colorWithRed:242/255.0 green:142/255.0 blue:115/255.0 alpha:1.0]
 #define babywith_orange_color_hightlight [UIColor colorWithRed:247/255.0 green:196/255.0 blue:182/255.0 alpha:1.0]
+#define babywith_color(rgbValue)   [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+
 #define babywith_sandbox_address [[NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"babywith"]
 #define kAlphaNum   @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 #define DeviceInitUser @"admin"

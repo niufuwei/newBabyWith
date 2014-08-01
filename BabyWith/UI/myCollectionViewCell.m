@@ -18,9 +18,13 @@
         _image = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 75.5, 75.5)] autorelease];
         [self addSubview:_image];
         
-        _videoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start1.png"]];
+        _videoImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start1.png"]] autorelease];
         _videoImage.frame = CGRectMake(21.75, 21.75,32, 32);
         [self addSubview:_videoImage];
+        
+        _deleteImage = [[[UIImageView alloc] initWithFrame:CGRectMake(40, 40, 30, 30)] autorelease];
+        [_deleteImage.layer setCornerRadius:15];
+        [self addSubview:_deleteImage];
     }
     return self;
 }

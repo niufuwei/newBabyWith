@@ -7,10 +7,19 @@
 //
 
 #import "BaseViewController.h"
-@interface ShareDeviceViewController : BaseViewController<UITextFieldDelegate,UIAlertViewDelegate>
+
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+
+@interface ShareDeviceViewController : BaseViewController<UITextFieldDelegate,UIAlertViewDelegate,ABPeoplePickerNavigationControllerDelegate>
 
 @property (retain, nonatomic) IBOutlet UITextField *phoneNumber;
 @property (retain, nonatomic)  UIButton *submit;
 @property (assign, nonatomic) BOOL result;
+
+
+- (IBAction)AddAdressBtn:(id)sender;
+
+
 
 @end

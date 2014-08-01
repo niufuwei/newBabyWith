@@ -22,15 +22,15 @@
 //        [self addNavBackButtonWithDefaultAction:@"后退"];
 //    }
     
-    self.view.backgroundColor = babywith_background_color;
-    self.navigationController.navigationBar.tintColor = babywith_green_color;
+    self.view.backgroundColor = babywith_color(0xf5f5f5);
+    self.navigationController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"导航栏背景.png"];
     if (IOS7_OR_LATER) {
-        self.navigationController.navigationBar.barTintColor = babywith_green_color;
+        self.navigationController.navigationBar.barTintColor = babywith_color(0x2da7e7);
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
     if (self.navigationController.viewControllers.count > 1) {
-        [self leftButtonItemWithImageName:@"camera_back"];
+        [self leftButtonItemWithImageName:@"导航栏返回.png"];
     }
 }
 
@@ -74,12 +74,25 @@
 - (void)leftButtonItemWithImageName:(NSString *)imageName
 {
     //左导航-主选择页面
-    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 35)];
+    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     [navButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     //[navButton setImage:[UIImage imageNamed:@"goMain_highlight.png"] forState:UIControlStateHighlighted];
     [navButton addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
     self.navigationItem.leftBarButtonItem = leftItem;
+}
+
+-(void)rightButtonTitle:(NSString *)titleName
+{
+    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+    [navButton setTitle:titleName  forState:UIControlStateNormal];
+    [navButton setBackgroundColor:[UIColor whiteColor]];
+    [navButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    //[navButton setImage:[UIImage imageNamed:@"goMain_highlight.png"] forState:UIControlStateHighlighted];
+    [navButton addTarget:self action:@selector(skip:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+    self.navigationItem.rightBarButtonItem = leftItem;
+
 }
 
 - (void)rightButtonItemWithImageName:(NSString *)imageName

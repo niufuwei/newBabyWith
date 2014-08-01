@@ -110,7 +110,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 100;
+    return 75;
 
 }
 
@@ -133,8 +133,10 @@
     
     
     
-    cell.backgroundColor = babywith_background_color;
+    cell.backgroundColor = [UIColor whiteColor];
 
+    NSLog(@".....%@",[appDelegate.appDefault objectForKey:@"alert"]);
+    
     cell.alertLabel.text =[NSString stringWithFormat:@"%@",[appDelegate.appDefault objectForKey:@"alert"]];
     
     int i = [[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@*",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count];

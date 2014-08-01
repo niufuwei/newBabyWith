@@ -53,15 +53,15 @@
     
     
     _cellNameArr = [[NSArray alloc] initWithObjects:@"修改昵称",@"修改密码",@"系统消息",@"关于我们", nil];
+    _cellLogoArr = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"更多 (1).png"], [UIImage imageNamed:@"更多 (2).png"],[UIImage imageNamed:@"更多 (3).png"],[UIImage imageNamed:@"更多 (4).png"],nil];
     
-    
-    _tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, 90, 320, 200)];
+    _tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, 65, 320, 200)];
     _tableList.delegate = self;
     _tableList.dataSource = self;
     _tableList.backgroundColor = [UIColor clearColor];
     _tableList.scrollEnabled = NO;
     [self.view addSubview:_tableList];
-    _tableList.frame = CGRectMake(0, 90, 320, [self tableView:_tableList numberOfRowsInSection:0]*[self tableView:_tableList heightForRowAtIndexPath:0]);
+//    _tableList.frame = CGRectMake(0, 90, 320, [self tableView:_tableList numberOfRowsInSection:0]*[self tableView:_tableList heightForRowAtIndexPath:0]);
     
     activity = [[Activity alloc] initWithActivity:self.view];
     
@@ -97,25 +97,22 @@
     ListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[ListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.statusLabel.backgroundColor = [UIColor clearColor];
     }
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.logoImage.image = [_cellLogoArr objectAtIndex:[indexPath row]];
+    cell.nameLabel.text = [_cellNameArr objectAtIndex:[indexPath row]];
+    cell.backgroundColor = [UIColor whiteColor];
     
-    cell.textLabel.text = [_cellNameArr objectAtIndex:[indexPath row]];
-    
-    
-    UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(cell.frame.size.width-25,25, 10, 13)];
-    [accessoryView setImage:[UIImage imageNamed:@"greenjiantou.png"]];
-    [cell addSubview:accessoryView];
+//    UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(cell.frame.size.width-25,25, 10, 13)];
+//    [accessoryView setImage:[UIImage imageNamed:@"greenjiantou.png"]];
+//    [cell addSubview:accessoryView];
     
     
     //修改昵称和系统消息的cell稍有不同
     if ([indexPath row] == 0) {
-        
-        
-        
         
         if (![[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@Appel_self",[appDelegate.appDefault objectForKey:@"Username"]]]  isEqual: @""] && [appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@Appel_self",[appDelegate.appDefault objectForKey:@"Username"]]])
         {
@@ -138,10 +135,11 @@
         if ([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] > 0)
         {
             cell.statusLabel.hidden = NO;
-            cell.statusLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"信息提示背景.png"]];
-            cell.statusLabel.frame = CGRectMake(230, 18, 24, 24);
+            cell.statusLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"主页-消息.png"]];
+            cell.statusLabel.frame = CGRectMake(230, 15, 20, 20);
             cell.statusLabel.textAlignment = NSTextAlignmentCenter;
             cell.statusLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)[[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count]];
+            cell.statusLabel.textColor = [UIColor whiteColor];
         }
         else if([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@#",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] == 0)
         {
@@ -160,7 +158,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 50;
 
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -250,7 +248,7 @@
             }
             else
             {
-                
+            
                 SetPasswordViewController *setPass = [[SetPasswordViewController alloc] init];
                 [self.navigationController pushViewController:setPass animated:YES];
             }

@@ -11,5 +11,9 @@
 @interface ListCell : UITableViewCell
 
 @property (nonatomic,retain) UILabel *statusLabel;
+@property (nonatomic,retain) UILabel *nameLabel;
+@property (nonatomic,retain) UIImageView*logoImage;
+
+
 
 @end
