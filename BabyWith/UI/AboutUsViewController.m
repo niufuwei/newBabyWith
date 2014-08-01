@@ -29,6 +29,7 @@
     
     [self titleSet:@"关于我们"];
     
+    self.view.backgroundColor = babywith_color(0xf5f5f5);
     
     if (IOS7) {
         self.rightLab.frame=CGRectMake(80, 400-44, 160, 30);

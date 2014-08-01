@@ -39,6 +39,13 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+     self.navigationController.navigationBarHidden = YES;
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,9 +56,10 @@
     self.passwordTF.secureTextEntry = YES;
     self.passwordTF.delegate = self;
     
+   
     
-    [self configurationForGreenButton:_loginButton];
-    [self titleSet:@"登录"];
+//    [self configurationForGreenButton:_loginButton];
+//    [self titleSet:@"登录"];
     
     activity = [[Activity alloc] initWithActivity:self.view];
     
@@ -96,7 +104,7 @@
     [_passwordTF resignFirstResponder];
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
+            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight);
     } completion:^(BOOL finished) {
         _keyboardShowed = NO;
     }];
@@ -114,12 +122,12 @@
         
         if (IOS7)
         {
-            self.view.frame = CGRectMake(0, -50, 320, kScreenHeight -44 -20);
+            self.view.frame = CGRectMake(0, -50, 320, kScreenHeight);
 
         }
         else
         {
-            self.view.frame = CGRectMake(0, -70, 320, kScreenHeight -44 -20);
+            self.view.frame = CGRectMake(0, -70, 320, kScreenHeight);
 
         }
         
@@ -150,10 +158,10 @@
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
         if (IOS7) {
-            self.view.frame = CGRectMake(0, 44+20, 320, kScreenHeight -44 -20);
+            self.view.frame = CGRectMake(0, 44+20, 320, kScreenHeight);
 
         } else {
-            self.view.frame = CGRectMake(0, 0 , 320, kScreenHeight -44 - 20);
+            self.view.frame = CGRectMake(0, 0 , 320, kScreenHeight);
 
         }
     } completion:^(BOOL finished) {
@@ -254,12 +262,13 @@
 - (IBAction)accountRegister:(UIButton *)sender {
     LoginRegisterViewController *vc = [[LoginRegisterViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (IBAction)forgotPassword:(UIButton *)sender {
     ForgotPasswordViewController *vc = [[ForgotPasswordViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+    self.navigationController.navigationBarHidden = NO;
 }
     
 

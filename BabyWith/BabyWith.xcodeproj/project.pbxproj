@@ -302,6 +302,9 @@
 		EF4A5EE8198B27F600A54EB2 /* 通讯录.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E72198B27F600A54EB2 /* 通讯录.png */; };
 		EF4A5EE9198B27F600A54EB2 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E73198B27F600A54EB2 /* 首页.png */; };
 		EF4A5EEA198B27F600A54EB2 /* 首页背景.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E74198B27F600A54EB2 /* 首页背景.png */; };
+		EF4A5EED198B2CE600A54EB2 /* qietu_07.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */; };
+		EF4A5EEE198B2CE600A54EB2 /* qietu_29.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */; };
+		EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEF198B45B800A54EB2 /* qietu_257.png */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF57848D1781875200D1C9C4 /* messageBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF57848C1781875200D1C9C4 /* messageBorder.png */; };
 		EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */; };
@@ -827,6 +830,9 @@
 		EF4A5E72198B27F600A54EB2 /* 通讯录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通讯录.png"; sourceTree = "<group>"; };
 		EF4A5E73198B27F600A54EB2 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		EF4A5E74198B27F600A54EB2 /* 首页背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页背景.png"; sourceTree = "<group>"; };
+		EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_07.png; sourceTree = "<group>"; };
+		EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_29.png; sourceTree = "<group>"; };
+		EF4A5EEF198B45B800A54EB2 /* qietu_257.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_257.png; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF57848C1781875200D1C9C4 /* messageBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBorder.png; sourceTree = "<group>"; };
 		EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot_highlight.png; sourceTree = "<group>"; };
@@ -1509,6 +1515,9 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF4A5EEF198B45B800A54EB2 /* qietu_257.png */,
+				EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */,
+				EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */,
 				EF4A5DFE198B27F500A54EB2 /* qietu_118.png */,
 				EF4A5DFF198B27F500A54EB2 /* qietu_120.png */,
 				EF4A5E00198B27F500A54EB2 /* qietu_122.png */,
@@ -2307,11 +2316,13 @@
 				711BB9DE195C1F5200265F41 /* 切图_62.png in Resources */,
 				EF4A5ED6198B27F600A54EB2 /* 绑定设备-选中 (1).png in Resources */,
 				EF4A5E80198B27F600A54EB2 /* qietu_166.png in Resources */,
+				EF4A5EEE198B2CE600A54EB2 /* qietu_29.png in Resources */,
 				EF1B062A178C65E400C08313 /* blackArrow.png in Resources */,
 				EF4A5E93198B27F600A54EB2 /* 全屏监控-未选 (4).png in Resources */,
 				7198D5E118D6D6C70011EA28 /* 记录.png in Resources */,
 				EF4A5E82198B27F600A54EB2 /* qietu_174.png in Resources */,
 				EF4A5EB2198B27F600A54EB2 /* 设置.png in Resources */,
+				EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */,
 				7174A0BA194EC88F00DCC781 /* 4031.wav in Resources */,
 				EFEFD6FB1804E87C00D5A74D /* message_history.png in Resources */,
 				EF1B062B178C65E400C08313 /* blackArrow@2x.png in Resources */,
@@ -2459,6 +2470,7 @@
 				EF4A5ED5198B27F600A54EB2 /* 绑定设备-未选 (3).png in Resources */,
 				EF4A5EE3198B27F600A54EB2 /* 退出系统 -显示密码.png in Resources */,
 				EFEA80DF17B0015900671744 /* peopleButton.png in Resources */,
+				EF4A5EED198B2CE600A54EB2 /* qietu_07.png in Resources */,
 				EF4A5E7D198B27F600A54EB2 /* qietu_15.png in Resources */,
 				EF4A5E92198B27F600A54EB2 /* 全屏监控-未选 (3).png in Resources */,
 				EF4A5E8B198B27F600A54EB2 /* 主菜单栏-选中 (8).png in Resources */,

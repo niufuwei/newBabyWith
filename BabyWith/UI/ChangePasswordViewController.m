@@ -64,7 +64,7 @@
     self.freshPass.layer.cornerRadius = 2.0;
     
      [self titleSet:@"修改密码"];
-    _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 180, 220, 35)];
+    _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 165, 220, 35)];
     [_submitBtn setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
 //    [_submitBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
 //    [_submitBtn setBackgroundColor:babywith_green_color];
@@ -143,25 +143,30 @@
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!_keyboardShowed) {
-        return;
-    }
+    
+    
     [_oldPass resignFirstResponder];
     [_freshPass resignFirstResponder];
     
-    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        if (IOS7)
-        {
-            self.view.frame = CGRectMake(0, 44 + 20, 320, kScreenHeight -44 -20);
-            
-        }
-        else
-        {
-            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
-            
-        }    } completion:^(BOOL finished) {
-        _keyboardShowed = NO;
-    }];
+//    if (!_keyboardShowed) {
+//        return;
+//    }
+//    [_oldPass resignFirstResponder];
+//    [_freshPass resignFirstResponder];
+    
+//    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
+//        if (IOS7)
+//        {
+//            self.view.frame = CGRectMake(0, 44 + 20, 320, kScreenHeight -44 -20);
+//            
+//        }
+//        else
+//        {
+//            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
+//            
+//        }    } completion:^(BOOL finished) {
+//        _keyboardShowed = NO;
+//    }];
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -169,27 +174,27 @@
     _freshPass.keyboardType = UIKeyboardTypeASCIICapable;
     _oldPass.keyboardType = UIKeyboardTypeASCIICapable;
     
-    
-    if (_keyboardShowed)
-    {
-        return;
-    }
-    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        
-        if (IOS7)
-        {
-            self.view.frame = CGRectMake(0, 10, 320, kScreenHeight -44 -20);
-            
-        }
-        else
-        {
-            self.view.frame = CGRectMake(0, -25, 320, kScreenHeight -44 -20);
-            
-        }
-        
-    } completion:^(BOOL finished) {
-        _keyboardShowed = YES;
-    }];
+//    
+//    if (_keyboardShowed)
+//    {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
+//        
+//        if (IOS7)
+//        {
+//            self.view.frame = CGRectMake(0, 10, 320, kScreenHeight -44 -20);
+//            
+//        }
+//        else
+//        {
+//            self.view.frame = CGRectMake(0, -25, 320, kScreenHeight -44 -20);
+//            
+//        }
+//        
+//    } completion:^(BOOL finished) {
+//        _keyboardShowed = YES;
+//    }];
     
     
     
@@ -197,25 +202,25 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if (_keyboardShowed) {
-        return;
-    }
-    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        
-        if (IOS7)
-        {
-            self.view.frame = CGRectMake(0, 44 + 20, 320, kScreenHeight -44 -20);
-            
-        }
-        else
-        {
-            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
-            
-        }
-        
-    } completion:^(BOOL finished) {
-        _keyboardShowed = NO;
-    }];
+//    if (_keyboardShowed) {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
+//        
+//        if (IOS7)
+//        {
+//            self.view.frame = CGRectMake(0, 44 + 20, 320, kScreenHeight -44 -20);
+//            
+//        }
+//        else
+//        {
+//            self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
+//            
+//        }
+//        
+//    } completion:^(BOOL finished) {
+//        _keyboardShowed = NO;
+//    }];
     
     
 }

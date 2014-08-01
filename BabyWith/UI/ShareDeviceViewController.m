@@ -38,6 +38,15 @@
 {
     [super viewDidLoad];
     
+    
+    //左导航-主选择页面
+    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 35)];
+    [navButton setImage:[UIImage imageNamed:@"camera_back"] forState:UIControlStateNormal];
+    [navButton addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    
     self.title  = @"分享账号";
     
     //圆角
@@ -61,6 +70,16 @@
     
 
 }
+
+-(void)pop:(id )sender
+
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    [appDelegate.selectDeviceArr removeAllObjects];
+}
+
+
 //添加通讯录
 - (IBAction)AddAdressBtn:(id)sender {
     
@@ -169,6 +188,8 @@
     self.phoneNumber.text = [self.phoneNumber.text
                             stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
+    NSLog(@"<><><><><><><><><>%@",self.phoneNumber.text);
+    
     //检查电话号码是否符合规格
     int phone_email_flag = [self checkTel:self.phoneNumber.text Type:1];
     NSLog(@"%d",phone_email_flag);
@@ -181,13 +202,12 @@
     
     
     
-    
-    
-    
-    
     //设备ID以逗号隔开
     NSString * deviceID;
     int i = [appDelegate.selectDeviceArr count];
+    NSLog(@">>>>>>>>%d",i);
+    //NSLog(@">>>>>>>>%@",[[appDelegate.selectDeviceArr objectAtIndex:0] objectForKey:@"device_id"]);
+    
     deviceID =  [[appDelegate.selectDeviceArr objectAtIndex:0] objectForKey:@"device_id"];
     //一开始始终是取得第一个
     //这个device id需要用逗号隔开
@@ -282,6 +302,9 @@
    
     
 }
+
+
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 
@@ -304,12 +327,12 @@
 
 
 }
--(void)viewWillDisappear:(BOOL)animated
-{
-
-  [appDelegate.selectDeviceArr removeAllObjects];
-
-}
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//
+//
+//
+//}
 
 
 @end

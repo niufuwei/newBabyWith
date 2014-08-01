@@ -40,6 +40,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+     [self titleSet:@"找回密码"];
+    
     _isShowing = NO;
     _passwordTF.secureTextEntry = YES;
     _passwordTF.delegate = self;

@@ -45,7 +45,7 @@
     _agreeOrNot = YES;
     
     UIImageView *buttonImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    buttonImage.image = [UIImage imageNamed:@"agree.png"];
+    buttonImage.image = [UIImage imageNamed:@"选择 (2).png"];
     buttonImage.tag = 2;
     [_agreeMentBtn addSubview:buttonImage];
     
@@ -195,10 +195,10 @@
 
 - (IBAction)agreeOrNot:(id)sender {
     if (_agreeOrNot == NO) {
-        ((UIImageView *)[sender viewWithTag:2]).image = [UIImage imageNamed:@"agree.png"];
+        ((UIImageView *)[sender viewWithTag:2]).image = [UIImage imageNamed:@"选择 (2).png"];
         
     } else {      
-       ((UIImageView *)[sender viewWithTag:2]).image = [UIImage imageNamed:@"notAgree.png"];
+       ((UIImageView *)[sender viewWithTag:2]).image = [UIImage imageNamed:@"选择 (1).png"];
       
     }
     _agreeOrNot = !_agreeOrNot;
