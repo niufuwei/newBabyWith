@@ -41,13 +41,14 @@
 	}
 	return nil;
 }
+
 #pragma mark UINavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
     if(self.sourceType == UIImagePickerControllerSourceTypeCamera){
         
-        UIImage *deviceImage = [UIImage imageNamed:@"切换视角.png"];
+        UIImage *deviceImage = [UIImage imageNamed:@"拍照1.png"];
         UIButton *deviceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [deviceBtn setBackgroundImage:deviceImage forState:UIControlStateNormal];
         [deviceBtn addTarget:self action:@selector(swapFrontAndBackCameras:)
@@ -64,8 +65,8 @@
 
         [self setShowsCameraControls:NO];
         
-        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight, 320, self.view.frame.size.height - ScreenHeight)];
-        [overlyView setBackgroundColor:babywith_green_color];
+        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, 450, 320, self.view.frame.size.height - ScreenHeight)];
+        [overlyView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照5.png"]]];
         
         UIButton *cameraBtn;
         UIButton *photoBtn;
@@ -116,8 +117,8 @@
 
         
     
-        [imageButton setBackgroundImage:[UIImage imageNamed:@"返回.png"] forState:UIControlStateNormal];
-        [imageButton setBackgroundImage:[UIImage imageNamed:@"返回.png"] forState:UIControlStateHighlighted];
+        [imageButton setBackgroundImage:[UIImage imageNamed:@"拍照2.png"] forState:UIControlStateNormal];
+        [imageButton setBackgroundImage:[UIImage imageNamed:@"拍照2.png"] forState:UIControlStateHighlighted];
         [imageButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
         imageButton.tag = 10;
         [overlyView addSubview:imageButton];
@@ -125,16 +126,16 @@
         
         
         
-        [cameraBtn setImage:[UIImage imageNamed:@"拍照1.png"] forState:UIControlStateNormal];
-        [cameraBtn setImage:[UIImage imageNamed:@"拍照1.png"] forState:UIControlStateHighlighted];
+        [cameraBtn setImage:[UIImage imageNamed:@"拍照3.png"] forState:UIControlStateNormal];
+        [cameraBtn setImage:[UIImage imageNamed:@"拍照3.png"] forState:UIControlStateHighlighted];
         [cameraBtn addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
         cameraBtn.tag = 20;
         [overlyView addSubview:cameraBtn];
 //        [cameraBtn release];
         
      
-        [photoBtn setBackgroundImage:[UIImage imageNamed:@"保存.png"] forState:UIControlStateNormal];
-        [photoBtn setBackgroundImage:[UIImage imageNamed:@"保存.png"] forState:UIControlStateHighlighted];
+        [photoBtn setBackgroundImage:[UIImage imageNamed:@"拍照4.png"] forState:UIControlStateNormal];
+        [photoBtn setBackgroundImage:[UIImage imageNamed:@"拍照4.png"] forState:UIControlStateHighlighted];
         photoBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
         photoBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         photoBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -236,7 +237,7 @@
     //    [self performSelector:@selector(AnimationCameraClose) withObject:nil afterDelay:0.1];
     UIButton *button = (UIButton*)[self.cameraOverlayView viewWithTag:20];
     button.enabled = NO;
-    [button setImage:[UIImage imageNamed:@"拍照1.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"拍照3.png"] forState:UIControlStateNormal];
     [super takePicture];
 }
 
@@ -357,7 +358,7 @@
         //牌拍照之后图片显示也不一样
         UIButton *button = (UIButton*)[self.cameraOverlayView viewWithTag:20];
         button.enabled = YES;
-        [button setImage:[UIImage imageNamed:@"拍照1.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"拍照3.png"] forState:UIControlStateNormal];
         
         //最多拍五张
         if ([_imageArray count] == 5) {
