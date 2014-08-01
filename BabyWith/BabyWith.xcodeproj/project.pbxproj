@@ -306,6 +306,7 @@
 		EF4A5EEE198B2CE600A54EB2 /* qietu_29.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */; };
 		EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEF198B45B800A54EB2 /* qietu_257.png */; };
 		EF4A5EF2198B56AF00A54EB2 /* 导航栏返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */; };
+		EF4A5EF4198B60B600A54EB2 /* qietu_254.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF3198B60B600A54EB2 /* qietu_254.png */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF57848D1781875200D1C9C4 /* messageBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF57848C1781875200D1C9C4 /* messageBorder.png */; };
 		EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */; };
@@ -836,6 +837,7 @@
 		EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_29.png; sourceTree = "<group>"; };
 		EF4A5EEF198B45B800A54EB2 /* qietu_257.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_257.png; sourceTree = "<group>"; };
 		EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏返回.png"; sourceTree = "<group>"; };
+		EF4A5EF3198B60B600A54EB2 /* qietu_254.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_254.png; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF57848C1781875200D1C9C4 /* messageBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBorder.png; sourceTree = "<group>"; };
 		EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot_highlight.png; sourceTree = "<group>"; };
@@ -1520,6 +1522,7 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF4A5EF3198B60B600A54EB2 /* qietu_254.png */,
 				EF4A5EEF198B45B800A54EB2 /* qietu_257.png */,
 				EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */,
 				EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */,
@@ -2564,6 +2567,7 @@
 				EF13DA3A17B423B00017D47F /* startRecord.png in Resources */,
 				71A86CF1190A310A004AFA50 /* line@2x.png in Resources */,
 				EFC71A6817B7F1E50089DA4A /* edit_background.png in Resources */,
+				EF4A5EF4198B60B600A54EB2 /* qietu_254.png in Resources */,
 				EF4A5EBC198B27F600A54EB2 /* 拍照.png in Resources */,
 				EFC71A6A17B7F56A0089DA4A /* rightDirGray.png in Resources */,
 				EFD666441834C0E000DD2A02 /* vertical_callButton.png in Resources */,
