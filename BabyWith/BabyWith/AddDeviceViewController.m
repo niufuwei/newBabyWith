@@ -62,6 +62,9 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = titleLabel;
     
+    
+    [self leftButtonItemWithImageName:@"导航返回.png"];
+    
     //右导航--设置按钮
     setButton = [[UIButton alloc] initWithFrame:CGRectMake(30, -30, 20, 20)];
     [setButton setBackgroundImage:[UIImage imageNamed:@"开灯.png"] forState:UIControlStateNormal];
@@ -151,12 +154,12 @@
     NSInteger yyyy=0;
     if(isFirst)
     {
-        yyyy =self.view.frame.size.height-50;
+        yyyy =self.view.frame.size.height-50 - 50 - 10;
         isFirst = FALSE;
     }
     else
     {
-        yyyy=self.view.frame.size.height-50;
+        yyyy=self.view.frame.size.height-50 - 50 -10;
     }
     
     UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, yyyy, self.view.frame.size.width, 50)];
@@ -248,7 +251,7 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"绑定设备-选中 (3)"] forState:UIControlStateNormal];
         
         
-        inputView = [[UIView alloc] initWithFrame:CGRectMake(10, 140, 300, 130)];
+        inputView = [[UIView alloc] initWithFrame:CGRectMake(10, 74, 300, 130)];
         inputView.backgroundColor = [UIColor whiteColor];
         inputView.layer.cornerRadius = 5.0;
         
@@ -301,7 +304,7 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"绑定设备-选中 (2)"] forState:UIControlStateNormal];
         
         
-        deviceListView = [[UIView alloc] initWithFrame:CGRectMake(10, 140, 300, 130)];
+        deviceListView = [[UIView alloc] initWithFrame:CGRectMake(10, 74, 300, 130)];
         deviceListView.backgroundColor = [UIColor whiteColor];
         deviceListView.layer.cornerRadius = 5.0;
         
@@ -313,10 +316,16 @@
         [deviceListView addSubview:warnLabel];
         
         
+        UIImageView *lineImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 26, 300, 1)];
+        lineImage.image = [UIImage imageNamed:@"分隔栏.png"];
+        [deviceListView addSubview:lineImage];
+        
+        
         deviceListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 28, 300, 100) style:UITableViewStylePlain];
         deviceListTableView.backgroundColor = [UIColor clearColor];
         deviceListTableView.delegate = self;
         deviceListTableView.dataSource = self;
+        deviceListTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         [deviceListView addSubview:deviceListTableView];
         
         
@@ -407,7 +416,7 @@
     if (upOrdown == NO)
     {
         num ++;
-        _line.frame = CGRectMake(50, 110+2*num, 220, 2);
+        _line.frame = CGRectMake(50, 60+2*num, 220, 2);
         if (2*num == 220)
         {
             upOrdown = YES;
@@ -416,7 +425,7 @@
     else
     {
         num --;
-        _line.frame = CGRectMake(50, 110+2*num, 220, 2);
+        _line.frame = CGRectMake(50, 60+2*num, 220, 2);
         if (num == 0)
         {
             upOrdown = NO;
@@ -432,7 +441,7 @@
 //        view.hidden = YES;
 //    }
     
-    _labIntroudction= [[UILabel alloc] initWithFrame:CGRectMake(30, 340, 260, 50)];
+    _labIntroudction= [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 260, 50)];
     _labIntroudction.backgroundColor = [UIColor clearColor];
     _labIntroudction.textAlignment=YES;
     _labIntroudction.numberOfLines=1;
@@ -442,13 +451,13 @@
     [self.view addSubview:_labIntroudction];
     
     
-    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(40, 100, 240, 240)];
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(40, 50, 240, 240)];
     _imageView.image = [UIImage imageNamed:@"pick_bg"];
     [self.view addSubview:_imageView];
     
     upOrdown = NO;
     num =0;
-    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 220, 2)];
+    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 220, 2)];
     _line.image = [UIImage imageNamed:@"line.png"];
     [self.view addSubview:_line];
     

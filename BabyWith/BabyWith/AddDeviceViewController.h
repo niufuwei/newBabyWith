@@ -11,9 +11,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 #import "SearchDVS.h"
+#import "BaseViewController.h"
 
-
-@interface AddDeviceViewController : UIViewController
+@interface AddDeviceViewController : BaseViewController
 <UIAlertViewDelegate,ZBarReaderDelegate,AVCaptureMetadataOutputObjectsDelegate,UITableViewDataSource,UITableViewDelegate,SearchCameraResultProtocol>
 
 {

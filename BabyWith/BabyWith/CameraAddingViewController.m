@@ -38,7 +38,7 @@
 
     //导航条设置
     {
-        [self leftButtonItemWithImageName:@"camera_back.png"];
+        [self leftButtonItemWithImageName:@"导航返回.png"];
 //        //左导航-主选择页面
 //        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
 //        navButton.tag = 1;

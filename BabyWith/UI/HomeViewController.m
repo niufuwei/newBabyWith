@@ -49,7 +49,8 @@
     _homeTableView1.delegate = self;
     _homeTableView1.dataSource = self;
     _homeTableView1.backgroundView = nil;
-    _homeTableView1.backgroundColor = babywith_background_color;
+    _homeTableView1.backgroundColor = [UIColor clearColor];
+    _homeTableView1.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     [self.view addSubview:_homeTableView1];
     
     activity = [[Activity alloc] initWithActivity:self.view];
@@ -717,7 +718,6 @@
     }
     cell3.selectionStyle = UITableViewCellSelectionStyleNone;
     //cell3.state.text = tempState;
-    cell3.backgroundColor = babywith_background_color;
 
     
     return cell3;

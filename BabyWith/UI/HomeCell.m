@@ -46,6 +46,7 @@
         [jiantou setImage:[UIImage imageNamed:@"qietu_40.png"]];
         [self addSubview:jiantou];
 
+        self.backgroundColor = [UIColor clearColor];
         
     }
     return self;
