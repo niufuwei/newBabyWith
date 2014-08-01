@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     
+    [self titleSet:@"关于我们"];
+    
+    
     if (IOS7) {
         self.rightLab.frame=CGRectMake(80, 400-44, 160, 30);
         self.detailLab.frame=CGRectMake(20, 430-44, 280, 20);

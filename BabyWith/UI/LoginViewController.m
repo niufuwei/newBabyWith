@@ -51,7 +51,7 @@
     
     
     [self configurationForGreenButton:_loginButton];
-    [self titleSet:@"登陆"];
+    [self titleSet:@"登录"];
     
     activity = [[Activity alloc] initWithActivity:self.view];
     

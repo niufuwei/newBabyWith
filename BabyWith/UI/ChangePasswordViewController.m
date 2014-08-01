@@ -63,8 +63,7 @@
     self.oldPass.layer.cornerRadius = 2.0;
     self.freshPass.layer.cornerRadius = 2.0;
     
-    
-    
+     [self titleSet:@"修改密码"];
     _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 180, 220, 35)];
     [_submitBtn setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
 //    [_submitBtn setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
