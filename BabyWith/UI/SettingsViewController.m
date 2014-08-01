@@ -55,7 +55,7 @@
     _cellNameArr = [[NSArray alloc] initWithObjects:@"修改昵称",@"修改密码",@"系统消息",@"关于我们", nil];
     _cellLogoArr = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"更多 (1).png"], [UIImage imageNamed:@"更多 (2).png"],[UIImage imageNamed:@"更多 (3).png"],[UIImage imageNamed:@"更多 (4).png"],nil];
     
-    _tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, 70, 320, 200)];
+    _tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, 65, 320, 200)];
     _tableList.delegate = self;
     _tableList.dataSource = self;
     _tableList.backgroundColor = [UIColor clearColor];

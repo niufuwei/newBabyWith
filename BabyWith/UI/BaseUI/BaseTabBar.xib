@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -15,7 +15,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="主页.png" highlightedImage="主页-按下.png" id="79">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="主菜单栏-未选 (5).png" highlightedImage="主菜单栏-选中 (6).png" id="79">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -50,7 +50,7 @@
                     <rect key="frame" x="80" y="0.0" width="80" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="分享.png" highlightedImage="分享-按下.png" id="80">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="主菜单栏-未选 (6).png" highlightedImage="主菜单栏-选中 (7).png" id="80">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -85,7 +85,7 @@
                     <rect key="frame" x="160" y="0.0" width="80" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="记录.png" highlightedImage="记录-按下.png" id="83">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="主菜单栏-未选 (7).png" highlightedImage="主菜单栏-选中 (8).png" id="83">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -120,7 +120,7 @@
                     <rect key="frame" x="240" y="0.0" width="80" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="更多.png" highlightedImage="更多-按下.png" id="86">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="主菜单栏-未选 (8).png" highlightedImage="主菜单栏-选中 (5).png" id="86">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="49"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -162,13 +162,13 @@
         </view>
     </objects>
     <resources>
-        <image name="主页-按下.png" width="160" height="98"/>
-        <image name="主页.png" width="160" height="98"/>
-        <image name="分享-按下.png" width="160" height="98"/>
-        <image name="分享.png" width="160" height="98"/>
-        <image name="更多-按下.png" width="160" height="98"/>
-        <image name="更多.png" width="160" height="98"/>
-        <image name="记录-按下.png" width="160" height="98"/>
-        <image name="记录.png" width="160" height="98"/>
+        <image name="主菜单栏-未选 (5).png" width="160" height="98"/>
+        <image name="主菜单栏-未选 (6).png" width="160" height="98"/>
+        <image name="主菜单栏-未选 (7).png" width="160" height="98"/>
+        <image name="主菜单栏-未选 (8).png" width="160" height="98"/>
+        <image name="主菜单栏-选中 (5).png" width="160" height="98"/>
+        <image name="主菜单栏-选中 (6).png" width="160" height="98"/>
+        <image name="主菜单栏-选中 (7).png" width="160" height="98"/>
+        <image name="主菜单栏-选中 (8).png" width="160" height="98"/>
     </resources>
 </document>

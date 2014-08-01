@@ -40,8 +40,8 @@
     
     
     //左导航-主选择页面
-    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 35)];
-    [navButton setImage:[UIImage imageNamed:@"camera_back"] forState:UIControlStateNormal];
+    UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    [navButton setImage:[UIImage imageNamed:@"导航栏返回.png"] forState:UIControlStateNormal];
     [navButton addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
     self.navigationItem.leftBarButtonItem = leftItem;

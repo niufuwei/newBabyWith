@@ -247,7 +247,6 @@
 		EF4A5EB1198B27F600A54EB2 /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E3B198B27F500A54EB2 /* 添加.png */; };
 		EF4A5EB2198B27F600A54EB2 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E3C198B27F500A54EB2 /* 设置.png */; };
 		EF4A5EB3198B27F600A54EB2 /* 跳过.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E3D198B27F500A54EB2 /* 跳过.png */; };
-		EF4A5EB4198B27F600A54EB2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E3E198B27F500A54EB2 /* 返回.png */; };
 		EF4A5EB5198B27F600A54EB2 /* 选择.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E3F198B27F500A54EB2 /* 选择.png */; };
 		EF4A5EB6198B27F600A54EB2 /* 导航栏背景.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E40198B27F500A54EB2 /* 导航栏背景.png */; };
 		EF4A5EB7198B27F600A54EB2 /* 开灯.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E41198B27F500A54EB2 /* 开灯.png */; };
@@ -305,6 +304,7 @@
 		EF4A5EED198B2CE600A54EB2 /* qietu_07.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */; };
 		EF4A5EEE198B2CE600A54EB2 /* qietu_29.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */; };
 		EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEF198B45B800A54EB2 /* qietu_257.png */; };
+		EF4A5EF2198B56AF00A54EB2 /* 导航栏返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF57848D1781875200D1C9C4 /* messageBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF57848C1781875200D1C9C4 /* messageBorder.png */; };
 		EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */; };
@@ -775,7 +775,6 @@
 		EF4A5E3B198B27F500A54EB2 /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
 		EF4A5E3C198B27F500A54EB2 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
 		EF4A5E3D198B27F500A54EB2 /* 跳过.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跳过.png"; sourceTree = "<group>"; };
-		EF4A5E3E198B27F500A54EB2 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		EF4A5E3F198B27F500A54EB2 /* 选择.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择.png"; sourceTree = "<group>"; };
 		EF4A5E40198B27F500A54EB2 /* 导航栏背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏背景.png"; sourceTree = "<group>"; };
 		EF4A5E41198B27F500A54EB2 /* 开灯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开灯.png"; sourceTree = "<group>"; };
@@ -833,6 +832,7 @@
 		EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_07.png; sourceTree = "<group>"; };
 		EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_29.png; sourceTree = "<group>"; };
 		EF4A5EEF198B45B800A54EB2 /* qietu_257.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_257.png; sourceTree = "<group>"; };
+		EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏返回.png"; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF57848C1781875200D1C9C4 /* messageBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBorder.png; sourceTree = "<group>"; };
 		EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot_highlight.png; sourceTree = "<group>"; };
@@ -1636,6 +1636,7 @@
 		EF4A5E36198B27F500A54EB2 /* 导航栏 */ = {
 			isa = PBXGroup;
 			children = (
+				EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */,
 				EF4A5E37198B27F500A54EB2 /* 关闭.png */,
 				EF4A5E38198B27F500A54EB2 /* 删除.png */,
 				EF4A5E39198B27F500A54EB2 /* 导航栏背景.png */,
@@ -1643,7 +1644,6 @@
 				EF4A5E3B198B27F500A54EB2 /* 添加.png */,
 				EF4A5E3C198B27F500A54EB2 /* 设置.png */,
 				EF4A5E3D198B27F500A54EB2 /* 跳过.png */,
-				EF4A5E3E198B27F500A54EB2 /* 返回.png */,
 				EF4A5E3F198B27F500A54EB2 /* 选择.png */,
 			);
 			path = "导航栏";
@@ -2492,6 +2492,7 @@
 				EFD83C4517B0D0D6006CCF05 /* goMain_highlight.png in Resources */,
 				7196B06018D827E800B8D8BB /* 退出登录.png in Resources */,
 				EFD83C4617B0D0D6006CCF05 /* goMain.png in Resources */,
+				EF4A5EF2198B56AF00A54EB2 /* 导航栏返回.png in Resources */,
 				EF1D3C4D18D2B2D90079C358 /* ForgotPasswordViewController.xib in Resources */,
 				EF4A5EBB198B27F600A54EB2 /* 拍照 (4).png in Resources */,
 				EF4A5EB7198B27F600A54EB2 /* 开灯.png in Resources */,
@@ -2531,7 +2532,6 @@
 				711BB9DB195C1F5200265F41 /* 切图_57.png in Resources */,
 				EFEF0A6D17B1DAC900F5144B /* deleteRecord.png in Resources */,
 				EFEF0A6F17B1DF8600F5144B /* navShadow.png in Resources */,
-				EF4A5EB4198B27F600A54EB2 /* 返回.png in Resources */,
 				EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */,
 				711BB9E7195C1F5200265F41 /* 全屏监控（结束对讲）.jpg in Resources */,
 				EF5B5CA817B24B04000935DB /* camera_shoot.png in Resources */,
