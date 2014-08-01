@@ -240,18 +240,18 @@
         {
              [activity stop];
             
-//            if (![[appDelegate.appDefault objectForKey:@"Password"] isEqualToString:@""])
-//            {
-//                [appDelegate.appDefault setObject:@"" forKey:@"Username"];
-//                [appDelegate.appDefault setObject:@"" forKey:@"Password"];
-//                [NOTICECENTER postNotificationName:@"MoveToLogin" object:nil];
-//            }
-//            else
-//            {
+            if (![[appDelegate.appDefault objectForKey:@"Password"] isEqualToString:@""])
+            {
+                [appDelegate.appDefault setObject:@"" forKey:@"Username"];
+                [appDelegate.appDefault setObject:@"" forKey:@"Password"];
+                [NOTICECENTER postNotificationName:@"MoveToLogin" object:nil];
+            }
+            else
+            {
             
                 SetPasswordViewController *setPass = [[SetPasswordViewController alloc] init];
                 [self.navigationController pushViewController:setPass animated:YES];
-//            }
+            }
             
             
         }
