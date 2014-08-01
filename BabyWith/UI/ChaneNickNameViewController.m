@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //圆角
-    self.nickName.layer.cornerRadius = 2.0;
+    self.nickName.layer.cornerRadius = 1.5;
     
 
     [self titleSet:@"修改昵称"];

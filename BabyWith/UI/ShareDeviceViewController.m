@@ -50,7 +50,7 @@
     self.title  = @"分享账号";
     
     //圆角
-    self.phoneNumber.layer.cornerRadius=2.0;
+    self.phoneNumber.layer.cornerRadius=1.5;
     
     // Do any additional setup after loading the view from its nib.
      _submit= [[UIButton alloc] initWithFrame:CGRectMake(50, 123, 220, 35)];

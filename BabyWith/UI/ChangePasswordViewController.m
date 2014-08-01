@@ -60,8 +60,8 @@
 //    [self.view addSubview:_secondBtn];
     
    //圆角
-    self.oldPass.layer.cornerRadius = 2.0;
-    self.freshPass.layer.cornerRadius = 2.0;
+    self.oldPass.layer.cornerRadius = 1.5;
+    self.freshPass.layer.cornerRadius = 1.5;
     
      [self titleSet:@"修改密码"];
     _submitBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 165, 220, 35)];

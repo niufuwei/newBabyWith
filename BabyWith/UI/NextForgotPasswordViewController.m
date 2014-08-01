@@ -88,9 +88,26 @@
 }
 - (IBAction)getCheckCode:(id)sender {
     
-    UIButton *btn = sender;
-    [btn setTitle:@"重新获取" forState:UIControlStateNormal];
+//    UIButton *btn = sender;
+//    [btn setBackgroundImage:[UIImage imageNamed:@"qietu_254.png"] forState:UIControlStateNormal];
     
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"sendCheckMessage"] isEqualToString:@"0"]) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(getCheck) userInfo:nil repeats:NO];
+        [self sendChekMessage];
+        [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"sendCheckMessage"];
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"验证码已发送" message:@"如果尚未收到，请您60秒之后再重新获取" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+}
+
+-(void)sendChekMessage
+{
     
     [activity start];
     BOOL result = [appDelegate.webInfoManger UserForgetPasswordUsingPhone:_configPhoneNum Vesting:@"86"];
@@ -102,7 +119,9 @@
     else
     {
         [activity stop];
-
+        
+        //添加计时器防止不停获取验证码
+        
         UIWindow *window = [[UIApplication sharedApplication].windows objectAtIndex:[[UIApplication sharedApplication].windows count]-1];
         MBProgressHUD *indicator = [[MBProgressHUD alloc] initWithWindow:window];
         indicator.labelText = @"验证码已发送";
@@ -113,7 +132,18 @@
         } completionBlock:^{
             [indicator removeFromSuperview];
         }];
+        
     }
+
+}
+
+-(void)getCheck
+{
+    UIButton *btn = (UIButton *)[self.view viewWithTag:10086];
+   [btn setBackgroundImage:[UIImage imageNamed:@"qietu_254.png"] forState:UIControlStateNormal];
+   [_timer invalidate];
+   [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"sendCheckMessage"];
+    
 }
 
 //显示密码

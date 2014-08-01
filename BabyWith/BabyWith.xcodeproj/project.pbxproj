@@ -281,9 +281,6 @@
 		EF4A5ED3198B27F600A54EB2 /* 绑定设备-未选 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E5D198B27F500A54EB2 /* 绑定设备-未选 (1).png */; };
 		EF4A5ED4198B27F600A54EB2 /* 绑定设备-未选 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E5E198B27F500A54EB2 /* 绑定设备-未选 (2).png */; };
 		EF4A5ED5198B27F600A54EB2 /* 绑定设备-未选 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E5F198B27F500A54EB2 /* 绑定设备-未选 (3).png */; };
-		EF4A5ED6198B27F600A54EB2 /* 绑定设备-选中 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E60198B27F500A54EB2 /* 绑定设备-选中 (1).png */; };
-		EF4A5ED7198B27F600A54EB2 /* 绑定设备-选中 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E61198B27F500A54EB2 /* 绑定设备-选中 (2).png */; };
-		EF4A5ED8198B27F600A54EB2 /* 绑定设备-选中 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E62198B27F500A54EB2 /* 绑定设备-选中 (3).png */; };
 		EF4A5ED9198B27F600A54EB2 /* 编辑.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E63198B27F500A54EB2 /* 编辑.png */; };
 		EF4A5EDA198B27F600A54EB2 /* 编辑记录.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E64198B27F500A54EB2 /* 编辑记录.png */; };
 		EF4A5EDB198B27F600A54EB2 /* 网络选择 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E65198B27F500A54EB2 /* 网络选择 (1).png */; };
@@ -307,6 +304,9 @@
 		EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EEF198B45B800A54EB2 /* qietu_257.png */; };
 		EF4A5EF2198B56AF00A54EB2 /* 导航栏返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */; };
 		EF4A5EF4198B60B600A54EB2 /* qietu_254.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF3198B60B600A54EB2 /* qietu_254.png */; };
+		EF4A5EF6198B6E4A00A54EB2 /* qietu_261.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */; };
+		EF4A5EF8198B88FE00A54EB2 /* qietu_267.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */; };
+		EF4A5EFA198B8AB200A54EB2 /* qietu_271.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF57848D1781875200D1C9C4 /* messageBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF57848C1781875200D1C9C4 /* messageBorder.png */; };
 		EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */; };
@@ -812,9 +812,6 @@
 		EF4A5E5D198B27F500A54EB2 /* 绑定设备-未选 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-未选 (1).png"; sourceTree = "<group>"; };
 		EF4A5E5E198B27F500A54EB2 /* 绑定设备-未选 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-未选 (2).png"; sourceTree = "<group>"; };
 		EF4A5E5F198B27F500A54EB2 /* 绑定设备-未选 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-未选 (3).png"; sourceTree = "<group>"; };
-		EF4A5E60198B27F500A54EB2 /* 绑定设备-选中 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-选中 (1).png"; sourceTree = "<group>"; };
-		EF4A5E61198B27F500A54EB2 /* 绑定设备-选中 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-选中 (2).png"; sourceTree = "<group>"; };
-		EF4A5E62198B27F500A54EB2 /* 绑定设备-选中 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备-选中 (3).png"; sourceTree = "<group>"; };
 		EF4A5E63198B27F500A54EB2 /* 编辑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑.png"; sourceTree = "<group>"; };
 		EF4A5E64198B27F500A54EB2 /* 编辑记录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑记录.png"; sourceTree = "<group>"; };
 		EF4A5E65198B27F500A54EB2 /* 网络选择 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "网络选择 (1).png"; sourceTree = "<group>"; };
@@ -838,6 +835,9 @@
 		EF4A5EEF198B45B800A54EB2 /* qietu_257.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_257.png; sourceTree = "<group>"; };
 		EF4A5EF1198B56AF00A54EB2 /* 导航栏返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏返回.png"; sourceTree = "<group>"; };
 		EF4A5EF3198B60B600A54EB2 /* qietu_254.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_254.png; sourceTree = "<group>"; };
+		EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_261.png; sourceTree = "<group>"; };
+		EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_267.png; sourceTree = "<group>"; };
+		EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_271.png; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF57848C1781875200D1C9C4 /* messageBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBorder.png; sourceTree = "<group>"; };
 		EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot_highlight.png; sourceTree = "<group>"; };
@@ -1522,6 +1522,9 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */,
+				EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */,
+				EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */,
 				EF4A5EF3198B60B600A54EB2 /* qietu_254.png */,
 				EF4A5EEF198B45B800A54EB2 /* qietu_257.png */,
 				EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */,
@@ -1615,9 +1618,6 @@
 				EF4A5E5D198B27F500A54EB2 /* 绑定设备-未选 (1).png */,
 				EF4A5E5E198B27F500A54EB2 /* 绑定设备-未选 (2).png */,
 				EF4A5E5F198B27F500A54EB2 /* 绑定设备-未选 (3).png */,
-				EF4A5E60198B27F500A54EB2 /* 绑定设备-选中 (1).png */,
-				EF4A5E61198B27F500A54EB2 /* 绑定设备-选中 (2).png */,
-				EF4A5E62198B27F500A54EB2 /* 绑定设备-选中 (3).png */,
 				EF4A5E63198B27F500A54EB2 /* 编辑.png */,
 				EF4A5E64198B27F500A54EB2 /* 编辑记录.png */,
 				EF4A5E65198B27F500A54EB2 /* 网络选择 (1).png */,
@@ -2322,7 +2322,6 @@
 				EF4A5ED0198B27F600A54EB2 /* 登录 (2).png in Resources */,
 				EFF7BA751788868B0035FB82 /* .version in Resources */,
 				711BB9DE195C1F5200265F41 /* 切图_62.png in Resources */,
-				EF4A5ED6198B27F600A54EB2 /* 绑定设备-选中 (1).png in Resources */,
 				EF4A5E80198B27F600A54EB2 /* qietu_166.png in Resources */,
 				EF4A5EEE198B2CE600A54EB2 /* qietu_29.png in Resources */,
 				EF1B062A178C65E400C08313 /* blackArrow.png in Resources */,
@@ -2412,7 +2411,6 @@
 				EF3578CA17AB8AC2009C6516 /* menu_background.png in Resources */,
 				EF4A5ECD198B27F600A54EB2 /* 横版导航栏背景.png in Resources */,
 				EF4A5E78198B27F600A54EB2 /* qietu_124.png in Resources */,
-				EF4A5ED7198B27F600A54EB2 /* 绑定设备-选中 (2).png in Resources */,
 				EF4A5EE1198B27F600A54EB2 /* 输入框.png in Resources */,
 				EF4A5EA4198B27F600A54EB2 /* 切换 (1).png in Resources */,
 				EF3578D017AB8D90009C6516 /* login_forget.png in Resources */,
@@ -2482,6 +2480,7 @@
 				EF4A5E7D198B27F600A54EB2 /* qietu_15.png in Resources */,
 				EF4A5E92198B27F600A54EB2 /* 全屏监控-未选 (3).png in Resources */,
 				EF4A5E8B198B27F600A54EB2 /* 主菜单栏-选中 (8).png in Resources */,
+				EF4A5EFA198B8AB200A54EB2 /* qietu_271.png in Resources */,
 				EF4A5E7C198B27F600A54EB2 /* qietu_149.png in Resources */,
 				EF517DA91811340100EB5CED /* Icon-80.png in Resources */,
 				71AD0D05195C28DF002B34BF /* 分割线.png in Resources */,
@@ -2546,7 +2545,6 @@
 				EF4A5EBA198B27F600A54EB2 /* 拍照 (3).png in Resources */,
 				EF0293C41803B1E100869200 /* cameraShootButton.png in Resources */,
 				EFE118F317B2AE49008185B6 /* edit_highlight.png in Resources */,
-				EF4A5ED8198B27F600A54EB2 /* 绑定设备-选中 (3).png in Resources */,
 				716C830A18D94403006CB5C3 /* SetPasswordViewController.xib in Resources */,
 				EF4A5E9D198B27F600A54EB2 /* 全屏监控-选中.png in Resources */,
 				EFE118F417B2AE49008185B6 /* edit.png in Resources */,
@@ -2558,6 +2556,7 @@
 				EFE118F817B313D7008185B6 /* photos_save.png in Resources */,
 				EF4A5E86198B27F600A54EB2 /* 主菜单栏-未选 (7).png in Resources */,
 				EF4A5E81198B27F600A54EB2 /* qietu_173.png in Resources */,
+				EF4A5EF8198B88FE00A54EB2 /* qietu_267.png in Resources */,
 				EF13DA3417B413A40017D47F /* circleDot_blank.png in Resources */,
 				EF13DA3717B417110017D47F /* sexLittlePic_1.png in Resources */,
 				EF13DA3817B417110017D47F /* sexLittlePic_0.png in Resources */,
@@ -2611,6 +2610,7 @@
 				EF13A68F17BEAC3B0022B329 /* Icon-Small@2x.png in Resources */,
 				EF13A69017BEAC3B0022B329 /* Icon.png in Resources */,
 				EF13A69117BEAC3B0022B329 /* Icon-Small.png in Resources */,
+				EF4A5EF6198B6E4A00A54EB2 /* qietu_261.png in Resources */,
 				EFEC8C3A17D87C09009E3CA1 /* callButton_selected.png in Resources */,
 				7198D5DA18D6D6C70011EA28 /* 主页.png in Resources */,
 				EFEC8C3B17D87C09009E3CA1 /* headphoneButton_selected.png in Resources */,
@@ -2755,6 +2755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 			};
 			name = Debug;
 		};
@@ -2780,6 +2781,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -2816,7 +2818,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2855,7 +2857,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";
