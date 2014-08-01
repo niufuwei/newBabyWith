@@ -464,7 +464,7 @@ int HudIsBecome = 0;
 {
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     homeVC.hidesBottomBarWhenPushed = YES;
-    homeVC.title = @"babywith";
+    //homeVC.title = @"babywith";
     BaseNavigationController *homeNav = [[[BaseNavigationController alloc] initWithRootViewController:homeVC] autorelease] ;
     
     

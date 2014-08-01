@@ -13,7 +13,7 @@
 #import "MainAppDelegate.h"
 #import "MBProgressHUD.h"
 #import "CameraSettingViewController.h"
-
+#import "WifiTableViewCell.h"
 
 @implementation CameraSetWifiViewController
 
@@ -54,7 +54,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = @"看护器无线网络设置";
+        titleLabel.text = @"网络选择";
         titleLabel.textColor = babywith_text_background_color;
         titleLabel.font = [UIFont systemFontOfSize:20];
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -64,11 +64,10 @@
     
     _wifiSearchList = [[NSMutableArray alloc] initWithCapacity:1];
     
-    _wifiListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    _wifiListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height) style:UITableViewStylePlain];
     _wifiListTableView.delegate = self;
     _wifiListTableView.dataSource = self;
-    _wifiListTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _wifiListTableView.separatorColor = [UIColor clearColor];
+    _wifiListTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _wifiListTableView.backgroundView = nil;
     _wifiListTableView.backgroundColor = [UIColor clearColor];
     
@@ -108,7 +107,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"select row = [%d]", indexPath.row);
     
-    SettingCell *cell = (SettingCell *)[tableView cellForRowAtIndexPath:indexPath];
+    WifiTableViewCell *cell = (WifiTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     //弹出提示框，输入密码
@@ -183,17 +182,33 @@
         } completionBlock:^{
             [indicator removeFromSuperview];
             [indicator release];
+            
+            WifiTableViewCell *cell = (WifiTableViewCell *)[_wifiListTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:alertView.tag inSection:0]];
+            cell.unlockLabel.text = @"解锁";
+            cell.lockImage.image = [UIImage imageNamed:@"网络选择 (1).png"];
+            
+            WifiTableViewCell *cell1 = (WifiTableViewCell *)[_wifiListTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:lastSelectRow inSection:0]];
+            cell1.unlockLabel.text = @"锁定";
+            cell1.lockImage.image = [UIImage imageNamed:@"网络选择 (2).png"];
+            lastSelectRow = alertView.tag;
+            
+            
             [(CameraSettingViewController *)_delegate RebootDevice];
             [self.navigationController popViewControllerAnimated:YES];
 
             
         }];
     }else if(buttonIndex == 0){
-        SettingCell *cell = (SettingCell *)[_wifiListTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:alertView.tag inSection:0]];
+        WifiTableViewCell *cell = (WifiTableViewCell *)[_wifiListTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:alertView.tag inSection:0]];
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    return 60;
+
+}
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_wifiSearchList count];
 }
@@ -205,9 +220,9 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"WIFI_search";
-    SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    WifiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[[SettingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+        cell = [[[WifiTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
         cell.textLabel.textColor = [UIColor colorWithRed:98/255.0 green:98/255.0 blue:98/255.0 alpha:1];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = babywith_text_background_color;
@@ -219,6 +234,23 @@
     }
     
     cell.textLabel.text = [[_wifiSearchList objectAtIndex:indexPath.row] objectForKey:@"strSSID"];
+    if ([cell.textLabel.text isEqualToString:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"ssid"]]])
+    {
+        
+        cell.unlockLabel.text = @"解锁";
+        cell.lockImage.image = [UIImage imageNamed:@"网络选择 (1).png"];
+        lastSelectRow = indexPath.row;
+    }
+    else
+    {
+        cell.unlockLabel.text = @"锁定";
+        
+        
+        
+        cell.lockImage.image = [UIImage imageNamed:@"网络选择 (2).png"];
+        
+    
+    }
     return cell;
 }
 

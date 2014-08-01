@@ -15,14 +15,14 @@
     // Initialization code
     
     _messageLabel.backgroundColor = [UIColor clearColor];
+    _messageLabel.font = [UIFont systemFontOfSize:15.0];
+    _messageLabel.numberOfLines = 0;
     _messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     
     //20.79.104.30
     _agreeShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 79, 104, 30)];
-    [_agreeShareBtn setTitle:@"同意" forState:UIControlStateNormal];
-    [_agreeShareBtn setTintColor:[UIColor whiteColor]];
-    [_agreeShareBtn setBackgroundColor:babywith_green_color];
+    [_agreeShareBtn setImage:[UIImage imageNamed:@"qietu_120.png"] forState:UIControlStateNormal];
     [self addSubview:_agreeShareBtn];
     
     
@@ -30,9 +30,7 @@
     
     //196.79.104.30
     _refuseShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(196, 79, 104, 30)];
-    [_refuseShareBtn setTitle:@"拒绝" forState:UIControlStateNormal];
-    [_refuseShareBtn setTintColor:[UIColor whiteColor]];
-    [_refuseShareBtn setBackgroundColor:babywith_green_color];
+    [_refuseShareBtn setImage:[UIImage imageNamed:@"qietu_147.png"] forState:UIControlStateNormal];
     [self addSubview:_refuseShareBtn];
     
     

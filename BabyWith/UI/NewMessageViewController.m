@@ -37,7 +37,7 @@
     _messageTableView.backgroundColor = babywith_background_color;
     _label = [[UILabel alloc] init];
     
-    [self setTitle:@"新分享设备"];
+    [self titleSet:@"分享设备"];
     
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -47,31 +47,40 @@
     [_messageTableView reloadData];
     
     NSLog(@"消息数组是%@",[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@$",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]]);
-    if ([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@$",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] == 0)
-    {
-        
-        _messageTableView.frame = CGRectMake(0, 0, 0, 0);
-        
-        _label.frame = CGRectMake(20, 200, 280, 60);
-        _label.textAlignment = NSTextAlignmentCenter;
-        _label.text =@"您还没有设备分享信息";
-        _label.hidden = NO;
-        _label.backgroundColor = [UIColor clearColor];
-        [self.view addSubview:_label];
-    }
-    else
-    {
+//    if ([[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@$",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count] == 0)
+//    {
+//        
+//        _messageTableView.frame = CGRectMake(0, 0, 0, 0);
+//        
+//        _label.frame = CGRectMake(20, 200, 280, 60);
+//        _label.textAlignment = NSTextAlignmentCenter;
+//        _label.text =@"您还没有设备分享信息";
+//        _label.hidden = NO;
+//        _label.backgroundColor = [UIColor clearColor];
+//        [self.view addSubview:_label];
+//    }
+//    else
+//    {
         _label.hidden = YES;
-        if (130.0*[self tableView:_messageTableView numberOfRowsInSection:0] > self.view.frame.size.height - 66)
+    UILabel *topLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 300, 40)];
+    topLabel.text = @"您的亲友已经将babywith这款产品分享给你使用，请您选择是否同意使用该产品";
+    topLabel.numberOfLines = 0;
+    topLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    topLabel.font = [UIFont systemFontOfSize:13.0];
+    topLabel.textColor = [UIColor grayColor];
+    topLabel.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:topLabel];
+    
+        if (130.0*[self tableView:_messageTableView numberOfRowsInSection:0] > self.view.frame.size.height - 66 - 71)
         {
-            _messageTableView.frame = CGRectMake(0, 0, 320, self.view.frame.size.height);
+            _messageTableView.frame = CGRectMake(0, 71, 320, self.view.frame.size.height - 71);
         }
         else
         {
-        _messageTableView.frame = CGRectMake(0, 0, 320, 130.0*[self tableView:_messageTableView numberOfRowsInSection:0]);
+        _messageTableView.frame = CGRectMake(0, 71, 320, 130.0*[self tableView:_messageTableView numberOfRowsInSection:0] - 71);
 
         }
-    }
+   // }
     [self.view addSubview:_messageTableView];
 
 
@@ -96,7 +105,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-   return  [[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@$",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count];
+   //return  [[appDelegate.appDefault objectForKey:[NSString stringWithFormat:@"%@$",[[NSUserDefaults standardUserDefaults] objectForKey:@"Username"]]] count];
+    
+    return 6;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,9 +124,9 @@
     }
     
     
-    cell.messageLabel.text = [NSString stringWithFormat:@"%@ ",[appDelegate.appDefault objectForKey:@"alert"]];
+   // cell.messageLabel.text = [NSString stringWithFormat:@"%@ ",[appDelegate.appDefault objectForKey:@"alert"]];
     
-   
+   cell.messageLabel.text = @"您好，张三将它使用的设备 工地监控一 分享给你，是否同意该监控？";
     
     [cell.agreeShareBtn addTarget:self action:@selector(agreeShare:) forControlEvents:UIControlEventTouchUpInside];
     [cell.refuseShareBtn addTarget:self action:@selector(refuseShare:) forControlEvents:UIControlEventTouchUpInside];

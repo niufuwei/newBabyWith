@@ -35,6 +35,7 @@
     int _currentRow;
     
     UILabel * tuisongLabel;
+    UIImageView *titleImage;
 }
 
 
