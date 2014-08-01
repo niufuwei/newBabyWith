@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DDF0DBB198B3F7D00E26961 /* AVCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF0DBA198B3F7D00E26961 /* AVCallController.m */; };
 		710AEDD5190795C000B19A58 /* NewMessageCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710AEDD3190794B700B19A58 /* NewMessageCell1.xib */; };
 		710AEDD81907AA1B00B19A58 /* SharedPersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710AEDD71907AA1B00B19A58 /* SharedPersonsViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		71121D36191D2E9F007B6937 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71121D35191D2E9F007B6937 /* Activity.m */; };
@@ -470,6 +471,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DDF0DB9198B3F7D00E26961 /* AVCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCallController.h; sourceTree = "<group>"; };
+		1DDF0DBA198B3F7D00E26961 /* AVCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCallController.m; sourceTree = "<group>"; };
 		710AEDD3190794B700B19A58 /* NewMessageCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMessageCell1.xib; sourceTree = "<group>"; };
 		710AEDD61907AA1B00B19A58 /* SharedPersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedPersonsViewController.h; sourceTree = "<group>"; };
 		710AEDD71907AA1B00B19A58 /* SharedPersonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedPersonsViewController.m; sourceTree = "<group>"; };
@@ -1449,6 +1452,8 @@
 				71A41D8D1951971C00B45C7E /* ImageShowController.m */,
 				71AAF65F18ED22E100C3B0D8 /* PhotoScanViewController.h */,
 				71AAF66018ED22E100C3B0D8 /* PhotoScanViewController.m */,
+				1DDF0DB9198B3F7D00E26961 /* AVCallController.h */,
+				1DDF0DBA198B3F7D00E26961 /* AVCallController.m */,
 			);
 			name = Records;
 			sourceTree = "<group>";
@@ -2693,6 +2698,7 @@
 				71A8CB6418E93E41008C793D /* CollectionCell.m in Sources */,
 				EF1D3C5C18D2B2D90079C358 /* ShareViewController.m in Sources */,
 				71A41D8E1951971C00B45C7E /* ImageShowController.m in Sources */,
+				1DDF0DBB198B3F7D00E26961 /* AVCallController.m in Sources */,
 				EFE8E6F8179F438B001689F4 /* CameraParamSettingViewController.m in Sources */,
 				EFF866CD17A220D40027570F /* CameraSetNameViewController.m in Sources */,
 				EFF0373617CCA30A00A1DDDA /* BabyWithCameraManagement.mm in Sources */,
@@ -2806,7 +2812,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2845,7 +2851,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";

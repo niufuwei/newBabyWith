@@ -15,6 +15,7 @@
 #import "PhotoScanViewController.h"
 #import "AppGlobal.h"
 #import "myCollectionViewCell.h"
+#import "AVCallController.h"
 
 //#define REUSEABLE_CELL_IDENTITY @"CELL"
 #define REUSEABLE_HEADER @"HEADER"
@@ -119,15 +120,20 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 {
     if([leftButton.titleLabel.text isEqualToString:@"编辑"])
     {
-        _picker = [[ImagePickerController alloc] init];
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-        {
-            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
-            _picker.customDelegate = self;
-            [self presentViewController:_picker animated:YES completion:^{
-                
-            }];
-        }
+//        _picker = [[ImagePickerController alloc] init];
+//        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+//        {
+//            [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+//            _picker.customDelegate = self;
+//            [self presentViewController:_picker animated:YES completion:^{
+//                
+//            }];
+//        }
+        
+        AVCallController * avcall = [[AVCallController alloc] init];
+        [self presentViewController:avcall animated:YES completion:^{
+            
+        }];
 
     }
     else

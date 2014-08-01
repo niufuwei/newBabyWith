@@ -55,17 +55,17 @@
             forControlEvents:UIControlEventTouchUpInside];
         [deviceBtn setFrame:CGRectMake(250, 20, 60, 30)];
         self.cameraFlashMode = UIImagePickerControllerCameraFlashModeOff;
-        
+//        self.wantsFullScreenLayout = YES;
         
         UIView *PLCameraView=[self findView:viewController.view withName:@"PLCameraView"];
         [PLCameraView addSubview:deviceBtn];
         //        [PLCameraView addSubview:backBtn];
         
         
-
+        self.cameraViewTransform = CGAffineTransformMakeScale(1.5, 1.5);
         [self setShowsCameraControls:NO];
         
-        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, 450, 320, self.view.frame.size.height - ScreenHeight)];
+        UIView *overlyView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-(self.view.frame.size.height - ScreenHeight), 320, self.view.frame.size.height - ScreenHeight)];
         [overlyView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照5.png"]]];
         
         UIButton *cameraBtn;
@@ -93,13 +93,13 @@
         
         if (kIsIphone5) {
             cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            cameraBtn.frame=CGRectMake(160-45, overlyView.frame.size.height-115, 90, 90);
+            cameraBtn.frame=CGRectMake(160-45, overlyView.frame.size.height-90, 90, 50);
             
             imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            imageButton.frame=CGRectMake(25, (overlyView.frame.size.height - 25)/2, 40, 30);
+            imageButton.frame=CGRectMake(25, overlyView.frame.size.height/2-40, 40, 50);
             
             photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            photoBtn.frame=CGRectMake(260, (overlyView.frame.size.height - 25)/2, 40, 30);
+            photoBtn.frame=CGRectMake(260, overlyView.frame.size.height/2-30, 40, 40);
         }
         
         else
@@ -145,6 +145,9 @@
 //        [photoBtn release];
         
         self.cameraOverlayView = overlyView;
+        CGRect hh =  self.cameraOverlayView.frame;
+        hh.origin.y = 20;
+        self.cameraOverlayView.frame = hh;
 //        [overlyView release];
     }
 }
