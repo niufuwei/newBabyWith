@@ -117,6 +117,9 @@
 		71B3D9F7195BC331001C355D /* 设备.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B3D9F6195BC331001C355D /* 设备.png */; };
 		71B3D9FC195BC626001C355D /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B3D9FB195BC626001C355D /* ShareCell.m */; };
 		71D66ED0195D535800896171 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D66ECF195D535800896171 /* HomeViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		71FC430D198A1DFD00FEF070 /* VedioQualityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FC430C198A1DFD00FEF070 /* VedioQualityTableViewCell.m */; };
+		71FC4310198A27E400FEF070 /* WifiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FC430F198A27E400FEF070 /* WifiTableViewCell.m */; };
+		71FC4313198A344A00FEF070 /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FC4312198A344A00FEF070 /* AddDeviceViewController.m */; };
 		EF0293C41803B1E100869200 /* cameraShootButton.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0293C31803B1E100869200 /* cameraShootButton.png */; };
 		EF039C5C179AD3340019D075 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF039C5B179AD3340019D075 /* SystemConfiguration.framework */; };
 		EF040440179DA20500F414BD /* imageNotFound.png in Resources */ = {isa = PBXBuildFile; fileRef = EF04043F179DA20400F414BD /* imageNotFound.png */; };
@@ -312,8 +315,7 @@
 		EF5B5CA717B24B04000935DB /* camera_shoot_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */; };
 		EF5B5CA817B24B04000935DB /* camera_shoot.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5B5CA617B24B04000935DB /* camera_shoot.png */; };
 		EF71ED94191CD08A00A434CB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EF71ED93191CD08A00A434CB /* logo.png */; };
-		EF8D1E27198A16D600AC3EAD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D1E25198A098500AC3EAD /* AddressBook.framework */; };
-		EF8D1E29198A1E4800AC3EAD /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */; };
+
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F12F18D2E110002C1245 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12C18D2E110002C1245 /* Default.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -612,6 +614,12 @@
 		71B3D9FA195BC626001C355D /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
 		71B3D9FB195BC626001C355D /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
 		71D66ECF195D535800896171 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		71FC430B198A1DFD00FEF070 /* VedioQualityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioQualityTableViewCell.h; sourceTree = "<group>"; };
+		71FC430C198A1DFD00FEF070 /* VedioQualityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioQualityTableViewCell.m; sourceTree = "<group>"; };
+		71FC430E198A27E400FEF070 /* WifiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiTableViewCell.h; sourceTree = "<group>"; };
+		71FC430F198A27E400FEF070 /* WifiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiTableViewCell.m; sourceTree = "<group>"; };
+		71FC4311198A344A00FEF070 /* AddDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceViewController.h; sourceTree = "<group>"; };
+		71FC4312198A344A00FEF070 /* AddDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
 		EF0293C31803B1E100869200 /* cameraShootButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraShootButton.png; sourceTree = "<group>"; };
 		EF039C5B179AD3340019D075 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EF04043F179DA20400F414BD /* imageNotFound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageNotFound.png; sourceTree = "<group>"; };
@@ -843,8 +851,7 @@
 		EF5B5CA517B24B04000935DB /* camera_shoot_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot_highlight.png; sourceTree = "<group>"; };
 		EF5B5CA617B24B04000935DB /* camera_shoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_shoot.png; sourceTree = "<group>"; };
 		EF71ED93191CD08A00A434CB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		EF8D1E25198A098500AC3EAD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		EF96F12D18D2E110002C1245 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -1522,10 +1529,14 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+
 				EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */,
 				EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */,
 				EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */,
 				EF4A5EF3198B60B600A54EB2 /* qietu_254.png */,
+
+
+
 				EF4A5EEF198B45B800A54EB2 /* qietu_257.png */,
 				EF4A5EEB198B2CE600A54EB2 /* qietu_07.png */,
 				EF4A5EEC198B2CE600A54EB2 /* qietu_29.png */,
@@ -1636,6 +1647,7 @@
 				EF4A5E72198B27F600A54EB2 /* 通讯录.png */,
 				EF4A5E73198B27F600A54EB2 /* 首页.png */,
 				EF4A5E74198B27F600A54EB2 /* 首页背景.png */,
+
 			);
 			name = images;
 			path = BabyWith/images;
@@ -1660,6 +1672,8 @@
 		EFE79544177BE26C00D15A32 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				71FC4311198A344A00FEF070 /* AddDeviceViewController.h */,
+				71FC4312198A344A00FEF070 /* AddDeviceViewController.m */,
 				EFF7B92C178885730035FB82 /* CameraAddingViewController.h */,
 				EFF7B92D178885730035FB82 /* CameraAddingViewController.m */,
 				EFF7B930178885730035FB82 /* WifiListViewController.h */,
@@ -1716,6 +1730,10 @@
 				EFE79573177C1B6100D15A32 /* SettingCell.m */,
 				71A95D051921F3190075CC61 /* MessageCell.h */,
 				71A95D061921F3190075CC61 /* MessageCell.m */,
+				71FC430B198A1DFD00FEF070 /* VedioQualityTableViewCell.h */,
+				71FC430C198A1DFD00FEF070 /* VedioQualityTableViewCell.m */,
+				71FC430E198A27E400FEF070 /* WifiTableViewCell.h */,
+				71FC430F198A27E400FEF070 /* WifiTableViewCell.m */,
 			);
 			name = "View&Cell";
 			sourceTree = "<group>";
@@ -2283,15 +2301,14 @@
 				EF71ED94191CD08A00A434CB /* logo.png in Resources */,
 				EF4A5EE9198B27F600A54EB2 /* 首页.png in Resources */,
 				711BB9C5195C1F5200265F41 /* 切图_02.png in Resources */,
-				EF4A5EE6198B27F600A54EB2 /* 选择 (2).png in Resources */,
-				EF4A5E7F198B27F600A54EB2 /* qietu_164.png in Resources */,
+
 				EFF53F2B1779BB8500C4AEB4 /* cutButton.png in Resources */,
 				EFF53F411779BB8500C4AEB4 /* numMessage.png in Resources */,
 				EFF53F551779BB8500C4AEB4 /* setSelf.png in Resources */,
 				EFF53F571779BB8500C4AEB4 /* setSureOrange.png in Resources */,
 				EFEFD6FA1804E87C00D5A74D /* message_history_selected.png in Resources */,
 				EF57848D1781875200D1C9C4 /* messageBorder.png in Resources */,
-				EF4A5EA0198B27F600A54EB2 /* 分享人员 (2).png in Resources */,
+
 				7169A387195D114F0040F5E4 /* 切图_20.png in Resources */,
 				EF4A5EAE198B27F600A54EB2 /* 删除.png in Resources */,
 				EF233DAD1786C3AC0030DB4C /* headIcon_1_gray.png in Resources */,
@@ -2318,6 +2335,7 @@
 				711BB9C6195C1F5200265F41 /* 切图_04.png in Resources */,
 				EF4A5EA9198B27F600A54EB2 /* 实时监控-未选 (3).png in Resources */,
 				EFF7BA741788868B0035FB82 /* .config in Resources */,
+
 				EFD666401834C0E000DD2A02 /* lock_off.png in Resources */,
 				EF4A5ED0198B27F600A54EB2 /* 登录 (2).png in Resources */,
 				EFF7BA751788868B0035FB82 /* .version in Resources */,
@@ -2327,9 +2345,7 @@
 				EF1B062A178C65E400C08313 /* blackArrow.png in Resources */,
 				EF4A5E93198B27F600A54EB2 /* 全屏监控-未选 (4).png in Resources */,
 				7198D5E118D6D6C70011EA28 /* 记录.png in Resources */,
-				EF4A5E82198B27F600A54EB2 /* qietu_174.png in Resources */,
-				EF4A5EB2198B27F600A54EB2 /* 设置.png in Resources */,
-				EF4A5EF0198B45B800A54EB2 /* qietu_257.png in Resources */,
+
 				7174A0BA194EC88F00DCC781 /* 4031.wav in Resources */,
 				EFEFD6FB1804E87C00D5A74D /* message_history.png in Resources */,
 				EF1B062B178C65E400C08313 /* blackArrow@2x.png in Resources */,
@@ -2337,17 +2353,14 @@
 				EF1B062D178C65E400C08313 /* blueArrow@2x.png in Resources */,
 				EF1B062E178C65E400C08313 /* grayArrow.png in Resources */,
 				EF96F30418D2E279002C1245 /* Images.xcassets in Resources */,
-				7198D5DC18D6D6C70011EA28 /* 分享.png in Resources */,
-				EF1B062F178C65E400C08313 /* grayArrow@2x.png in Resources */,
+
 				7198D5D818D6D6C70011EA28 /* skip.png in Resources */,
 				EF4A5EA8198B27F600A54EB2 /* 实时监控-未选 (2).png in Resources */,
 				EF4A5EC2198B27F600A54EB2 /* 播放视频 (1).png in Resources */,
 				EF1B0630178C65E400C08313 /* whiteArrow.png in Resources */,
 				EF4A5EDC198B27F600A54EB2 /* 网络选择 (2).png in Resources */,
 				7198D5D618D6D6C70011EA28 /* first_login_welcome.png in Resources */,
-				EF4A5EE2198B27F600A54EB2 /* 返回.png in Resources */,
-				EF4A5EC9198B27F600A54EB2 /* 更多 (1).png in Resources */,
-				EF4A5E83198B27F600A54EB2 /* qietu_40.png in Resources */,
+
 				EF1B0631178C65E400C08313 /* whiteArrow@2x.png in Resources */,
 				EF4A5EE5198B27F600A54EB2 /* 选择 (1).png in Resources */,
 				71AA5B9518FA21FB0043D208 /* start2.png in Resources */,
@@ -2366,9 +2379,10 @@
 				7198D5D918D6D6C70011EA28 /* 主页-按下.png in Resources */,
 				EF2EEB921799239900CFE7C8 /* recordClock.png in Resources */,
 				71AA5B9418FA21FB0043D208 /* start1.png in Resources */,
+
 				EF1D3C5518D2B2D90079C358 /* NextForgotPasswordViewController.xib in Resources */,
 				711BB9DD195C1F5200265F41 /* 切图_61.png in Resources */,
-				EF4A5EE4198B27F600A54EB2 /* 退出系统-取消显示.png in Resources */,
+
 				EF040440179DA20500F414BD /* imageNotFound.png in Resources */,
 				EFFDA5F117A8BCBE0090EFBB /* flashPage_1.png in Resources */,
 				EF4A5E89198B27F600A54EB2 /* 主菜单栏-选中 (6).png in Resources */,
@@ -2382,7 +2396,7 @@
 				EF4A5EA6198B27F600A54EB2 /* 删除.png in Resources */,
 				71A41D881951778800B45C7E /* AboutUsViewController.xib in Resources */,
 				EFFDA5F417A8BCBE0090EFBB /* flashPage_4.png in Resources */,
-				711BB9E1195C1F5200265F41 /* 切图_67.png in Resources */,
+
 				EFFDA5F517A8BCBE0090EFBB /* flashPage_5.png in Resources */,
 				7196B07B18D837C400B8D8BB /* ChaneNickNameViewController.xib in Resources */,
 				EFD666501834CA6500DD2A02 /* vertical_switch_on.png in Resources */,
@@ -2394,6 +2408,7 @@
 				71A86CEB190A04FC004AFA50 /* help.html in Resources */,
 				EF4A5EE8198B27F600A54EB2 /* 通讯录.png in Resources */,
 				711BB9CC195C1F5200265F41 /* 切图_21.png in Resources */,
+
 				7198D5E018D6D6C70011EA28 /* 记录-按下.png in Resources */,
 				7198D5DD18D6D6C70011EA28 /* 更多-按下.png in Resources */,
 				EF4A5EBE198B27F600A54EB2 /* 拍照2.png in Resources */,
@@ -2409,10 +2424,12 @@
 				EF4A5EC0198B27F600A54EB2 /* 拍照4.png in Resources */,
 				EF3578C417AB7654009C6516 /* logo_login.png in Resources */,
 				EF3578CA17AB8AC2009C6516 /* menu_background.png in Resources */,
+
 				EF4A5ECD198B27F600A54EB2 /* 横版导航栏背景.png in Resources */,
 				EF4A5E78198B27F600A54EB2 /* qietu_124.png in Resources */,
 				EF4A5EE1198B27F600A54EB2 /* 输入框.png in Resources */,
 				EF4A5EA4198B27F600A54EB2 /* 切换 (1).png in Resources */,
+
 				EF3578D017AB8D90009C6516 /* login_forget.png in Resources */,
 				EF3578D217AB8ED1009C6516 /* login_forget_highlight.png in Resources */,
 				EF4A5EDF198B27F600A54EB2 /* 设置.png in Resources */,
@@ -2447,11 +2464,7 @@
 				EF3578EB17ABB7B0009C6516 /* setSure_highlight.png in Resources */,
 				EF4A5E88198B27F600A54EB2 /* 主菜单栏-选中 (5).png in Resources */,
 				711BB9CE195C1F5200265F41 /* 切图_23.png in Resources */,
-				EF1D3C5918D2B2D90079C358 /* RegisterViewController.xib in Resources */,
-				EF3578EC17ABB7B0009C6516 /* setSure.png in Resources */,
-				EF4A5EB1198B27F600A54EB2 /* 添加.png in Resources */,
-				EF4A5ED9198B27F600A54EB2 /* 编辑.png in Resources */,
-				EF4A5EB6198B27F600A54EB2 /* 导航栏背景.png in Resources */,
+
 				7196B05318D7E53C00B8D8BB /* 多选未选中.png in Resources */,
 				EFE4CC2117AEB7300095B476 /* camera.png in Resources */,
 				EFE4CC2417AEB8490095B476 /* family_record.png in Resources */,
@@ -2484,7 +2497,7 @@
 				EF4A5E7C198B27F600A54EB2 /* qietu_149.png in Resources */,
 				EF517DA91811340100EB5CED /* Icon-80.png in Resources */,
 				71AD0D05195C28DF002B34BF /* 分割线.png in Resources */,
-				EF4A5E8F198B27F600A54EB2 /* 主页摄像头.png in Resources */,
+
 				EFD666411834C0E000DD2A02 /* lock_on_highlighted.png in Resources */,
 				7198D5D418D6D6C70011EA28 /* alert.png in Resources */,
 				71AC1C0D18E3BFA700842C38 /* 返回.png in Resources */,
@@ -2493,6 +2506,7 @@
 				EF4A5ED3198B27F600A54EB2 /* 绑定设备-未选 (1).png in Resources */,
 				EFEA80E117B0015900671744 /* speechButton.png in Resources */,
 				EFD83C4317B0D0D6006CCF05 /* addRecord_highlight.png in Resources */,
+
 				7198D5DF18D6D6C70011EA28 /* 添加设备.png in Resources */,
 				EFD83C4417B0D0D6006CCF05 /* addRecord.png in Resources */,
 				EF4A5EAB198B27F600A54EB2 /* 实时监控-选中 (1).png in Resources */,
@@ -2512,6 +2526,7 @@
 				EFD83C8817B0F759006CCF05 /* home.png in Resources */,
 				7195029718D43E85006FCB7F /* LoginViewController.xib in Resources */,
 				EFD83C8917B0F759006CCF05 /* message_highlight.png in Resources */,
+
 				EFD6664E1834CA6500DD2A02 /* vertical_switch_off.png in Resources */,
 				EF4A5ECF198B27F600A54EB2 /* 登录 (1).png in Resources */,
 				EF4A5E8C198B27F600A54EB2 /* 主页- 消息背景 (1).png in Resources */,
@@ -2525,8 +2540,7 @@
 				EFD666481834C0E000DD2A02 /* vertical_up_bar.png in Resources */,
 				EFD83C8D17B0F759006CCF05 /* system_highlight.png in Resources */,
 				EFD83C8E17B0F759006CCF05 /* system.png in Resources */,
-				EF96F12F18D2E110002C1245 /* Default.png in Resources */,
-				EFD83C9317B0FC7A006CCF05 /* camera_button_switch.png in Resources */,
+
 				711BB9D9195C1F5200265F41 /* 切图_55.png in Resources */,
 				EF4A5E94198B27F600A54EB2 /* 全屏监控-未选 (5).png in Resources */,
 				711BB9E0195C1F5200265F41 /* 切图_65.png in Resources */,
@@ -2653,6 +2667,7 @@
 				EFF7B9FF1788862B0035FB82 /* APICommon.mm in Sources */,
 				71D66ED0195D535800896171 /* HomeViewController.m in Sources */,
 				EFF7BA001788862B0035FB82 /* CameraDBUtils.mm in Sources */,
+				71FC430D198A1DFD00FEF070 /* VedioQualityTableViewCell.m in Sources */,
 				EFF7BA011788862B0035FB82 /* CameraListMgt.mm in Sources */,
 				71AAF66218ED22E100C3B0D8 /* PhotoScanViewController.m in Sources */,
 				EFF7BA021788862B0035FB82 /* CgiPacket.cpp in Sources */,
@@ -2706,7 +2721,9 @@
 				EFE8E6F8179F438B001689F4 /* CameraParamSettingViewController.m in Sources */,
 				EFF866CD17A220D40027570F /* CameraSetNameViewController.m in Sources */,
 				EFF0373617CCA30A00A1DDDA /* BabyWithCameraManagement.mm in Sources */,
+				71FC4310198A27E400FEF070 /* WifiTableViewCell.m in Sources */,
 				71A95D071921F3190075CC61 /* MessageCell.m in Sources */,
+				71FC4313198A344A00FEF070 /* AddDeviceViewController.m in Sources */,
 				EF14B7AC17D32CE0004F47AC /* CameraSetWifiViewController.m in Sources */,
 				71A918FE1922FDB600034D68 /* myCollectionViewCell.m in Sources */,
 				EFED9DE517D59385009A62BA /* UncaughtExceptionHandler.m in Sources */,

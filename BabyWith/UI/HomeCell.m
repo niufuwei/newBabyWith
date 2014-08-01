@@ -22,17 +22,17 @@
     if (self) {
         // Initialization code
         
-        image = [[UIImageView alloc] initWithFrame:CGRectMake(5, 15, 25, 30)];
+        image = [[UIImageView alloc] initWithFrame:CGRectMake(10, 7.5, 35, 35)];
         [self.contentView addSubview:image];
         
-        title = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, 5, 200, 30)];
+        title = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, 0, 200, 30)];
         title.backgroundColor = [UIColor clearColor];
-        title.font = [UIFont systemFontOfSize:17];
+        title.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:title];
         
-        state = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, title.frame.size.height+title.frame.origin.y, 120, 20)];
+        state = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, title.frame.size.height+title.frame.origin.y - 5, 120, 20)];
         state.backgroundColor = [UIColor clearColor];
-        state.font = [UIFont systemFontOfSize:12];
+        state.font = [UIFont systemFontOfSize:13];
         state.textColor = [UIColor grayColor];
         [self.contentView addSubview:state];
         
@@ -42,8 +42,8 @@
         isShare.textColor =babywith_green_color;
         [self.contentView addSubview:isShare];
         
-        jiantou = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width-25,25, 10, 13)];
-        [jiantou setImage:[UIImage imageNamed:@"greenjiantou.png"]];
+        jiantou = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width-25,18.5, 10, 13)];
+        [jiantou setImage:[UIImage imageNamed:@"qietu_40.png"]];
         [self addSubview:jiantou];
 
         

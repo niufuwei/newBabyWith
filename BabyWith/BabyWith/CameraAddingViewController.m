@@ -53,7 +53,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = @"看护器绑定";
+        titleLabel.text = @"绑定设备";
         titleLabel.textColor = babywith_text_background_color;
         titleLabel.font = [UIFont systemFontOfSize:20];
         titleLabel.textAlignment = NSTextAlignmentCenter;

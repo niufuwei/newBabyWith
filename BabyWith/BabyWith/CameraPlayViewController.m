@@ -107,8 +107,9 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             
             if ([[[dic objectForKey:@"id_member"] stringValue] isEqualToString:@"1"])
             {
-                UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 35)];
-                [navButton setTitle:@"设置" forState:UIControlStateNormal];
+                UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 0, 20, 20)];
+                //[navButton setTitle:@"设置" forState:UIControlStateNormal];
+                [navButton setBackgroundImage:[UIImage imageNamed:@"设置.png"] forState:UIControlStateNormal];
                 [navButton addTarget:self action:@selector(cameraSettings:) forControlEvents:UIControlEventTouchUpInside];
                 UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
                 self.navigationItem.rightBarButtonItem = rightItem;
@@ -148,36 +149,40 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     _lView.alpha=0.5;
     _lView.hidden = YES;
     
-    
+    //截图
     screenshotsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     screenshotsButton.frame = CGRectMake(10, 10, 60, 40);
     screenshotsButton.tag = 1;
-    [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"切图_02.png"] forState:UIControlStateNormal];
-    [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"切图_20.png"] forState:UIControlStateHighlighted];
+    [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"横屏截屏(1).png"] forState:UIControlStateNormal];
+    [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"横屏截屏(2).png"] forState:UIControlStateHighlighted];
     [screenshotsButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:screenshotsButton];
     
-    
+    //录制视频
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.tag = 2;
     button2.frame = CGRectMake(self.view.frame.size.height/6, 10, 60, 40);
-    [button2 setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
+    [button2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
+    [button2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(2).png"] forState:UIControlStateHighlighted];
     [button2 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:button2];
     
+    //分享人员
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
     button3.tag = 3;
     button3.frame = CGRectMake( self.view.frame.size.height*2/6,10, 60, 40);
-    [button3 setBackgroundImage:[UIImage imageNamed:@"切图_06.png"] forState:UIControlStateNormal];
+    [button3 setBackgroundImage:[UIImage imageNamed:@"横屏分享人员(1).png"] forState:UIControlStateNormal];
+    [button3 setBackgroundImage:[UIImage imageNamed:@"横屏分享人员(2).png"] forState:UIControlStateHighlighted];
     [button3 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:button3];
 
     
-
+    //开启对讲
     UIButton *button4 = [UIButton buttonWithType:UIButtonTypeCustom];
     button4.tag = 13;
     button4.frame = CGRectMake( self.view.frame.size.height*3/6,10, 60, 40);
-    [button4 setBackgroundImage:[UIImage imageNamed:@"切图_24.png"] forState:UIControlStateNormal];
+    [button4 setBackgroundImage:[UIImage imageNamed:@"横屏开启对讲(1).png"] forState:UIControlStateNormal];
+    [button4 setBackgroundImage:[UIImage imageNamed:@"横屏开启对讲(2).png"] forState:UIControlStateHighlighted];
     [button4 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:button4];
 
@@ -186,8 +191,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     UIButton *button5 = [UIButton buttonWithType:UIButtonTypeCustom];
     button5.tag = 14;
     button5.frame = CGRectMake( self.view.frame.size.height*3/6,10, 60, 40);
-    [button5 setBackgroundImage:[UIImage imageNamed:@"切图_08.png"] forState:UIControlStateNormal];
-    
+    [button5 setBackgroundImage:[UIImage imageNamed:@"横屏按住说话(1).png"] forState:UIControlStateNormal];
+    [button5 setBackgroundImage:[UIImage imageNamed:@"横屏按住说话(2).png"] forState:UIControlStateHighlighted];
     [button5 addTarget:self action:@selector(startListen:) forControlEvents:UIControlEventTouchUpInside];
     [button5 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchDown];
     [_lView addSubview:button5];
@@ -197,7 +202,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     UIButton *button6 = [UIButton buttonWithType:UIButtonTypeCustom];
     button6.tag = 15;
     button6.frame = CGRectMake( self.view.frame.size.height*4/6,10, 60, 40);
-    [button6 setBackgroundImage:[UIImage imageNamed:@"切图_10.png"] forState:UIControlStateNormal];
+    [button6 setBackgroundImage:[UIImage imageNamed:@"横屏结束对讲(1).png"] forState:UIControlStateNormal];
+    [button6 setBackgroundImage:[UIImage imageNamed:@"横屏结束对讲(2).png"] forState:UIControlStateHighlighted];
     [button6 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:button6];
     button6.hidden = YES;
@@ -206,7 +212,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     UIButton *button7 = [UIButton buttonWithType:UIButtonTypeCustom];
     button7.tag = 4;
     button7.frame = CGRectMake(self.view.frame.size.height*5/6,10, 60, 40);
-    [button7 setBackgroundImage:[UIImage imageNamed:@"切图_退出全屏.png"] forState:UIControlStateNormal];
+    [button7 setBackgroundImage:[UIImage imageNamed:@"横屏切换全屏(1).png"] forState:UIControlStateNormal];
+    [button7 setBackgroundImage:[UIImage imageNamed:@"横屏切换全屏(2).png"] forState:UIControlStateHighlighted];
     [button7 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lView addSubview:button7];
     
@@ -222,7 +229,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.tag = i+1;
-        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"切图_%d.png",i+54]] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"竖屏(%d).png",i+1]] forState:UIControlStateNormal];
 //        [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"切图_%d.png",i+60]] forState:UIControlStateSelected];
         [button setTitleColor:babywith_green_color forState:UIControlStateNormal];
         button.frame = CGRectMake(320/4*i, 0, 320/4, 44);
@@ -238,18 +245,23 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     _lTalkView.frame = CGRectMake(0, self.view.frame.size.height-44-44, 320, 44);
     [self.view addSubview:_lTalkView];
     
+    
+    UIImageView *lineImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
+    lineImage.image = [UIImage imageNamed:@"分隔栏.png"];
+    [_lTalkView addSubview:lineImage];
+    
     //开启对讲
     UIButton *startTalkButton = [UIButton buttonWithType:UIButtonTypeCustom];
     startTalkButton.tag = 13;
-    [startTalkButton setBackgroundImage:[UIImage imageNamed:@"切图_71.png"] forState:UIControlStateNormal];
+    [startTalkButton setBackgroundImage:[UIImage imageNamed:@"qietu_148.png"] forState:UIControlStateNormal];
     startTalkButton.frame = CGRectMake(40 ,5 ,240 ,34);
     [startTalkButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lTalkView addSubview:startTalkButton];
     //按住说话
     UIButton *pressTalkButton = [UIButton buttonWithType:UIButtonTypeCustom];
     pressTalkButton.tag = 14;
-    [pressTalkButton setBackgroundImage:[UIImage imageNamed:@"切图_74.png"] forState:UIControlStateNormal];
-    pressTalkButton.frame = CGRectMake(0 ,5 ,320/4+20 ,34);
+    [pressTalkButton setBackgroundImage:[UIImage imageNamed:@"qietu_124.png"] forState:UIControlStateNormal];
+    pressTalkButton.frame = CGRectMake(10 ,5 ,320/4+20 ,34);
     [pressTalkButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchDown];
     [pressTalkButton addTarget:self action:@selector(startListen:) forControlEvents:UIControlEventTouchUpInside];
     [_lTalkView addSubview:pressTalkButton];
@@ -257,8 +269,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     
     UIButton *endTalkButton = [UIButton buttonWithType:UIButtonTypeCustom];
     endTalkButton.tag = 15;
-    [endTalkButton setBackgroundImage:[UIImage imageNamed:@"切图_76.png"] forState:UIControlStateNormal];
-    endTalkButton.frame = CGRectMake(240-20 ,5 ,320/4+20 ,34);
+    [endTalkButton setBackgroundImage:[UIImage imageNamed:@"qietu_149.png"] forState:UIControlStateNormal];
+    endTalkButton.frame = CGRectMake(210 ,5 ,100 ,34);
     [endTalkButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_lTalkView addSubview:endTalkButton];
     endTalkButton.hidden = YES;
@@ -573,11 +585,11 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             
             [self performSelector:@selector(findBtn) withObject:self afterDelay:1.0];
             if (_isFullScreen) {
-                [button setBackgroundImage:[UIImage imageNamed:@"切图_21.png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:[UIImage imageNamed:@"横屏录制(2).png"] forState:UIControlStateNormal];
             }
             else
             {
-                [button setBackgroundImage:[UIImage imageNamed:@"切图_61.png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:[UIImage imageNamed:@"竖屏录制(2).png"] forState:UIControlStateNormal];
             }
             
             hasSavedVideoImage = TRUE;
@@ -588,11 +600,11 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             [button setUserInteractionEnabled:NO];
             _isRecord = 2;
             if (_isFullScreen) {
-                [button setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
             }
             else
             {
-                [button setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
             }
             
             
@@ -680,7 +692,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
      //停止收听
         if (_isFullScreen)
         {
-            [button setBackgroundImage:[UIImage imageNamed:@"切图_23.png"] forState:UIControlEventTouchDown];
+            [button setBackgroundImage:[UIImage imageNamed:@"横屏按住说话(2).png"] forState:UIControlEventTouchDown];
         }
         
         appDelegate.m_PPPPChannelMgt->StopPPPPAudio([_cameraID UTF8String]);
@@ -728,19 +740,19 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
         
         if (_isRecord==1) {
             UIButton *btn = (UIButton *)[_lView viewWithTag:2];
-            [btn setBackgroundImage:[UIImage imageNamed:@"切图_21.png"] forState:UIControlStateNormal];
+            [btn setBackgroundImage:[UIImage imageNamed:@"横屏录制(2).png"] forState:UIControlStateNormal];
             
             UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-            [btn1 setBackgroundImage:[UIImage imageNamed:@"切图_61.png"] forState:UIControlStateNormal];
+            [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏录制(2).png"] forState:UIControlStateNormal];
             
         }
         else
         {
             UIButton *btn = (UIButton *)[_lView viewWithTag:2];
-            [btn setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
+            [btn setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
             
             UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-            [btn1 setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+            [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
         }
         
         
@@ -924,11 +936,11 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
                 [mytoast showWithText:@"内存不足，自动保存视频"];
                 
                 UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-                [btn1 setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+                [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
                 
                 
                 UIButton *btn2 = (UIButton *)[_lView viewWithTag:2];
-                [btn2 setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
+                [btn2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
             });
 
            
@@ -2101,8 +2113,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
         if (_isRecord ==1)
         {
             _isRecord = 2;
-            [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
-            [(UIButton *)[_lTalkView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+            [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
+            [(UIButton *)[_lTalkView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
         }
         
         
@@ -2148,8 +2160,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
         {
             _isRecord = 2;
             //[btn1 setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
-            [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
-            [(UIButton *)[_lTalkView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+            [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
+            [(UIButton *)[_lTalkView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
         }
         
         
@@ -2169,8 +2181,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     [_imageArray removeAllObjects];
     [self.collectionImageArray removeAllObjects];
     [self.collectionView reloadData];
-    [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
-    [(UIButton *)[_pView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+    [(UIButton *)[_lView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
+    [(UIButton *)[_pView viewWithTag:2] setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
 
     
     [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"hasComeBackFromBackground"];
@@ -2303,10 +2315,10 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
         [_lTalkView viewWithTag:15].hidden = YES;
 
         UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-        [btn1 setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+        [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
         
         UIButton *btn2 = (UIButton *)[_lView viewWithTag:2];
-        [btn2 setBackgroundImage:[UIImage imageNamed:@"切图_04.png"] forState:UIControlStateNormal];
+        [btn2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
         
        
         
@@ -2379,7 +2391,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     if(alertView.tag ==11111)
     {
         UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-        [btn1 setBackgroundImage:[UIImage imageNamed:@"切图_55.png"] forState:UIControlStateNormal];
+        [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
         
          _isRecord =3;
         _isViode = FALSE;
