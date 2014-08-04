@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface AVCallController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>
+@protocol ImagePickerControllerDelegate <NSObject>
+
+-(void)cameraPhoto:(NSArray*)imageArra;
+
+@end
+@interface AVCallController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate,UIImagePickerControllerDelegate>
 {
     //UI
     UILabel*labelState;
@@ -20,12 +25,19 @@
     AVCaptureDevice *avCaptureDevice;
     BOOL firstFrame; //是否为第一帧
     int producerFps;
-    
+    BOOL isStop;
+    UIImageView * SaveImage;
+    UIButton *imageButton;
+    BOOL isBackFront;
+    AVAudioPlayer *_avAudioPlayer;
+    NSMutableArray * _imageArray;
     
 }
+
+
 @property (nonatomic, retain) AVCaptureSession *avCaptureSession;
 @property (nonatomic, retain) UILabel *labelState;
-
+@property(nonatomic,assign)id<ImagePickerControllerDelegate> customDelegate;
 
 - (void)createControl;
 - (AVCaptureDevice *)getFrontCamera;

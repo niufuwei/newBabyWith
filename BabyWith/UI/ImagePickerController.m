@@ -145,10 +145,10 @@
 //        [photoBtn release];
         
         self.cameraOverlayView = overlyView;
-        CGRect hh =  self.cameraOverlayView.frame;
-        hh.origin.y = 20;
-        self.cameraOverlayView.frame = hh;
-//        [overlyView release];
+//        CGRect hh =  self.cameraOverlayView.frame;
+//        hh.origin.y = 20;
+//        self.cameraOverlayView.frame = hh;
+        [overlyView release];
     }
 }
 - (void)viewDidLoad

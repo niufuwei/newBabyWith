@@ -50,13 +50,21 @@
     {
         
         
+//        
+//        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(30, -30, 20, 20)];
+//        [navButton setImage:[UIImage imageNamed:@"添加"] forState:UIControlStateNormal];
+//        [navButton addTarget:self action:@selector(bind:) forControlEvents:UIControlEventTouchUpInside];
+//        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+//        self.navigationItem.rightBarButtonItem = rightItem;
+        
+        
         //右导航--删除按钮
         UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 74, 36)];
         
         [setButton addTarget:self action:@selector(deletePic) forControlEvents:UIControlEventTouchUpInside];
         [setButton setTitle:@"删除" forState:UIControlStateNormal];
-        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
+        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
         setButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: setButton];
         self.navigationItem.rightBarButtonItem = rightItem;
@@ -116,7 +124,7 @@
         //是视频图片的话要添加开始按钮一样的东西作为普通图片和视频区别
         if ([[dic objectForKey:@"is_vedio"] intValue] ==1)
         {
-            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start2.png"]] ;
+            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"播放视频 (4).png"]] ;
             startImage.frame = CGRectMake(128, 58, 64, 64);
             [imageView addSubview:startImage];
             
