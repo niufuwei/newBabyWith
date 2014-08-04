@@ -254,13 +254,14 @@
     //
     AVCaptureVideoDataOutput *avCaptureVideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     NSDictionary*settings = [[NSDictionary alloc] initWithObjectsAndKeys:
-                             //[NSNumber numberWithUnsignedInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange], kCVPixelBufferPixelFormatTypeKey,
-                             [NSNumber numberWithInt:self.view.frame.size.width], (id)kCVPixelBufferWidthKey,
-                             [NSNumber numberWithInt:self.view.frame.size.height], (id)kCVPixelBufferHeightKey,
+                             [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey,
+//                             [NSNumber numberWithInt:self.view.frame.size.width], (id)kCVPixelBufferWidthKey,
+//                             [NSNumber numberWithInt:self.view.frame.size.height], (id)kCVPixelBufferHeightKey,
                              nil];
     avCaptureVideoDataOutput.videoSettings = settings;
     [settings release];
-    avCaptureVideoDataOutput.minFrameDuration = CMTimeMake(1, self->producerFps);
+//    avCaptureVideoDataOutput.minFrameDuration = CMTimeMake(1, self->producerFps);
+    
     /*We create a serial queue to handle the processing of our frames*/
     dispatch_queue_t queue = dispatch_queue_create("org.doubango.idoubs", NULL);
     [avCaptureVideoDataOutput setSampleBufferDelegate:self queue:queue];
@@ -488,8 +489,36 @@
         [appDelegate.appDefault setObject:mutArray forKey:@"imageEditArray"];
         [_customDelegate cameraPhoto:_imageArray];
     }];
-    [[NSNotificationCenter defaultCenter ]postNotificationName:@"imageCollectionReload" object:self userInfo:nil];
+    [[NSNotificationCenter defaultCenter ]postNotificationName:@"imageCollectionReload" object:nil userInfo:nil];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    [super viewWillAppear:YES];
+    
+    NSLog(@"视图出现的时候的array is %@",[appDelegate.appDefault objectForKey:@"imageEditArray"]);
+    
+    if ([(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"] count] == 0)
+    {
+        SaveImage.hidden = YES;
+        imageButton.hidden = NO;
+        
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"]];
+        _imageArray = array;
+    }
+    else if([(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"] count] > 0)
+    {
+        NSLog(@"last object is %@",[(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"] lastObject]);
+        
+        NSData *data = [NSData dataWithContentsOfFile:[[(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"] lastObject] objectForKey:@"image"] ];
+        SaveImage.image = [UIImage imageWithData:data];
+        
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:(NSArray *)[appDelegate.appDefault objectForKey:@"imageEditArray"]];
+        _imageArray = array;
+        
+    }
 }
 -(void)imageClicked
 {

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCB5BC2198F1E8B001D177E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC1198F1E8B001D177E /* AddressBook.framework */; };
+		1DCB5BC4198F1E90001D177E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC3198F1E90001D177E /* AddressBookUI.framework */; };
+		1DCB5BC6198F1ECB001D177E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC5198F1ECB001D177E /* ImageIO.framework */; };
+		1DCB5BC8198F1ED1001D177E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC7198F1ED1001D177E /* CoreImage.framework */; };
 		1DDF0DBB198B3F7D00E26961 /* AVCallController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */; };
-		1DDF0DBF198B674700E26961 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDF0DBE198B674700E26961 /* ImageIO.framework */; };
-		1DDF0DC3198B692400E26961 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDF0DC2198B692400E26961 /* CoreImage.framework */; };
 		1DEEFEE8198B904100ED2C84 /* 1374.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEFEE7198B904100ED2C84 /* 1374.wav */; };
 		710AEDD5190795C000B19A58 /* NewMessageCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710AEDD3190794B700B19A58 /* NewMessageCell1.xib */; };
 		710AEDD81907AA1B00B19A58 /* SharedPersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710AEDD71907AA1B00B19A58 /* SharedPersonsViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -62,8 +64,6 @@
 		71CAFE29198B6EF200E2DC1F /* 竖屏切换全屏(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE0A198B6EF200E2DC1F /* 竖屏切换全屏(2).png */; };
 		71CAFE2A198B6EF200E2DC1F /* qietu_173.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE0B198B6EF200E2DC1F /* qietu_173.png */; };
 		71CAFE2B198B6EF200E2DC1F /* qietu_174.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE0C198B6EF200E2DC1F /* qietu_174.png */; };
-		71CAFE2E198B6FB900E2DC1F /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CAFE2D198B6FB900E2DC1F /* AddressBookUI.framework */; };
-		71CAFE30198B6FF400E2DC1F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CAFE2F198B6FF400E2DC1F /* AddressBook.framework */; };
 		71CAFE4D198B718600E2DC1F /* 关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE45198B718600E2DC1F /* 关闭.png */; };
 		71CAFE4E198B718600E2DC1F /* 删除.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE46198B718600E2DC1F /* 删除.png */; };
 		71CAFE4F198B718600E2DC1F /* 导航栏背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE47198B718600E2DC1F /* 导航栏背景.png */; };
@@ -225,8 +225,6 @@
 		EF4A5EF6198B6E4A00A54EB2 /* qietu_261.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */; };
 		EF4A5EF8198B88FE00A54EB2 /* qietu_267.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */; };
 		EF4A5EFA198B8AB200A54EB2 /* qietu_271.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */; };
-		EF4A5EFC198B8D6F00A54EB2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4A5EFB198B8D6F00A54EB2 /* AddressBook.framework */; };
-		EF4A5EFE198B8D7700A54EB2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4A5EFD198B8D7700A54EB2 /* AddressBookUI.framework */; };
 		EF4A5F12198B90B800A54EB2 /* 更多 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5F0E198B90B800A54EB2 /* 更多 (1).png */; };
 		EF4A5F13198B90B800A54EB2 /* 更多 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5F0F198B90B800A54EB2 /* 更多 (2).png */; };
 		EF4A5F14198B90B800A54EB2 /* 更多 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5F10198B90B800A54EB2 /* 更多 (3).png */; };
@@ -324,11 +322,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DCB5BC1198F1E8B001D177E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		1DCB5BC3198F1E90001D177E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		1DCB5BC5198F1ECB001D177E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		1DCB5BC7198F1ED1001D177E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		1DDF0DB9198B3F7D00E26961 /* AVCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCallController.h; sourceTree = "<group>"; };
 		1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCallController.mm; sourceTree = "<group>"; };
-		1DDF0DBC198B673C00E26961 /* ImageCaptureCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageCaptureCore.framework; path = System/Library/Frameworks/ImageCaptureCore.framework; sourceTree = SDKROOT; };
-		1DDF0DBE198B674700E26961 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		1DDF0DC2198B692400E26961 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = ../../CoreImage.framework; sourceTree = "<group>"; };
 		1DEEFEE7198B904100ED2C84 /* 1374.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1374.wav; path = BabyWith/images/1374.wav; sourceTree = "<group>"; };
 		710AEDD3190794B700B19A58 /* NewMessageCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMessageCell1.xib; sourceTree = "<group>"; };
 		710AEDD61907AA1B00B19A58 /* SharedPersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedPersonsViewController.h; sourceTree = "<group>"; };
@@ -409,8 +408,6 @@
 		71CAFE0A198B6EF200E2DC1F /* 竖屏切换全屏(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "竖屏切换全屏(2).png"; sourceTree = "<group>"; };
 		71CAFE0B198B6EF200E2DC1F /* qietu_173.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_173.png; sourceTree = "<group>"; };
 		71CAFE0C198B6EF200E2DC1F /* qietu_174.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_174.png; sourceTree = "<group>"; };
-		71CAFE2D198B6FB900E2DC1F /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		71CAFE2F198B6FF400E2DC1F /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		71CAFE45198B718600E2DC1F /* 关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭.png"; sourceTree = "<group>"; };
 		71CAFE46198B718600E2DC1F /* 删除.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除.png"; sourceTree = "<group>"; };
 		71CAFE47198B718600E2DC1F /* 导航栏背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航栏背景.png"; sourceTree = "<group>"; };
@@ -611,8 +608,6 @@
 		EF4A5EF5198B6E4A00A54EB2 /* qietu_261.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_261.png; sourceTree = "<group>"; };
 		EF4A5EF7198B88FE00A54EB2 /* qietu_267.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_267.png; sourceTree = "<group>"; };
 		EF4A5EF9198B8AB200A54EB2 /* qietu_271.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_271.png; sourceTree = "<group>"; };
-		EF4A5EFB198B8D6F00A54EB2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		EF4A5EFD198B8D7700A54EB2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		EF4A5F0E198B90B800A54EB2 /* 更多 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (1).png"; sourceTree = "<group>"; };
 		EF4A5F0F198B90B800A54EB2 /* 更多 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (2).png"; sourceTree = "<group>"; };
 		EF4A5F10198B90B800A54EB2 /* 更多 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (3).png"; sourceTree = "<group>"; };
@@ -852,6 +847,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCB5BC8198F1ED1001D177E /* CoreImage.framework in Frameworks */,
+				1DCB5BC6198F1ECB001D177E /* ImageIO.framework in Frameworks */,
+				1DCB5BC4198F1E90001D177E /* AddressBookUI.framework in Frameworks */,
+				1DCB5BC2198F1E8B001D177E /* AddressBook.framework in Frameworks */,
 				EFF53F811779BCBF00C4AEB4 /* QuartzCore.framework in Frameworks */,
 				EFF53F5F1779BC0600C4AEB4 /* AudioToolbox.framework in Frameworks */,
 				71AC54821904BD6F00DEBB46 /* AdSupport.framework in Frameworks */,
@@ -1384,6 +1383,10 @@
 		EFF53E4C1779B64F00C4AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DCB5BC7198F1ED1001D177E /* CoreImage.framework */,
+				1DCB5BC5198F1ECB001D177E /* ImageIO.framework */,
+				1DCB5BC3198F1E90001D177E /* AddressBookUI.framework */,
+				1DCB5BC1198F1E8B001D177E /* AddressBook.framework */,
 				71AC54811904BD6F00DEBB46 /* AdSupport.framework */,
 				EFEA10A418272B4900B4B502 /* AdSupport.framework */,
 				EFF3FE8D179C7E23001845AE /* MessageUI.framework */,
@@ -2218,7 +2221,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
+				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2261,7 +2264,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
+				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";
