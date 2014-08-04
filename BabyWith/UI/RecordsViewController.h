@@ -41,6 +41,7 @@
     NSMutableDictionary * arrayDictionary;
     UIButton * selectButton;
     BOOL isDelete;
+    BOOL isAllSelect;
 }
 @property (nonatomic,copy) UICollectionView *imageCollection;
 //-(void)DeleteRecord:(NSDictionary *)dic;

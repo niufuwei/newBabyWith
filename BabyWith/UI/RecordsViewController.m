@@ -22,6 +22,7 @@
 @interface RecordsViewController ()
 {
     UIButton *leftButton;
+    UIButton * rightButton;
 }
 @end
 
@@ -55,10 +56,19 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc] initWithCustomView: leftButton];
     self.navigationItem.leftBarButtonItem = LeftItem;
     
+    rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
+    //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
+    [rightButton setBackgroundImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
+    //    [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    //    [leftButton setBackgroundColor:[UIColor whiteColor]];
+    [rightButton addTarget:self action:@selector(RightButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: rightButton];
+    self.navigationItem.rightBarButtonItem = rightItem;
+
     
     
-    
-    [self rightButtonItemWithImageName:@"拍照.png"];
+    [rightButton setBackgroundImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
     self.delegate = self;
     
     [self titleSet:@"记录"];
@@ -110,7 +120,7 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 //        [leftButton setTitle:@"取消" forState:UIControlStateNormal];
         [leftButton setBackgroundImage:[UIImage imageNamed:@"编辑2.png"] forState:UIControlStateNormal];
 
-        [self rightButtonTitle:@"删除"];
+        [rightButton setBackgroundImage:[UIImage imageNamed:@"删除.png"] forState:UIControlStateNormal];
         [_imageCollection reloadData];
     }
     else
@@ -119,7 +129,8 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 //        [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
         [leftButton setBackgroundImage:[UIImage imageNamed:@"编辑.png"] forState:UIControlStateNormal];
         [deleteArray removeAllObjects];
-        [self rightButtonTitle:@"拍照"];
+        [rightButton setBackgroundImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
+
         [_imageCollection reloadData];
 
     }
@@ -183,7 +194,7 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
 
 //        [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
         [deleteArray removeAllObjects];
-        [self rightButtonTitle:@"拍照"];
+        [rightButton setBackgroundImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
         
         [_imageCollection reloadData];
 
@@ -656,14 +667,111 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     headerView.headerLabel.text = [_dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[[dic objectForKey:@"time_record"] doubleValue]/1000]];
     headerView.headerLabel.textColor = [UIColor grayColor];
     
+    if(selectButton)
+    {
+        [selectButton removeFromSuperview];
+    }
     selectButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    selectButton.frame = CGRectMake(self.view.frame.size.width-80, 0, 60,30 );
+    selectButton.frame = CGRectMake(self.view.frame.size.width-55, 10, 45,20 );
     selectButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    [selectButton setBackgroundImage:[UIImage imageNamed:@"selectButton.png"] forState:UIControlStateNormal];
+    [selectButton setBackgroundImage:[UIImage imageNamed:@"qietu_15.png"] forState:UIControlStateNormal];
+    selectButton.tag = indexPath.section+1;
+    [selectButton addTarget:self action:@selector(onDelete:) forControlEvents:UIControlEventTouchUpInside];
+    if(!isDelete)
+    {
+        selectButton.hidden = YES;
+
+    }
+    else
+    {
+        selectButton.hidden = NO;
+
+    }
     [headerView addSubview:selectButton];
     return headerView;
 
 
+}
+
+-(void)onDelete:(id)sender
+{
+    isAllSelect = !isAllSelect;
+    
+    UIButton * btn = (UIButton*)sender;
+    NSMutableArray *currentSectionPhoto = [_sectionArray objectAtIndex:btn.tag -1];
+    
+    NSLog(@"%@",currentSectionPhoto);
+    NSLog(@"%d",btn.tag);
+    NSLog(@"%@",deleteArray);
+    
+    if(isAllSelect)
+    {
+        [selectButton setBackgroundImage:[UIImage imageNamed:@"qietu_15.png"] forState:UIControlStateNormal];
+
+        BOOL isExit = FALSE;
+        for(int i = 0;i<currentSectionPhoto.count;i++)
+        {
+            NSIndexPath * indexpath = [NSIndexPath indexPathForRow:i inSection:btn.tag-1];
+            myCollectionViewCell * cell = (myCollectionViewCell *)[_imageCollection cellForItemAtIndexPath:indexpath];
+            
+            for(int j = 0;j<deleteArray.count;j++)
+            {
+                NSLog(@"%@",currentSectionPhoto);
+                NSLog(@"%@",deleteArray);
+                if([[deleteArray objectAtIndex:j] objectForKey:[[currentSectionPhoto objectAtIndex:i] objectForKey:@"id_record"]])
+                {
+                    isExit = TRUE;
+                    break;
+                }
+                else
+                {
+                    isExit = FALSE;
+                }
+
+            }
+           
+            if(!isExit)
+            {
+                //如果数据不存在，就插入
+
+                NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
+                [dic setObject:[currentSectionPhoto objectAtIndex:i] forKey:[[currentSectionPhoto objectAtIndex:i] objectForKey:@"id_record"]];
+                
+                [cell.deleteImage setHidden:NO];
+                [cell.deleteImage setImage:[UIImage imageNamed:@"qietu_34.png"]];
+                [deleteArray addObject:dic];
+
+            }
+            else
+            {
+                //如果数据存在，就不操作
+                
+            }
+        }
+
+    }
+    else
+    {
+        [selectButton setBackgroundImage:[UIImage imageNamed:@"编辑记录.png"] forState:UIControlStateNormal];
+
+         for(int i = 0;i<currentSectionPhoto.count;i++)
+         {
+             NSIndexPath * indexpath = [NSIndexPath indexPathForRow:i inSection:btn.tag-1];
+             myCollectionViewCell * cell = (myCollectionViewCell *)[_imageCollection cellForItemAtIndexPath:indexpath];
+             
+             for(int j = 0;j<deleteArray.count;j++)
+             {
+                 if([[deleteArray objectAtIndex:j] objectForKey:[[currentSectionPhoto objectAtIndex:i] objectForKey:@"id_record"]])
+                 {
+                     [cell.deleteImage setHidden:YES];
+                     [deleteArray removeObjectAtIndex:j];
+                     break;
+                 }
+             }
+             
+         }
+        
+    }
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
