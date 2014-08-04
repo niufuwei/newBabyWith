@@ -15,4 +15,5 @@
 
 }
 @property(nonatomic, retain)UILabel *headerLabel;
+@property (nonatomic,retain) UIButton * AllSelectButton;
 @end

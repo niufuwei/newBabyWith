@@ -39,7 +39,7 @@
     NSMutableDictionary * statusDictionary;
     NSMutableArray * deleteArray;
     NSMutableDictionary * arrayDictionary;
-    UIButton * selectButton;
+    NSMutableDictionary * selectButtonIsExit;
     BOOL isDelete;
     BOOL isAllSelect;
 }
