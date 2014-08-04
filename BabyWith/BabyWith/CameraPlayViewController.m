@@ -2083,8 +2083,6 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     NSLog(@"GoBackground=====================");
     dispatch_async(dispatch_get_main_queue(),^{
         
-        
-        
         if (_hiddenTimer) {
             [_hiddenTimer invalidate];
             _hiddenTimer = nil;

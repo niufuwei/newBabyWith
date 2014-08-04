@@ -28,35 +28,64 @@
 
 @implementation RegisterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (iPhone5)
-    {
+
         self.view = [[[NSBundle mainBundle] loadNibNamed:@"RegisterViewController" owner:self options:nil] objectAtIndex:0];
-
-    }
-    else
-    {
-    
-        self.view = [[[NSBundle mainBundle] loadNibNamed:@"RegisterView" owner:self options:nil] objectAtIndex:0];
-
-    
-    }
     [self titleSet:@"babywith"];
-    [self configurationForGreenButton:_registerButton];
+//    [self titleSet:@"babywith"];
+//    [self configurationForGreenButton:_registerButton];
+    self.navigationController.navigationBarHidden = YES;
     
-   
+    //顶部字体图片
+    UIImageView *fontImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 60, 180, 50)];
+    fontImage.image = [UIImage imageNamed:@"qietu_267.png"];
+    [self.view addSubview:fontImage];
+    //label
+    UILabel *aLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height-295, 280, 20)];
+    aLabel.text = @"注册您babywith的第一个账号";
+    aLabel.textColor = [UIColor whiteColor];
+    aLabel.font = [UIFont systemFontOfSize:16.0];
+    [self.view addSubview:aLabel];
+    //手机号码
+    
+    phoneTF = [[UITextField alloc] initWithFrame:CGRectMake(20, 215, aLabel.frame.size.height+10, 35)];
+    phoneTF.layer.cornerRadius = 1.5;
+    phoneTF.placeholder = @"手机号码";
+    [self.view addSubview:phoneTF];
+    
+    //确认手机号码
+    confirmTF = [[UITextField alloc] initWithFrame:CGRectMake(20, 215, aLabel.frame.size.height+10+37, 35)];
+    confirmTF.layer.cornerRadius = 1.5;
+    confirmTF.placeholder = @"确认手机号码";
+    [self.view addSubview:confirmTF];
+    
+    //下一步
+    UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    nextBtn.frame = CGRectMake(50, aLabel.frame.size.height+80, 220, 35);
+    [nextBtn addTarget:self action:@selector(nextBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:nextBtn];
+    
+    //跳过注册
+    UIButton *finshBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    finshBtn.frame = CGRectMake(70, aLabel.frame.size.height+100, 180, 30);
+    [finshBtn addTarget:self action:@selector(finshBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:finshBtn];
+    
+
+    
+    
     activity = [[Activity alloc] initWithActivity:self.view];
     
     
@@ -76,8 +105,8 @@
     if (!_keyboardShowed) {
         return;
     }
-    [_phoneTF resignFirstResponder];
-    [_confirmTF resignFirstResponder];
+    [phoneTF resignFirstResponder];
+    [confirmTF resignFirstResponder];
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
         self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
@@ -124,12 +153,12 @@
 - (IBAction)startRegister:(UIButton *)sender {
     //校验手机号码
 
-    NSString *phoneStr = [_phoneTF.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *phoneStr = [phoneTF.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     int phone_email_flag = [self checkTel:phoneStr Type:1];
     if (phone_email_flag == 0) {
         return;
     }
-    if (![phoneStr isEqualToString:[_confirmTF.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]]) {
+    if (![phoneStr isEqualToString:[confirmTF.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]]) {
         [self makeAlert:@"确认号码不一致"];
         return;
     }
@@ -161,7 +190,7 @@
                     
                     
                     //登陆校验，发送消息到服务器
-                    BOOL result = [appDelegate.webInfoManger UserLoginUsingUsername:_phoneTF.text Password:@"" Version:ClientVersion Vesting:@"86" ClientType:@"2" DeviceToken:appDelegate.deviceToken];
+                    BOOL result = [appDelegate.webInfoManger UserLoginUsingUsername:phoneTF.text Password:@"" Version:ClientVersion Vesting:@"86" ClientType:@"2" DeviceToken:appDelegate.deviceToken];
                     
                     if (result)
                     {

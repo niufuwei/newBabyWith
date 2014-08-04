@@ -11,6 +11,8 @@
 		1DCB5BC4198F1E90001D177E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC3198F1E90001D177E /* AddressBookUI.framework */; };
 		1DCB5BC6198F1ECB001D177E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC5198F1ECB001D177E /* ImageIO.framework */; };
 		1DCB5BC8198F1ED1001D177E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCB5BC7198F1ED1001D177E /* CoreImage.framework */; };
+		1DCB5BCA198F3645001D177E /* 编辑2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB5BC9198F3645001D177E /* 编辑2.png */; };
+		1DCB5BCC198F3665001D177E /* qietu_34.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB5BCB198F3665001D177E /* qietu_34.png */; };
 		1DDF0DBB198B3F7D00E26961 /* AVCallController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */; };
 		1DEEFEE8198B904100ED2C84 /* 1374.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEFEE7198B904100ED2C84 /* 1374.wav */; };
 		710AEDD5190795C000B19A58 /* NewMessageCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710AEDD3190794B700B19A58 /* NewMessageCell1.xib */; };
@@ -112,7 +114,6 @@
 		71CAFEAE198B989100E2DC1F /* 横屏录制(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE8D198B981600E2DC1F /* 横屏录制(1).png */; };
 		71CAFEAF198B989100E2DC1F /* 横屏录制(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE8E198B981600E2DC1F /* 横屏录制(2).png */; };
 		71CAFEB3198B994900E2DC1F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CAFEB1198B994900E2DC1F /* RegisterViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		71CAFEB4198B994900E2DC1F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */; };
 		71CAFEB8198B995700E2DC1F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CAFEB6198B995700E2DC1F /* SettingsViewController.m */; };
 		71CAFEB9198B995700E2DC1F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFEB7198B995700E2DC1F /* SettingsViewController.xib */; };
 		71D66ED0195D535800896171 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D66ECF195D535800896171 /* HomeViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -327,6 +328,8 @@
 		1DCB5BC3198F1E90001D177E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		1DCB5BC5198F1ECB001D177E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		1DCB5BC7198F1ED1001D177E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		1DCB5BC9198F3645001D177E /* 编辑2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑2.png"; sourceTree = "<group>"; };
+		1DCB5BCB198F3665001D177E /* qietu_34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qietu_34.png; sourceTree = "<group>"; };
 		1DDF0DB9198B3F7D00E26961 /* AVCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCallController.h; sourceTree = "<group>"; };
 		1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCallController.mm; sourceTree = "<group>"; };
 		1DEEFEE7198B904100ED2C84 /* 1374.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1374.wav; path = BabyWith/images/1374.wav; sourceTree = "<group>"; };
@@ -444,7 +447,6 @@
 		71CAFE8E198B981600E2DC1F /* 横屏录制(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "横屏录制(2).png"; path = "导航栏/横屏录制(2).png"; sourceTree = "<group>"; };
 		71CAFEB0198B994900E2DC1F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		71CAFEB1198B994900E2DC1F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		71CAFEB5198B995700E2DC1F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		71CAFEB6198B995700E2DC1F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		71CAFEB7198B995700E2DC1F /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -1065,7 +1067,6 @@
 			children = (
 				71CAFEB0198B994900E2DC1F /* RegisterViewController.h */,
 				71CAFEB1198B994900E2DC1F /* RegisterViewController.m */,
-				71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */,
 				7195029318D43E85006FCB7F /* LoginViewController.h */,
 				7195029418D43E85006FCB7F /* LoginViewController.m */,
 				7195029518D43E85006FCB7F /* LoginViewController.xib */,
@@ -1161,6 +1162,8 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1DCB5BCB198F3665001D177E /* qietu_34.png */,
+				1DCB5BC9198F3645001D177E /* 编辑2.png */,
 				EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */,
 				71CAFE7D198B981600E2DC1F /* 绑定-未选 (1).png */,
 				71CAFE7E198B981600E2DC1F /* 绑定-未选 (2).png */,
@@ -1852,7 +1855,6 @@
 				EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */,
 				EF4A5EB9198B27F600A54EB2 /* 拍照 (2).png in Resources */,
 				EF4A5E7E198B27F600A54EB2 /* qietu_162.png in Resources */,
-				71CAFEB4198B994900E2DC1F /* RegisterViewController.xib in Resources */,
 				7196B08018D837D600B8D8BB /* ChangePasswordViewController.xib in Resources */,
 				EF4A5EDD198B27F600A54EB2 /* 背景条.png in Resources */,
 				EF4A5E84198B27F600A54EB2 /* 主菜单栏-未选 (5).png in Resources */,
@@ -1986,12 +1988,14 @@
 				EF4A5EC4198B27F600A54EB2 /* 播放视频 (3).png in Resources */,
 				71A86CF1190A310A004AFA50 /* line@2x.png in Resources */,
 				EF4A5EBC198B27F600A54EB2 /* 拍照.png in Resources */,
+				1DCB5BCC198F3665001D177E /* qietu_34.png in Resources */,
 				71CAFE25198B6EF200E2DC1F /* 竖屏(4).png in Resources */,
 				EF4A5EA2198B27F600A54EB2 /* 分享设备-新消息.png in Resources */,
 				EF4A5ED2198B27F600A54EB2 /* 系统消息未读背景.png in Resources */,
 				71CAFE2B198B6EF200E2DC1F /* qietu_174.png in Resources */,
 				EF4A5EEA198B27F600A54EB2 /* 首页背景.png in Resources */,
 				EF1246E017BB2A760012BBCC /* README in Resources */,
+				1DCB5BCA198F3645001D177E /* 编辑2.png in Resources */,
 				71CAFE54198B718600E2DC1F /* 导航返回.png in Resources */,
 				EF1246E117BB2A760012BBCC /* zbar-back.png in Resources */,
 				71CAFE67198B7D4800E2DC1F /* 更多 (3).png in Resources */,
