@@ -604,7 +604,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             }
             else
             {
-                [button setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
+                [button setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
             }
             
             
@@ -752,7 +752,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             [btn setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
             
             UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-            [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
+            [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
         }
         
         
@@ -936,7 +936,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
                 [mytoast showWithText:@"内存不足，自动保存视频"];
                 
                 UIButton *btn1 = (UIButton *)[_pView viewWithTag:2];
-                [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(1).png"] forState:UIControlStateNormal];
+                [btn1 setBackgroundImage:[UIImage imageNamed:@"竖屏(2).png"] forState:UIControlStateNormal];
                 
                 
                 UIButton *btn2 = (UIButton *)[_lView viewWithTag:2];
