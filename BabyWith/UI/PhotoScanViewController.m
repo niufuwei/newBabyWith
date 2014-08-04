@@ -176,16 +176,31 @@
             {
                 //添加导航栏
                 aView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 568, 44)];
-                aView.backgroundColor=[UIColor blackColor];
+                aView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"导航栏背景"]];
                 aView.alpha=0.5;
+                
+                
+                
                 //添加返回按钮
                 UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-                [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+                [backBtn setBackgroundImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
                 [backBtn addTarget:self action:@selector(backBtn) forControlEvents:UIControlEventTouchUpInside];
-                
-                [backBtn setTitleColor:babywith_green_color forState:UIControlStateNormal];
-                backBtn.frame=CGRectMake(20, 7, 40, 30);
+                backBtn.frame=CGRectMake(20, 12, 10, 20);
                 [aView addSubview:backBtn];
+                
+                
+                
+    
+                UILabel *playLabel = [[UILabel alloc] initWithFrame:CGRectMake(204, 0, 160, 44)];
+                playLabel.backgroundColor = [UIColor clearColor];
+                playLabel.text = @"视频播放";
+                playLabel.font = [UIFont systemFontOfSize:20.0];
+
+                playLabel.textColor = [UIColor whiteColor];
+                playLabel.textAlignment = NSTextAlignmentCenter;
+                [aView addSubview:playLabel];
+                
+                
                 
                 [_playView addSubview:aView];
                 
@@ -196,15 +211,24 @@
             else
             {
                 aView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 480, 44)];
-                aView.backgroundColor=[UIColor blackColor];
+                aView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"导航栏背景"]];
                 aView.alpha=0.5;
                 //添加返回按钮
                 UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-                [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+                [backBtn setBackgroundImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
                 [backBtn addTarget:self action:@selector(backBtn) forControlEvents:UIControlEventTouchUpInside];
-                backBtn.frame=CGRectMake(20, 7, 40, 30);
-                [backBtn setTitleColor:babywith_green_color forState:UIControlStateNormal];
+                backBtn.frame=CGRectMake(20, 12, 10, 20);
                 [aView addSubview:backBtn];
+                
+                
+                UILabel *playLabel = [[UILabel alloc] initWithFrame:CGRectMake(160, 0, 160, 44)];
+                playLabel.backgroundColor = [UIColor clearColor];
+                playLabel.text = @"视频播放";
+                playLabel.font = [UIFont systemFontOfSize:20.0];
+                playLabel.textColor = [UIColor whiteColor];
+                playLabel.textAlignment = NSTextAlignmentCenter;
+                [aView addSubview:playLabel];
+                
                 [_playView addSubview:aView];
                 _playView.frame = CGRectMake(0, 0, 480, 320);
                 
