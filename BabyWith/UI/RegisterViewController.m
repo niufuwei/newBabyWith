@@ -41,10 +41,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self titleSet:@"babywith"];
-    [self configurationForGreenButton:_registerButton];
+//    [self titleSet:@"babywith"];
+//    [self configurationForGreenButton:_registerButton];
+    self.navigationController.navigationBarHidden = YES;
+   //圆角
+    self.phoneTF.layer.cornerRadius = 1.5;
+    self.confirmTF.layer.cornerRadius = 1.5;
     
-   
+    
     activity = [[Activity alloc] initWithActivity:self.view];
     
     
