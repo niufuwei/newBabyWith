@@ -39,7 +39,8 @@
     NSMutableDictionary * statusDictionary;
     NSMutableArray * deleteArray;
     NSMutableDictionary * arrayDictionary;
-
+    UIButton * selectButton;
+    BOOL isDelete;
 }
 @property (nonatomic,copy) UICollectionView *imageCollection;
 //-(void)DeleteRecord:(NSDictionary *)dic;
