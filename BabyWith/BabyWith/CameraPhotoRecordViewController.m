@@ -103,7 +103,7 @@
         if ([[dic objectForKey:@"is_vedio"] intValue] == 1)
         {
             
-            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start2.png"]];
+            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"播放视频 (4).png"]];
             startImage.frame = CGRectMake(imageView.frame.size.width/2 - 40, imageView.frame.size.height/2 - 40, 64, 64);
             [imageView addSubview:startImage];
             
