@@ -38,7 +38,7 @@
     //导航条设置
     {
         //左导航-主选择页面
-        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 36)];
+        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
         navButton.tag = 1;
         [navButton setImage:[UIImage imageNamed:@"导航返回.png"] forState:UIControlStateNormal];
         [navButton addTarget:self action:@selector(ShowPrePage) forControlEvents:UIControlEventTouchUpInside];

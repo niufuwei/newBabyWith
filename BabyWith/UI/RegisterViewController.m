@@ -41,6 +41,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if (iPhone5)
+    {
+        self.view = [[[NSBundle mainBundle] loadNibNamed:@"RegisterViewController" owner:self options:nil] objectAtIndex:0];
+
+    }
+    else
+    {
+    
+        self.view = [[[NSBundle mainBundle] loadNibNamed:@"RegisterView" owner:self options:nil] objectAtIndex:0];
+
+    
+    }
     [self titleSet:@"babywith"];
     [self configurationForGreenButton:_registerButton];
     
