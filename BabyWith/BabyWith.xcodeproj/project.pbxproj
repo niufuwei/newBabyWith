@@ -114,7 +114,6 @@
 		71CAFEAE198B989100E2DC1F /* 横屏录制(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE8D198B981600E2DC1F /* 横屏录制(1).png */; };
 		71CAFEAF198B989100E2DC1F /* 横屏录制(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFE8E198B981600E2DC1F /* 横屏录制(2).png */; };
 		71CAFEB3198B994900E2DC1F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CAFEB1198B994900E2DC1F /* RegisterViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		71CAFEB4198B994900E2DC1F /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */; };
 		71CAFEB8198B995700E2DC1F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CAFEB6198B995700E2DC1F /* SettingsViewController.m */; };
 		71CAFEB9198B995700E2DC1F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CAFEB7198B995700E2DC1F /* SettingsViewController.xib */; };
 		71D66ED0195D535800896171 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D66ECF195D535800896171 /* HomeViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -448,7 +447,6 @@
 		71CAFE8E198B981600E2DC1F /* 横屏录制(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "横屏录制(2).png"; path = "导航栏/横屏录制(2).png"; sourceTree = "<group>"; };
 		71CAFEB0198B994900E2DC1F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		71CAFEB1198B994900E2DC1F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		71CAFEB5198B995700E2DC1F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		71CAFEB6198B995700E2DC1F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		71CAFEB7198B995700E2DC1F /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -1069,7 +1067,6 @@
 			children = (
 				71CAFEB0198B994900E2DC1F /* RegisterViewController.h */,
 				71CAFEB1198B994900E2DC1F /* RegisterViewController.m */,
-				71CAFEB2198B994900E2DC1F /* RegisterViewController.xib */,
 				7195029318D43E85006FCB7F /* LoginViewController.h */,
 				7195029418D43E85006FCB7F /* LoginViewController.m */,
 				7195029518D43E85006FCB7F /* LoginViewController.xib */,
@@ -1858,7 +1855,6 @@
 				EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */,
 				EF4A5EB9198B27F600A54EB2 /* 拍照 (2).png in Resources */,
 				EF4A5E7E198B27F600A54EB2 /* qietu_162.png in Resources */,
-				71CAFEB4198B994900E2DC1F /* RegisterViewController.xib in Resources */,
 				7196B08018D837D600B8D8BB /* ChangePasswordViewController.xib in Resources */,
 				EF4A5EDD198B27F600A54EB2 /* 背景条.png in Resources */,
 				EF4A5E84198B27F600A54EB2 /* 主菜单栏-未选 (5).png in Resources */,
@@ -2164,7 +2160,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
@@ -2191,7 +2187,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
+				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
 				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
@@ -2234,6 +2230,7 @@
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
+
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2276,6 +2273,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+
 				PROVISIONING_PROFILE = "FA1C2462-DD4A-475E-8772-C588734C78E8";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
