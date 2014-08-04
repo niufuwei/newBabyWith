@@ -8,6 +8,7 @@
 
 #import "SharedPersonsViewController.h"
 #import "MainAppDelegate.h"
+#import <AddressBook/AddressBook.h>
 
 
 @implementation SharedPersonsViewController
@@ -33,6 +34,8 @@
     _sharedPersonTableView.delegate = self;
     _sharedPersonTableView.dataSource = self;
     _sharedPersonTableView.backgroundColor = [UIColor clearColor];
+    _sharedPersonTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _sharedPersonTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     _label = [[UILabel alloc] init];
     
 }
@@ -108,7 +111,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 60.0;
+    return 45;
 
 
 }
@@ -120,9 +123,106 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:15.0];
+        cell.textLabel.textColor = babywith_color(0x373737);
+         cell.backgroundColor = [UIColor whiteColor];
+        
+        
     }
-    cell.textLabel.text = [[appDelegate.appDefault arrayForKey:[NSString stringWithFormat:@"%@_number",self.deviceID]] objectAtIndex:indexPath.row];
-    cell.backgroundColor = babywith_background_color;
+    else{
+        while ([cell.contentView.subviews lastObject] != nil) {
+            [(UIView*)[cell.contentView.subviews lastObject] removeFromSuperview];  //删除并进行重新分配
+        }
+    }
+    
+   
+    NSString *phone = [[appDelegate.appDefault arrayForKey:[NSString stringWithFormat:@"%@_number",self.deviceID]] objectAtIndex:indexPath.row];
+    
+    if ([self getNameBytel:phone])
+    {
+        cell.textLabel.text = [self getNameBytel:phone];
+        CGSize size = CGSizeMake(320, 45);
+        CGSize labelsize = [[self getNameBytel:phone] sizeWithFont:[UIFont systemFontOfSize:15.0] constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+        [cell.textLabel setFrame:CGRectMake(0, 0, labelsize.width, labelsize.height)];
+        NSLog(@"cell.width is %f",cell.textLabel.frame.size.width);
+    }
+    else
+    {
+    
+        cell.textLabel.text = phone;
+        CGSize size = CGSizeMake(320, 45);
+        CGSize labelsize = [phone sizeWithFont:[UIFont systemFontOfSize:15.0] constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+        [cell.textLabel setFrame:CGRectMake(0, 0, labelsize.width, labelsize.height)];
+        NSLog(@"cell.width 1 is %f",cell.textLabel.frame.size.width);
+
+    
+    }
+    
+    UIImageView *accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(320-25,16, 10, 13)];
+    [accessoryView setImage:[UIImage imageNamed:@"qietu_40.png"]];
+    [cell addSubview:accessoryView];
+    
+    
+    UIImageView *statusImage = [[UIImageView alloc] initWithFrame:CGRectMake(cell.textLabel.frame.size.width + 20, 17.5 , 10, 10)];
+    statusImage.image = [UIImage imageNamed:@"分享人员 (2)"];
+    [cell addSubview:statusImage];
+    
+    
+    UILabel *statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(260, 0, 30, 45)];
+    statusLabel.backgroundColor = [UIColor clearColor];
+    
+    statusLabel.text  = @"关闭";
+    statusLabel.textColor = babywith_color(0xff5b7e);
+    statusLabel.font = [UIFont systemFontOfSize:14.0];
+    [cell addSubview:statusLabel];
+    
+    
+    
     return cell;
+}
+
+-(NSString *)getNameBytel:(NSString *)telstr
+{
+    NSMutableArray* personArray = [[NSMutableArray alloc] init];
+    //打开电话本数据库
+    CFErrorRef error = NULL;
+    ABAddressBookRef addressRef= ABAddressBookCreateWithOptions(NULL, &error);
+    NSString *firstName, *lastName, *fullName;
+    //返回所有联系人到一个数组中
+    personArray = (__bridge_transfer NSMutableArray *)ABAddressBookCopyArrayOfAllPeople(addressRef);
+    
+  
+    NSUInteger peopleCounter = 0;
+    for (peopleCounter = 0; peopleCounter < [personArray count]; peopleCounter++)
+    {
+         ABRecordRef person = (__bridge ABRecordRef)[personArray objectAtIndex:peopleCounter];
+        firstName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);;
+        lastName = (__bridge_transfer NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+        if (lastName !=nil)
+        {
+            fullName = [lastName stringByAppendingFormat:@"%@",firstName];
+            
+        }
+        else
+        {
+            fullName = firstName;
+        }
+        NSLog(@"===%@",fullName);
+        ABMultiValueRef phones = (ABMultiValueRef) ABRecordCopyValue(person, kABPersonPhoneProperty);
+        for(int i = 0 ;i < ABMultiValueGetCount(phones); i++)
+        {
+            NSString *phone = (__bridge NSString *)ABMultiValueCopyValueAtIndex(phones, i);
+            phone = [phone stringByReplacingOccurrencesOfString:@"(" withString:@""];
+            phone = [phone stringByReplacingOccurrencesOfString:@")" withString:@""];
+            phone = [phone stringByReplacingOccurrencesOfString:@"-" withString:@""];
+            phone = [phone stringByReplacingOccurrencesOfString:@" " withString:@""];
+            NSLog(@"===%@",phone); 
+            if ([phone isEqualToString:telstr]) 
+            {
+                return fullName;
+            }
+        } 
+    }
+    return nil;
 }
 @end

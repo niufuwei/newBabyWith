@@ -34,7 +34,7 @@
     _messageTableView.delegate = self;
     _messageTableView.dataSource = self;
     _messageTableView.allowsSelection = NO;
-    _messageTableView.backgroundColor = babywith_background_color;
+    _messageTableView.backgroundColor = [UIColor clearColor];
     _label = [[UILabel alloc] init];
     
     [self titleSet:@"分享设备"];
@@ -62,22 +62,22 @@
 //    else
 //    {
         _label.hidden = YES;
-    UILabel *topLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 300, 40)];
-    topLabel.text = @"您的亲友已经将babywith这款产品分享给你使用，请您选择是否同意使用该产品";
-    topLabel.numberOfLines = 0;
-    topLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    topLabel.font = [UIFont systemFontOfSize:13.0];
-    topLabel.textColor = [UIColor grayColor];
-    topLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:topLabel];
+//    UILabel *topLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, 300, 40)];
+//    topLabel.text = @"您的亲友已经将babywith这款产品分享给你使用，请您选择是否同意使用该产品";
+//    topLabel.numberOfLines = 0;
+//    topLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    topLabel.font = [UIFont systemFontOfSize:13.0];
+//    topLabel.textColor = [UIColor grayColor];
+//    topLabel.backgroundColor = [UIColor clearColor];
+//    [self.view addSubview:topLabel];
     
-        if (130.0*[self tableView:_messageTableView numberOfRowsInSection:0] > self.view.frame.size.height - 66 - 71)
+        if (130.0*[self tableView:_messageTableView numberOfRowsInSection:0] > self.view.frame.size.height - 66)
         {
-            _messageTableView.frame = CGRectMake(0, 71, 320, self.view.frame.size.height - 71);
+            _messageTableView.frame = CGRectMake(0, 0, 320, self.view.frame.size.height);
         }
         else
         {
-        _messageTableView.frame = CGRectMake(0, 71, 320, 130.0*[self tableView:_messageTableView numberOfRowsInSection:0] - 71);
+        _messageTableView.frame = CGRectMake(0, 0, 320, 130.0*[self tableView:_messageTableView numberOfRowsInSection:0]);
 
         }
    // }
@@ -135,7 +135,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 130.0;
+    return 90.0;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

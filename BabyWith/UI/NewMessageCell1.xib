@@ -14,16 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="系统消息未读背景.png" id="gKt-Bm-oue">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分享设备-新消息.png" id="u85-kq-QHL">
-                        <rect key="frame" x="20" y="7" width="49" height="49"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JyJ-gE-ebP">
-                        <rect key="frame" x="89" y="4" width="211" height="57"/>
+                        <rect key="frame" x="9" y="0.0" width="300" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -36,8 +28,4 @@
             </connections>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="分享设备-新消息.png" width="60" height="60"/>
-        <image name="系统消息未读背景.png" width="20" height="88"/>
-    </resources>
 </document>

@@ -64,12 +64,12 @@
         [titleLabel release];
     }
     
-    _cameraTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 250) style:UITableViewStylePlain];
+    _cameraTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 270) style:UITableViewStylePlain];
     _cameraTableView.delegate = self;
     _cameraTableView.dataSource = self;
-    _cameraTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _cameraTableView.separatorColor = [UIColor clearColor];
+    _cameraTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _cameraTableView.backgroundView = nil;
+    _cameraTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     _cameraTableView.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:_cameraTableView];
@@ -78,7 +78,8 @@
     _ssidStr = @"获取中";
     
     UIButton *dissolveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    dissolveButton.frame = CGRectMake(50, CGRectGetHeight(_cameraTableView.frame)+20, 220, 50);
+    dissolveButton.frame = CGRectMake(44
+                                      , CGRectGetHeight(_cameraTableView.frame)+37, 232, 31);
     //dissolveButton.autoresizingMask =
     [dissolveButton setBackgroundImage:[UIImage imageNamed:@"qietu_162"] forState:UIControlStateNormal];
     [dissolveButton addTarget:self action:@selector(dissolveDevice:) forControlEvents:UIControlEventTouchUpInside];
@@ -385,7 +386,8 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-   }
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -393,8 +395,11 @@
     SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[[SettingCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
-        cell.textLabel.textColor = [UIColor colorWithRed:98/255.0 green:98/255.0 blue:98/255.0 alpha:1];
-        cell.detailTextLabel.textColor= [UIColor colorWithRed:98/255.0 green:98/255.0 blue:98/255.0 alpha:1];
+        cell.textLabel.textColor = babywith_color(0x373737);
+        cell.textLabel.font = [UIFont systemFontOfSize:15.0];
+        
+        cell.detailTextLabel.textColor= babywith_color(0x373737);
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = babywith_text_background_color;
         
@@ -490,6 +495,14 @@
         case 5:{
                 cell.textLabel.text = @"设备名称";
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+//            UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 0, 160, 40)];
+//            nameLabel.backgroundColor = [UIColor clearColor];
+//            nameLabel.textAlignment = NSTextAlignmentRight;
+//            nameLabel.font = [UIFont systemFontOfSize:14.0];
+//            nameLabel.textColor = babywith_color(0x373737);
+            cell.detailTextLabel.text = [[[NSMutableDictionary alloc] initWithDictionary:[appDelegate.appDefault objectForKey:@"Device_selected"]] objectForKey:@"name"];
+            //[cell addSubview:nameLabel];
        }
         break;
         
@@ -499,15 +512,8 @@
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-//    if (indexPath.section == 5) {
-//        
-//        NSLog(@"setting campare = [%@] [%@]", [_deviceDictionary objectForKey:@"id_member"], [appDelegate.appDefault objectForKey:@"Member_id_self"]);
-//        if ([[_deviceDictionary objectForKey:@"id_member"] integerValue] != [[appDelegate.appDefault objectForKey:@"Member_id_self"] integerValue]) {
-//            return 0;
-//        }
-//    }
     
-    return 40;
+    return 45;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -202,7 +202,7 @@
     ImageShowController *imageShow = [[ImageShowController alloc] initWithArray:_imageArray];
     
     [self presentViewController:imageShow animated:YES completion:^{
-        
+        [UIApplication sharedApplication].statusBarHidden = NO;
     }];
     
 }
@@ -259,7 +259,7 @@
 
     [self dismissViewControllerAnimated:NO completion:^{
         
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
         
         NSLog(@"imageArray is %@",_imageArray);

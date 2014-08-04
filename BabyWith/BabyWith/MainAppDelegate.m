@@ -62,9 +62,10 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor  = babywith_background_color;
     
-    
+//    //状态栏 白色
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     //添加本地计时器用来几时验证码
-    
+
     [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"sendCheckMessage"];
     
     
@@ -412,17 +413,14 @@ int HudIsBecome = 0;
     }
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    NSLog(@"applicationWillEnterForeground=================");
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"applicationDidBecomeActive====================");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     //如果是在开启视频的情况下进入后台，重新回到前台的时候应该让视频开启
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"becameActive" object:nil];
     

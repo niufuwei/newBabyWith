@@ -71,7 +71,7 @@
     //[self titleSet:@"主页"];
     
     titleImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"首页.png"]];
-    titleImage.frame = CGRectMake(110, 7.5, 100, 25);
+    titleImage.frame = CGRectMake(110, 10, 100, 25);
     [self.navigationController.navigationBar addSubview:titleImage];
     _willDeleteDevice = [[NSMutableDictionary alloc] initWithCapacity:1];
     
@@ -142,7 +142,7 @@
 -(void)HeaderView
 {
     
-    NSArray * arr = [[NSArray alloc] initWithObjects:@"常见问题指南",@"新分享设备", nil];
+    NSArray * arr = [[NSArray alloc] initWithObjects:@"常见问题指南",@"新设备分享", nil];
     
     NSInteger yyy = 0;
     
@@ -157,6 +157,7 @@
         [buttonTitle setBackgroundImage:[UIImage imageNamed:@"主页- 消息背景 (2).png"] forState:(UIControlStateSelected|UIControlStateHighlighted)];
         [buttonTitle setBackgroundColor:[UIColor clearColor]];
         [buttonTitle setAdjustsImageWhenHighlighted:NO];
+        buttonTitle.titleLabel.textColor = babywith_color(0x626262);
         buttonTitle.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         buttonTitle.contentEdgeInsets = UIEdgeInsetsMake(0,15, 0, 0);
         buttonTitle.tag = i+101;
@@ -184,12 +185,13 @@
             else
             {
                 tuisongLabel.hidden = NO;
+                [self.view viewWithTag:102].backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"系统消息未读背景.png"]];
             }
 
         }
         
         
-        yyy = 45+5;
+        yyy = 45;
     }
     
     CGRect yyyyy = _homeTableView1.frame;
@@ -212,6 +214,7 @@
             break;
         case 102:
         {
+            [self.view viewWithTag:102].backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"主页- 消息背景 (2).png"]];
             NewMessageViewController * newMessageVC = [[NewMessageViewController alloc] init];
             [self.navigationController pushViewController:newMessageVC animated:YES];
         }
@@ -631,6 +634,7 @@
     else
     {
         tuisongLabel.hidden = NO;
+        [self.view viewWithTag:102].backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"系统消息未读背景.png"]];
     }
 
 }
@@ -877,6 +881,7 @@
 //            [self.navigationController pushViewController:vc animated:YES];
 //        }
 //    }
+    
     [appDelegate.appDefault setObject:[self.deviceArray objectAtIndex:indexPath.row] forKey:@"Device_selected"];
     NSLog(@"存入的设备是%@",[appDelegate.appDefault objectForKey:@"Device_selected"]);
     CameraPlayViewController *vc = [[CameraPlayViewController alloc]init];

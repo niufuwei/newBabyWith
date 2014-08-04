@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-@interface ImageShowController : UIViewController<UIScrollViewDelegate,UIAlertViewDelegate>
+
+@interface ImageShowController : BaseViewController<UIScrollViewDelegate,UIAlertViewDelegate>
 {
     
     int pageCount;

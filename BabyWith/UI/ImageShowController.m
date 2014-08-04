@@ -32,28 +32,33 @@
 -(void)viewDidLoad{
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+
+//    self.view.backgroundColor = [UIColor blackColor];
     
     //导航条设置
-    {
-        
+    
         topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
-        topView.backgroundColor = babywith_green_color;
+        
+        UIImageView *aImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
+        aImage.image = [UIImage imageNamed:@"导航栏背景.png"];
+        [topView addSubview:aImage];
+        
+//        topView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:topView];
         
         
-        UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 15, 50, 35)];
-        [backBtn setBackgroundImage:[UIImage imageNamed:@"camera_back"] forState:UIControlStateNormal];
+        UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 22+10, 10, 20)];
+        [backBtn setBackgroundImage:[UIImage imageNamed:@"返回.png"] forState:UIControlStateNormal];
         [backBtn addTarget:self action:@selector(backToCamera) forControlEvents:UIControlEventTouchUpInside];
         [topView addSubview:backBtn];
         
         //右导航--删除按钮
-        UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 15, 74, 36)];
+        UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(240, 17+10, 60, 30)];
         
         [setButton addTarget:self action:@selector(deletePic) forControlEvents:UIControlEventTouchUpInside];
         [setButton setTitle:@"删除" forState:UIControlStateNormal];
         setButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
-        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
         setButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         [topView addSubview:setButton];
         
@@ -64,7 +69,7 @@
         _currentPage = [_photoArray count] -1;
         _image = [[UIImage alloc]init];
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(105, 10, 110, 44)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(105, 10+10, 110, 44)];
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.text = [NSString stringWithFormat:@"%d/%d", _currentPage+1, pageCount];
         titleLabel.textColor = babywith_text_background_color;
@@ -73,7 +78,7 @@
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [topView addSubview:titleLabel];
         
-    }
+
     
     float contentHeight = self.view.frame.size.height;
     NSLog(@"self.view height %f",contentHeight);

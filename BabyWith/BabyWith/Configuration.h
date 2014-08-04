@@ -16,8 +16,8 @@
 #define ClientVersion @"5"
 //#define babywith_gate_address  @"http://www.chaoyongwenhua.com:8080/aiJIaJIaWebservice/api"
 //#define babywith_gate_address @"http://192.168.18.105:8081/aiJIaJIaWebservice/api"
+#define babywith_background_color babywith_color(0xf5f5f5)
 #define babywith_gate_address @"http://192.168.18.159:8081/aiJIaJIaWebservice/api"
-#define babywith_background_color [UIColor colorWithRed:243/255.0 green:238/255.0 blue:228/255.0 alpha:1.0]
 #define babywith_text_background_color [UIColor colorWithRed:253/255.0 green:251/255.0 blue:249/255.0 alpha:1.0]
 #define babywith_text_color [UIColor colorWithRed:181/255.0 green:181/255.0 blue:181/255.0 alpha:1.0]
 #define babywith_button_text_color [UIColor colorWithRed:98/255.0 green:98/255.0 blue:98/255.0 alpha:1.0]

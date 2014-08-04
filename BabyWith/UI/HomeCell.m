@@ -28,11 +28,13 @@
         title = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, 0, 200, 30)];
         title.backgroundColor = [UIColor clearColor];
         title.font = [UIFont systemFontOfSize:15];
+        title.textColor = babywith_color(0x373737);
         [self.contentView addSubview:title];
         
         state = [[UILabel alloc] initWithFrame:CGRectMake(image.frame.size.width+image.frame.origin.x+10, title.frame.size.height+title.frame.origin.y - 5, 120, 20)];
         state.backgroundColor = [UIColor clearColor];
         state.font = [UIFont systemFontOfSize:13];
+        state.textColor = babywith_color(0x909090);
         state.textColor = [UIColor grayColor];
         [self.contentView addSubview:state];
         
