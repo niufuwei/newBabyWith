@@ -41,13 +41,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    [self titleSet:@"babywith"];
-//    [self configurationForGreenButton:_registerButton];
-    self.navigationController.navigationBarHidden = YES;
+    [self titleSet:@"babywith"];
+    [self configurationForGreenButton:_registerButton];
     
-    //圆角
-    self.phoneTF.layer.cornerRadius = 1.5;
-    self.confirmTF.layer.cornerRadius = 1.5;
    
     activity = [[Activity alloc] initWithActivity:self.view];
     
@@ -72,7 +68,7 @@
     [_confirmTF resignFirstResponder];
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        self.view.frame = CGRectMake(0, 0, 320, kScreenHeight);
+        self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
     } completion:^(BOOL finished) {
         _keyboardShowed = NO;
     }];
@@ -85,7 +81,7 @@
     }
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        self.view.frame = CGRectMake(0, -100, 320, kScreenHeight);
+        self.view.frame = CGRectMake(0, -100, 320, kScreenHeight -44 -20);
     } completion:^(BOOL finished) {
         _keyboardShowed = YES;
     }];
@@ -100,7 +96,7 @@
     }
     
     [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-        self.view.frame = CGRectMake(0, 0, 320, kScreenHeight);
+        self.view.frame = CGRectMake(0, 0, 320, kScreenHeight -44 -20);
     } completion:^(BOOL finished) {
         _keyboardShowed = NO;
     }];
