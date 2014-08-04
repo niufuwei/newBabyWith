@@ -37,7 +37,6 @@
     
     //导航条设置
     
-        
         topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
         
         UIImageView *aImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
