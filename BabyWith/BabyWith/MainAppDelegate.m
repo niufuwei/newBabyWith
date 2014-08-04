@@ -62,6 +62,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor  = babywith_background_color;
     
+    
+    //添加本地计时器用来几时验证码
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"sendCheckMessage"];
+    
+    
     NSLog(@"launchOptions   %@",launchOptions);
     _systemDic = [[NSMutableDictionary alloc] init];
     _pushDic = [[NSMutableDictionary alloc] init];
@@ -464,7 +470,7 @@ int HudIsBecome = 0;
 {
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     homeVC.hidesBottomBarWhenPushed = YES;
-    homeVC.title = @"babywith";
+    //homeVC.title = @"babywith";
     BaseNavigationController *homeNav = [[[BaseNavigationController alloc] initWithRootViewController:homeVC] autorelease] ;
     
     

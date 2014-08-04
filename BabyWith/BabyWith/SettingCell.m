@@ -21,6 +21,7 @@
         // Initialization code
 //        self.textLabel.textColor = babywith_text_color;
         self.cellType = 0; //默认为0， 1-button。
+        
     }
     return self;
 }

@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setTitle:@"常见问题"];
+    [self titleSet:@"常见问题"];
     _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
     [self.view addSubview:_webView];
     _webView.backgroundColor = [UIColor clearColor];

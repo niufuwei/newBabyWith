@@ -38,7 +38,7 @@
 
     //导航条设置
     {
-        [self leftButtonItemWithImageName:@"camera_back.png"];
+        [self leftButtonItemWithImageName:@"导航返回.png"];
 //        //左导航-主选择页面
 //        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
 //        navButton.tag = 1;
@@ -53,7 +53,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = @"看护器绑定";
+        titleLabel.text = @"绑定设备";
         titleLabel.textColor = babywith_text_background_color;
         titleLabel.font = [UIFont systemFontOfSize:20];
         titleLabel.textAlignment = NSTextAlignmentCenter;

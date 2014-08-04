@@ -30,7 +30,7 @@
     }
     
     if (self.navigationController.viewControllers.count > 1) {
-        [self leftButtonItemWithImageName:@"导航栏返回.png"];
+        [self leftButtonItemWithImageName:@"导航返回.png"];
     }
 }
 
@@ -58,6 +58,7 @@
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 44)];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.text = aTitle;
+        titleLabel.font = [UIFont systemFontOfSize:20.0];
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.backgroundColor = [UIColor clearColor];
         self.navigationItem.titleView = titleLabel;

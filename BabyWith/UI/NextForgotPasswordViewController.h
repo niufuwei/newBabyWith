@@ -9,14 +9,20 @@
 #import "BaseViewController.h"
 
 @interface NextForgotPasswordViewController : BaseViewController<UITextFieldDelegate>
+
+{
+    NSTimer *_timer;
+}
+
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 @property (weak, nonatomic) IBOutlet UITextField *checkCodeTF;
 @property (weak, nonatomic) IBOutlet UIButton *getCheckCodeButton;
-@property (weak, nonatomic) IBOutlet UIButton *showPasswordButton;
+
+- (IBAction)showPassWordBtn:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong,nonatomic) NSString *configPhoneNum;
 - (IBAction)getCheckCode:(id)sender;
-- (IBAction)showOrHidePassword:(id)sender;
 
 - (IBAction)submit:(id)sender;
 @end

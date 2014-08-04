@@ -36,12 +36,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //圆角
-    self.nickName.layer.cornerRadius = 2.0;
+    self.nickName.layer.cornerRadius = 1.5;
     
 
     [self titleSet:@"修改昵称"];
     
-    UIButton * subMit = [[UIButton alloc] initWithFrame:CGRectMake(50, 123, 220, 35)];
+    UIButton * subMit = [[UIButton alloc] initWithFrame:CGRectMake(50, 150, 220, 35)];
     [subMit setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
 //    [subMit setTitleColor:babywith_text_background_color forState:UIControlStateNormal];
 //    [subMit setBackgroundColor:babywith_green_color];

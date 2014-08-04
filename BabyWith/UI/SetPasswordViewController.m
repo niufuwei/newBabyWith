@@ -42,7 +42,7 @@
     
     activity = [[Activity alloc] initWithActivity:self.view];
     //圆角
-    self.passwordField.layer.cornerRadius = 2.0;
+    self.passwordField.layer.cornerRadius = 1.5;
 //    [self.hidePass setTitle:@"隐藏密码" forState:UIControlStateNormal];
 //    [self.hidePass setTintColor:[UIColor whiteColor]];
 //    [self.hidePass setBackgroundColor:babywith_green_color];

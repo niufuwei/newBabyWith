@@ -80,9 +80,10 @@
     UIButton *dissolveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     dissolveButton.frame = CGRectMake(50, CGRectGetHeight(_cameraTableView.frame)+20, 220, 50);
     //dissolveButton.autoresizingMask =
+    [dissolveButton setBackgroundImage:[UIImage imageNamed:@"qietu_162"] forState:UIControlStateNormal];
     [dissolveButton addTarget:self action:@selector(dissolveDevice:) forControlEvents:UIControlEventTouchUpInside];
-    [dissolveButton setBackgroundColor:[UIColor redColor]];
-    [dissolveButton setTitle:@"解绑设备" forState:UIControlStateNormal];
+//    [dissolveButton setBackgroundColor:[UIColor redColor]];
+//    [dissolveButton setTitle:@"解绑设备" forState:UIControlStateNormal];
     [self.view addSubview:dissolveButton];
     
     
@@ -428,6 +429,7 @@
             cell.textLabel.text = @"网络选择";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.detailTextLabel.text = _ssidStr;
+            [[NSUserDefaults standardUserDefaults] setObject:_ssidStr forKey:@"ssid"];
 
         }
             break;
@@ -440,12 +442,12 @@
             if (sense == 1)
             {
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }
             else
             {
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }
             
         }
@@ -459,12 +461,12 @@
             if (sense == 1)
             {
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }
             else
             {
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }
         
         
@@ -476,17 +478,17 @@
             int sense = [[[appDelegate.appDefault objectForKey:[_deviceDictionary objectForKey:@"device_id"]] objectForKey:@"invert"] integerValue];
             if (sense == 1) {
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }else{
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }
 
             
         }
          break;
         case 5:{
-                cell.textLabel.text = @"名称修改";
+                cell.textLabel.text = @"设备名称";
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
        }
         break;
@@ -548,10 +550,10 @@
             
             if (cell.tag == 1) {
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }else{
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }
             
             //添加默认参数 视频质量，移动侦测开关
@@ -602,10 +604,10 @@
             
             if (cell.tag == 1) {
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }else{
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }
             
             //添加默认参数 视频质量，移动侦测开关
@@ -657,10 +659,10 @@
             
             if (cell.tag == 1) {
                 cell.tag = 2;
-                cell.imageView.image = [UIImage imageNamed:@"switch_off.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (2).png"];
             }else{
                 cell.tag = 1;
-                cell.imageView.image = [UIImage imageNamed:@"switch_on.png"];
+                cell.imageView.image = [UIImage imageNamed:@"切换 (1).png"];
             }
             
             //添加默认参数 视频倒置开关

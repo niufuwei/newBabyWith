@@ -7,7 +7,7 @@
 //
 
 #import "CameraParamSettingViewController.h"
-#import "SettingCell.h"
+#import "VedioQualityTableViewCell.h"
 #import "Configuration.h"
 #import "MainAppDelegate.h"
 #import "CameraSettingViewController.h"
@@ -40,7 +40,7 @@
         //左导航-主选择页面
         UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 36)];
         navButton.tag = 1;
-        [navButton setImage:[UIImage imageNamed:@"camera_back.png"] forState:UIControlStateNormal];
+        [navButton setImage:[UIImage imageNamed:@"导航返回.png"] forState:UIControlStateNormal];
         [navButton addTarget:self action:@selector(ShowPrePage) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
         self.navigationItem.leftBarButtonItem = leftItem;
@@ -50,7 +50,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = @"视频质量设置";
+        titleLabel.text = @"视频质量";
         titleLabel.textColor = babywith_text_background_color;
         titleLabel.font = [UIFont systemFontOfSize:20];
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -59,7 +59,7 @@
     }
     _selectedRow = 0;
     
-    _settingTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStyleGrouped];
+    _settingTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
     _settingTableView.dataSource = self;
     _settingTableView.delegate = self;
     _settingTableView.backgroundView = nil;
@@ -77,14 +77,16 @@
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SettingCell *cell = (SettingCell *)[tableView cellForRowAtIndexPath:indexPath];
-    if (cell.tag == 0) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    VedioQualityTableViewCell *cell = (VedioQualityTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell.tag == 0)
+    {
+        cell.qualityImage.image = [UIImage imageNamed:@"选择 (2).png"];
         cell.tag = 1;
         
-        SettingCell *releaseCell = (SettingCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_selectedRow inSection:0]];
-        releaseCell.accessoryType = UITableViewCellAccessoryNone;
+        VedioQualityTableViewCell *releaseCell = (VedioQualityTableViewCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_selectedRow inSection:0]];
+        releaseCell.qualityImage.image = [UIImage imageNamed:@"选择 (1).png"];
         releaseCell.tag = 0;
         
         _selectedRow = indexPath.row;
@@ -113,28 +115,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"relativeSetting";
-    SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    VedioQualityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[[SettingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
+        cell = [[[VedioQualityTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
         cell.textLabel.textColor = [UIColor colorWithRed:98/255.0 green:98/255.0 blue:98/255.0 alpha:1];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = babywith_text_background_color;
     }
     
     if (indexPath.row == _selectedRow) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.qualityImage.image = [UIImage imageNamed:@"选择 (2).png"];
         cell.tag = 1;
     }else{
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.qualityImage.image = [UIImage imageNamed:@"选择 (1).png"];
+
         cell.tag = 0;
     }
     
     if (indexPath.row == 0) {
         cell.textLabel.text = @"高清";
     }else if(indexPath.row == 1){
-        cell.textLabel.text = @"普通";
-    }else{
         cell.textLabel.text = @"一般";
+    }else{
+        cell.textLabel.text = @"低像素";
     }
     return cell;
 }

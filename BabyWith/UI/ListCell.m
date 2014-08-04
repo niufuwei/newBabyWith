@@ -16,7 +16,9 @@
     if (self) {
         // Initialization code
         //状态
-        _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 18, 120, 24)];
+        _statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(140, 10, 140, 30)];
+        _statusLabel.textAlignment = NSTextAlignmentRight;
+        _statusLabel.font = [UIFont systemFontOfSize:16.0];
         [self addSubview:_statusLabel];
         //名字
         _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 150, 30)];

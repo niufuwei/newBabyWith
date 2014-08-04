@@ -39,9 +39,9 @@
     //导航条设置
     {
         //左导航-主选择页面
-        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 36)];
+        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
         navButton.tag = 3;
-        [navButton setImage:[UIImage imageNamed:@"camera_back.png"] forState:UIControlStateNormal];
+        [navButton setImage:[UIImage imageNamed:@"导航返回.png"] forState:UIControlStateNormal];
         [navButton addTarget:self action:@selector(ShowPrePage) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
         self.navigationItem.leftBarButtonItem = leftItem;
@@ -59,15 +59,22 @@
         [titleLabel release];
     }
     
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(11, 10, 160, 40)];
+    nameLabel.backgroundColor = [UIColor clearColor];
+    nameLabel.text = @"请填写设备名称";
+    nameLabel.textColor = [UIColor grayColor];
+    [self.view addSubview:nameLabel];
+    
     //看护器名称文本区域
-     _cameraTextField= [[UITextField alloc] initWithFrame:CGRectMake(11, 10, 298, 40)];
+     _cameraTextField= [[UITextField alloc] initWithFrame:CGRectMake(11, 50, 298, 40)];
     _cameraTextField.placeholder = @"请输入看护器名称";
     _cameraTextField.delegate = self;
     _cameraTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     [_cameraTextField becomeFirstResponder];
     [_cameraTextField setKeyboardType:UIKeyboardTypeDefault];
     _cameraTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    _cameraTextField.backgroundColor = babywith_text_background_color;
+    _cameraTextField.backgroundColor = [UIColor colorWithPatternImage:[UIImage  imageNamed:@"输入框"]];
     _cameraTextField.layer.cornerRadius = 5.0;
     
     UILabel *paddingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 32)];
@@ -82,22 +89,22 @@
     
     
     //下一步按钮
-    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 110, 300, 40)];
-    [nextButton setBackgroundColor:babywith_green_color];
-    
-    CGSize imageSize = CGSizeMake(300, 40);
-    UIGraphicsBeginImageContextWithOptions(imageSize, 0, [UIScreen mainScreen].scale);
-    [babywith_green_color_hightlight set];
-    UIRectFill(CGRectMake(0, 0, imageSize.width, imageSize.height));
-    UIImage *pressedColorImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    [nextButton setBackgroundImage:pressedColorImg forState:UIControlStateHighlighted];
-    
-    [nextButton setTitle:@"看护器重命名" forState:UIControlStateNormal];
-    nextButton.titleLabel.font = [UIFont systemFontOfSize:18.0];
-    [nextButton.layer setMasksToBounds:YES];
-    [nextButton.layer setCornerRadius:5.0];
+    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 130, 220, 40)];
+    //[nextButton setBackgroundColor:babywith_green_color];
+    [nextButton setBackgroundImage:[UIImage imageNamed:@"qietu_118.png"] forState:UIControlStateNormal];
+//    CGSize imageSize = CGSizeMake(300, 40);
+//    UIGraphicsBeginImageContextWithOptions(imageSize, 0, [UIScreen mainScreen].scale);
+//    [babywith_green_color_hightlight set];
+//    UIRectFill(CGRectMake(0, 0, imageSize.width, imageSize.height));
+//    UIImage *pressedColorImg = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    [nextButton setBackgroundImage:pressedColorImg forState:UIControlStateHighlighted];
+//    
+//    [nextButton setTitle:@"看护器重命名" forState:UIControlStateNormal];
+//    nextButton.titleLabel.font = [UIFont systemFontOfSize:18.0];
+//    [nextButton.layer setMasksToBounds:YES];
+//    [nextButton.layer setCornerRadius:5.0];
     [nextButton addTarget:self action:@selector(ModifyCameraName) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:nextButton];

@@ -17,6 +17,7 @@
     NSMutableArray *_wifiSearchList;
     
     NSObject *_delegate;
+    NSInteger lastSelectRow;
 }
 
 - (id)initWithDelegate:(NSObject *)delegate;
