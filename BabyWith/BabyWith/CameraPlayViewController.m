@@ -2044,11 +2044,9 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     [indicator showAnimated:YES whileExecutingBlock:^{
         sleep(1.2);
     } completionBlock:^{
-        
+        //移除图片
          [imageVie removeFromSuperview];
         [indicator removeFromSuperview];
-        
-
         
         UIImageView *imageView = (UIImageView *)[self.navigationItem.titleView viewWithTag:20];
         [imageView setImage:[UIImage imageNamed:@"switch_on.png"]];
