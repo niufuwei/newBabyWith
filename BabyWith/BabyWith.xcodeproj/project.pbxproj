@@ -241,7 +241,6 @@
 		EF4A5F20198B915100A54EB2 /* 退出系统-取消显示.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E6E198B27F600A54EB2 /* 退出系统-取消显示.png */; };
 		EF4A5F21198B915100A54EB2 /* 选择 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E70198B27F600A54EB2 /* 选择 (2).png */; };
 		EF4AAF25198F5F1400F33F0E /* cameraBackImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */; };
-		EF4AAF27198F6CE400F33F0E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4AAF26198F6CE400F33F0E /* RegisterViewController.xib */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -617,7 +616,6 @@
 		EF4A5F10198B90B800A54EB2 /* 更多 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (3).png"; sourceTree = "<group>"; };
 		EF4A5F11198B90B800A54EB2 /* 更多 (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (4).png"; sourceTree = "<group>"; };
 		EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraBackImage.png; sourceTree = "<group>"; };
-		EF4AAF26198F6CE400F33F0E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -1069,7 +1067,6 @@
 			children = (
 				71CAFEB0198B994900E2DC1F /* RegisterViewController.h */,
 				71CAFEB1198B994900E2DC1F /* RegisterViewController.m */,
-				EF4AAF26198F6CE400F33F0E /* RegisterViewController.xib */,
 				7195029318D43E85006FCB7F /* LoginViewController.h */,
 				7195029418D43E85006FCB7F /* LoginViewController.m */,
 				7195029518D43E85006FCB7F /* LoginViewController.xib */,
@@ -1975,7 +1972,6 @@
 				EF4A5E9E198B27F600A54EB2 /* 关闭.png in Resources */,
 				EF4A5EC8198B27F600A54EB2 /* 播放视频-进度条 (3).png in Resources */,
 				EF4A5E85198B27F600A54EB2 /* 主菜单栏-未选 (6).png in Resources */,
-				EF4AAF27198F6CE400F33F0E /* RegisterViewController.xib in Resources */,
 				EF4A5EC7198B27F600A54EB2 /* 播放视频-进度条 (2).png in Resources */,
 				71CAFE2A198B6EF200E2DC1F /* qietu_173.png in Resources */,
 				71CAFE29198B6EF200E2DC1F /* 竖屏切换全屏(2).png in Resources */,

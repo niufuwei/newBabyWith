@@ -10,10 +10,16 @@
 #import "BaseViewController.h"
 
 @interface RegisterViewController : BaseViewController<UITextFieldDelegate ,UIAlertViewDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *phoneTF;
-@property (weak, nonatomic) IBOutlet UITextField *confirmTF;
-@property (weak, nonatomic) IBOutlet UIButton *registerButton;
-- (IBAction)skipRegistration:(UIButton *)sender;
-- (IBAction)startRegister:(UIButton *)sender;
+//@property (weak, nonatomic) IBOutlet UITextField *phoneTF;
+//@property (weak, nonatomic) IBOutlet UITextField *confirmTF;
+//@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+//- (IBAction)skipRegistration:(UIButton *)sender;
+//- (IBAction)startRegister:(UIButton *)sender;
+
+{
+    UITextField *phoneTF;
+    UITextField *confirmTF;
+}
+
 
 @end
