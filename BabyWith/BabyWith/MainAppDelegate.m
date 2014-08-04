@@ -63,8 +63,9 @@
     self.window.backgroundColor  = babywith_background_color;
     
     
-    //添加本地计时器用来几时验证码
     
+    //添加本地计时器用来几时验证码
+
     [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"sendCheckMessage"];
     
     
@@ -423,6 +424,7 @@ int HudIsBecome = 0;
     NSLog(@"applicationDidBecomeActive====================");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     //如果是在开启视频的情况下进入后台，重新回到前台的时候应该让视频开启
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"becameActive" object:nil];
     

@@ -20,12 +20,12 @@
 //        [self addSubview:_imageCell];
         
          _nameLabel =[[UILabel alloc] initWithFrame:CGRectMake(60, 3, 180, 40)];
-        _nameLabel.font = [UIFont systemFontOfSize:20];
+        _nameLabel.font = [UIFont systemFontOfSize:17.0];
         [self addSubview:_nameLabel];
         
         
         _bindTimeLabel =[[UILabel alloc] initWithFrame:CGRectMake(60, 33, 180, 20)];
-        _bindTimeLabel.font = [UIFont systemFontOfSize:15];
+        _bindTimeLabel.font = [UIFont systemFontOfSize:15.0];
         _bindTimeLabel.textColor = [UIColor grayColor];
         [self addSubview:_bindTimeLabel];
         
