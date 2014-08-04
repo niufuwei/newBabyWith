@@ -21,15 +21,15 @@
     
     
     //20.79.104.30
-    _agreeShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 79, 104, 30)];
+    _agreeShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(22, 50, 133, 30)];
     [_agreeShareBtn setImage:[UIImage imageNamed:@"qietu_120.png"] forState:UIControlStateNormal];
     [self addSubview:_agreeShareBtn];
     
     
-    self.backgroundColor = babywith_background_color;
+    self.backgroundColor = [UIColor clearColor];
     
     //196.79.104.30
-    _refuseShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(196, 79, 104, 30)];
+    _refuseShareBtn = [[UIButton alloc] initWithFrame:CGRectMake(165, 50, 133, 30)];
     [_refuseShareBtn setImage:[UIImage imageNamed:@"qietu_147.png"] forState:UIControlStateNormal];
     [self addSubview:_refuseShareBtn];
     

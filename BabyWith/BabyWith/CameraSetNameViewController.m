@@ -89,9 +89,9 @@
     
     
     //下一步按钮
-    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 130, 220, 40)];
+    UIButton *nextButton = [[UIButton alloc] initWithFrame:CGRectMake(44, 130, 232, 31)];
     //[nextButton setBackgroundColor:babywith_green_color];
-    [nextButton setBackgroundImage:[UIImage imageNamed:@"qietu_118.png"] forState:UIControlStateNormal];
+    [nextButton setBackgroundImage:[UIImage imageNamed:@"qietu_146.png"] forState:UIControlStateNormal];
 //    CGSize imageSize = CGSizeMake(300, 40);
 //    UIGraphicsBeginImageContextWithOptions(imageSize, 0, [UIScreen mainScreen].scale);
 //    [babywith_green_color_hightlight set];

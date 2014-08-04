@@ -144,14 +144,14 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     
     //横屏工具条，横评的时候才出现
     _lView = [[UIView alloc]init];
-    _lView.frame = CGRectMake(0, 0, 320, 60);
+    _lView.frame = CGRectMake(0, 0, 320, 49);
     _lView.backgroundColor=[UIColor blackColor];
     _lView.alpha=0.5;
     _lView.hidden = YES;
     
     //截图
     screenshotsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    screenshotsButton.frame = CGRectMake(10, 10, 60, 40);
+    screenshotsButton.frame = CGRectMake(10, 0, 80, 49);
     screenshotsButton.tag = 1;
     [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"横屏截屏(1).png"] forState:UIControlStateNormal];
     [screenshotsButton setBackgroundImage:[UIImage imageNamed:@"横屏截屏(2).png"] forState:UIControlStateHighlighted];
@@ -161,7 +161,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     //录制视频
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.tag = 2;
-    button2.frame = CGRectMake(self.view.frame.size.height/6, 10, 60, 40);
+    button2.frame = CGRectMake(self.view.frame.size.height/6, 0, 80, 49);
     [button2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(1).png"] forState:UIControlStateNormal];
     [button2 setBackgroundImage:[UIImage imageNamed:@"横屏录制(2).png"] forState:UIControlStateHighlighted];
     [button2 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -170,7 +170,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     //分享人员
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
     button3.tag = 3;
-    button3.frame = CGRectMake( self.view.frame.size.height*2/6,10, 60, 40);
+    button3.frame = CGRectMake( self.view.frame.size.height*2/6,0, 80, 49);
     [button3 setBackgroundImage:[UIImage imageNamed:@"横屏分享人员(1).png"] forState:UIControlStateNormal];
     [button3 setBackgroundImage:[UIImage imageNamed:@"横屏分享人员(2).png"] forState:UIControlStateHighlighted];
     [button3 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -180,7 +180,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     //开启对讲
     UIButton *button4 = [UIButton buttonWithType:UIButtonTypeCustom];
     button4.tag = 13;
-    button4.frame = CGRectMake( self.view.frame.size.height*3/6,10, 60, 40);
+    button4.frame = CGRectMake( self.view.frame.size.height*3/6,0, 80, 49);
     [button4 setBackgroundImage:[UIImage imageNamed:@"横屏开启对讲(1).png"] forState:UIControlStateNormal];
     [button4 setBackgroundImage:[UIImage imageNamed:@"横屏开启对讲(2).png"] forState:UIControlStateHighlighted];
     [button4 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -190,7 +190,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     
     UIButton *button5 = [UIButton buttonWithType:UIButtonTypeCustom];
     button5.tag = 14;
-    button5.frame = CGRectMake( self.view.frame.size.height*3/6,10, 60, 40);
+    button5.frame = CGRectMake( self.view.frame.size.height*3/6,0, 80, 49);
     [button5 setBackgroundImage:[UIImage imageNamed:@"横屏按住说话(1).png"] forState:UIControlStateNormal];
     [button5 setBackgroundImage:[UIImage imageNamed:@"横屏按住说话(2).png"] forState:UIControlStateHighlighted];
     [button5 addTarget:self action:@selector(startListen:) forControlEvents:UIControlEventTouchUpInside];
@@ -201,7 +201,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     
     UIButton *button6 = [UIButton buttonWithType:UIButtonTypeCustom];
     button6.tag = 15;
-    button6.frame = CGRectMake( self.view.frame.size.height*4/6,10, 60, 40);
+    button6.frame = CGRectMake( self.view.frame.size.height*4/6,0, 80, 49);
     [button6 setBackgroundImage:[UIImage imageNamed:@"横屏结束对讲(1).png"] forState:UIControlStateNormal];
     [button6 setBackgroundImage:[UIImage imageNamed:@"横屏结束对讲(2).png"] forState:UIControlStateHighlighted];
     [button6 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -211,7 +211,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
 
     UIButton *button7 = [UIButton buttonWithType:UIButtonTypeCustom];
     button7.tag = 4;
-    button7.frame = CGRectMake(self.view.frame.size.height*5/6,10, 60, 40);
+    button7.frame = CGRectMake(self.view.frame.size.height*5/6,0, 80, 49);
     [button7 setBackgroundImage:[UIImage imageNamed:@"横屏切换全屏(1).png"] forState:UIControlStateNormal];
     [button7 setBackgroundImage:[UIImage imageNamed:@"横屏切换全屏(2).png"] forState:UIControlStateHighlighted];
     [button7 addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -792,7 +792,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
             [UIView animateWithDuration:0.0f animations:^{
                 _pView.hidden = YES;
                 _lView.hidden = NO;
-                _lView.frame = CGRectMake(0, 320-60, self.view.frame.size.height, 60);
+                _lView.frame = CGRectMake(0, 320-49, self.view.frame.size.height, 49);
                 [self.view setTransform: CGAffineTransformMakeRotation(M_PI / 2)];
                 
                 if(kIsIphone5)

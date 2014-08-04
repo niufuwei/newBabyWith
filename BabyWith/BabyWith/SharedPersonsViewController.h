@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 @interface SharedPersonsViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
 {
 

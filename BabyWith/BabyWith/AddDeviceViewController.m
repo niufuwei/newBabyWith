@@ -316,12 +316,12 @@
         [deviceListView addSubview:warnLabel];
         
         
-        UIImageView *lineImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 26, 300, 1)];
+        UIImageView *lineImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 31, 300, 1)];
         lineImage.image = [UIImage imageNamed:@"分隔栏.png"];
         [deviceListView addSubview:lineImage];
         
         
-        deviceListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 28, 300, 100) style:UITableViewStylePlain];
+        deviceListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 35, 300, 95) style:UITableViewStylePlain];
         deviceListTableView.backgroundColor = [UIColor clearColor];
         deviceListTableView.delegate = self;
         deviceListTableView.dataSource = self;
