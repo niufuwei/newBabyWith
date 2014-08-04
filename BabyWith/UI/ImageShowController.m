@@ -36,7 +36,7 @@
 //    self.view.backgroundColor = [UIColor blackColor];
     
     //导航条设置
-    {
+    
         
         topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 64)];
         
@@ -79,7 +79,7 @@
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [topView addSubview:titleLabel];
         
-    }
+
     
     float contentHeight = self.view.frame.size.height;
     NSLog(@"self.view height %f",contentHeight);
