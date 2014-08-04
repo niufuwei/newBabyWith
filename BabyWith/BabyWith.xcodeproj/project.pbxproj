@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDF0DBB198B3F7D00E26961 /* AVCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF0DBA198B3F7D00E26961 /* AVCallController.m */; };
+		1DDF0DBB198B3F7D00E26961 /* AVCallController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */; };
+		1DDF0DBF198B674700E26961 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDF0DBE198B674700E26961 /* ImageIO.framework */; };
+		1DDF0DC3198B692400E26961 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDF0DC2198B692400E26961 /* CoreImage.framework */; };
+		1DEEFEE8198B904100ED2C84 /* 1374.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1DEEFEE7198B904100ED2C84 /* 1374.wav */; };
 		710AEDD5190795C000B19A58 /* NewMessageCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 710AEDD3190794B700B19A58 /* NewMessageCell1.xib */; };
 		710AEDD81907AA1B00B19A58 /* SharedPersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710AEDD71907AA1B00B19A58 /* SharedPersonsViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		71121D36191D2E9F007B6937 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71121D35191D2E9F007B6937 /* Activity.m */; };
@@ -472,7 +475,11 @@
 
 /* Begin PBXFileReference section */
 		1DDF0DB9198B3F7D00E26961 /* AVCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCallController.h; sourceTree = "<group>"; };
-		1DDF0DBA198B3F7D00E26961 /* AVCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCallController.m; sourceTree = "<group>"; };
+		1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCallController.mm; sourceTree = "<group>"; };
+		1DDF0DBC198B673C00E26961 /* ImageCaptureCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageCaptureCore.framework; path = System/Library/Frameworks/ImageCaptureCore.framework; sourceTree = SDKROOT; };
+		1DDF0DBE198B674700E26961 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		1DDF0DC2198B692400E26961 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = ../../CoreImage.framework; sourceTree = "<group>"; };
+		1DEEFEE7198B904100ED2C84 /* 1374.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1374.wav; path = BabyWith/images/1374.wav; sourceTree = "<group>"; };
 		710AEDD3190794B700B19A58 /* NewMessageCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMessageCell1.xib; sourceTree = "<group>"; };
 		710AEDD61907AA1B00B19A58 /* SharedPersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedPersonsViewController.h; sourceTree = "<group>"; };
 		710AEDD71907AA1B00B19A58 /* SharedPersonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedPersonsViewController.m; sourceTree = "<group>"; };
@@ -1152,6 +1159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDF0DC3198B692400E26961 /* CoreImage.framework in Frameworks */,
+				1DDF0DBF198B674700E26961 /* ImageIO.framework in Frameworks */,
 				EF8D1E29198A1E4800AC3EAD /* AddressBookUI.framework in Frameworks */,
 				EF8D1E27198A16D600AC3EAD /* AddressBook.framework in Frameworks */,
 				EFF53F811779BCBF00C4AEB4 /* QuartzCore.framework in Frameworks */,
@@ -1453,7 +1462,7 @@
 				71AAF65F18ED22E100C3B0D8 /* PhotoScanViewController.h */,
 				71AAF66018ED22E100C3B0D8 /* PhotoScanViewController.m */,
 				1DDF0DB9198B3F7D00E26961 /* AVCallController.h */,
-				1DDF0DBA198B3F7D00E26961 /* AVCallController.m */,
+				1DDF0DBA198B3F7D00E26961 /* AVCallController.mm */,
 			);
 			name = Records;
 			sourceTree = "<group>";
@@ -1722,6 +1731,7 @@
 			children = (
 				EF4A5DFD198B27F500A54EB2 /* images */,
 				7174A0B9194EC88F00DCC781 /* 4031.wav */,
+				1DEEFEE7198B904100ED2C84 /* 1374.wav */,
 				7150969C192CBAA6005F4BBA /* OpenGLView20.h */,
 				7150969D192CBAA6005F4BBA /* OpenGLView20.m */,
 				EFE79545177BE46000D15A32 /* DeviceManager */,
@@ -1742,6 +1752,9 @@
 		EFF53E4C1779B64F00C4AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DDF0DC2198B692400E26961 /* CoreImage.framework */,
+				1DDF0DBE198B674700E26961 /* ImageIO.framework */,
+				1DDF0DBC198B673C00E26961 /* ImageCaptureCore.framework */,
 				EF8D1E28198A1E4800AC3EAD /* AddressBookUI.framework */,
 				EF8D1E25198A098500AC3EAD /* AddressBook.framework */,
 				71AC54811904BD6F00DEBB46 /* AdSupport.framework */,
@@ -2421,6 +2434,7 @@
 				EF3578D517AB9439009C6516 /* goBack_highlight.png in Resources */,
 				EF4A5E8A198B27F600A54EB2 /* 主菜单栏-选中 (7).png in Resources */,
 				EF1D3C5118D2B2D90079C358 /* LoginRegisterViewController.xib in Resources */,
+				1DEEFEE8198B904100ED2C84 /* 1374.wav in Resources */,
 				EF4A5ECE198B27F600A54EB2 /* 添加.png in Resources */,
 				711BB9D7195C1F5200265F41 /* 切图_46.png in Resources */,
 				711BB9C7195C1F5200265F41 /* 切图_06.png in Resources */,
@@ -2698,7 +2712,7 @@
 				71A8CB6418E93E41008C793D /* CollectionCell.m in Sources */,
 				EF1D3C5C18D2B2D90079C358 /* ShareViewController.m in Sources */,
 				71A41D8E1951971C00B45C7E /* ImageShowController.m in Sources */,
-				1DDF0DBB198B3F7D00E26961 /* AVCallController.m in Sources */,
+				1DDF0DBB198B3F7D00E26961 /* AVCallController.mm in Sources */,
 				EFE8E6F8179F438B001689F4 /* CameraParamSettingViewController.m in Sources */,
 				EFF866CD17A220D40027570F /* CameraSetNameViewController.m in Sources */,
 				EFF0373617CCA30A00A1DDDA /* BabyWithCameraManagement.mm in Sources */,
@@ -2791,6 +2805,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer: lingjuan chen (WF7976Z973)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: lingjuan chen (WF7976Z973)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/laoniu/Desktop,
+				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2830,6 +2848,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer: lingjuan chen (WF7976Z973)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: lingjuan chen (WF7976Z973)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/laoniu/Desktop,
+				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
