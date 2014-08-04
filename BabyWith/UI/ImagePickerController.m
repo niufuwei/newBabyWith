@@ -108,10 +108,10 @@
             cameraBtn.frame=CGRectMake(125, overlyView.frame.size.height-70, 70, 70);
             
             imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            imageButton.frame=CGRectMake(25, (overlyView.frame.size.height - 25)/2, 30, 20);
+            imageButton.frame=CGRectMake(25, (overlyView.frame.size.height - 25)/2, 40, 50);
             
             photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            photoBtn.frame=CGRectMake(260, (overlyView.frame.size.height - 25)/2, 30, 20);
+            photoBtn.frame=CGRectMake(260, (overlyView.frame.size.height - 25)/2, 40, 40);
 
         }
 

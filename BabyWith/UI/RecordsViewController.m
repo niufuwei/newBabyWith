@@ -716,8 +716,8 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
             
             for(int j = 0;j<deleteArray.count;j++)
             {
-                NSLog(@"%@",currentSectionPhoto);
-                NSLog(@"%@",deleteArray);
+//                NSLog(@"%@",currentSectionPhoto);
+//                NSLog(@"%@",deleteArray);
                 if([[deleteArray objectAtIndex:j] objectForKey:[[currentSectionPhoto objectAtIndex:i] objectForKey:@"id_record"]])
                 {
                     isExit = TRUE;
