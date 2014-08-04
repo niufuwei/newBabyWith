@@ -122,11 +122,14 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     
     
      _switchFlag = 0;  //0是没有连接，1是开始连接
-    
+//    cameraBackImage.png
     
     //显示视频的画面
     _playView = [[OpenGLView20 alloc] initWithFrame:CGRectMake(0, 0, 320,  180)];
-    [_playView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"cameraBackView.png"]]];
+//    [_playView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"cameraBackImage.png"]]];
+    imageVie = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 180)];
+    imageVie.image = [UIImage imageNamed:@"cameraBackImage.png"];
+    [_playView addSubview:imageVie];
     [_playView setVideoSize:320 height:180];
     [self.view addSubview:_playView];
     [self imageAddGest:_playView];//增加手势，让摄像头可以左右上下旋转
@@ -2033,6 +2036,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
         _hiddenTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideToolBar) userInfo:nil repeats:YES];
     }
     
+   
     MBProgressHUD *indicator = [[MBProgressHUD alloc] initWithView:self.view];
     indicator.labelText = @"视频开启";
     indicator.mode = MBProgressHUDModeText;
@@ -2040,6 +2044,8 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     [indicator showAnimated:YES whileExecutingBlock:^{
         sleep(1.2);
     } completionBlock:^{
+        
+         [imageVie removeFromSuperview];
         [indicator removeFromSuperview];
         
 

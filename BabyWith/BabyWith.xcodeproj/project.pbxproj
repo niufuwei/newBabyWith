@@ -239,6 +239,7 @@
 		EF4A5F1F198B915100A54EB2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E6C198B27F600A54EB2 /* 返回.png */; };
 		EF4A5F20198B915100A54EB2 /* 退出系统-取消显示.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E6E198B27F600A54EB2 /* 退出系统-取消显示.png */; };
 		EF4A5F21198B915100A54EB2 /* 选择 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E70198B27F600A54EB2 /* 选择 (2).png */; };
+		EF4AAF25198F5F1400F33F0E /* cameraBackImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -612,6 +613,7 @@
 		EF4A5F0F198B90B800A54EB2 /* 更多 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (2).png"; sourceTree = "<group>"; };
 		EF4A5F10198B90B800A54EB2 /* 更多 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (3).png"; sourceTree = "<group>"; };
 		EF4A5F11198B90B800A54EB2 /* 更多 (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (4).png"; sourceTree = "<group>"; };
+		EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraBackImage.png; sourceTree = "<group>"; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -1159,6 +1161,7 @@
 		EF4A5DFD198B27F500A54EB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EF4AAF24198F5F1400F33F0E /* cameraBackImage.png */,
 				71CAFE7D198B981600E2DC1F /* 绑定-未选 (1).png */,
 				71CAFE7E198B981600E2DC1F /* 绑定-未选 (2).png */,
 				71CAFE7F198B981600E2DC1F /* 绑定-未选 (3).png */,
@@ -1930,6 +1933,7 @@
 				1DEEFEE8198B904100ED2C84 /* 1374.wav in Resources */,
 				EF4A5ECE198B27F600A54EB2 /* 添加.png in Resources */,
 				EF4A5EE0198B27F600A54EB2 /* 跳过.png in Resources */,
+				EF4AAF25198F5F1400F33F0E /* cameraBackImage.png in Resources */,
 				71CAFE50198B718600E2DC1F /* 开灯.png in Resources */,
 				71CAFE28198B6EF200E2DC1F /* 竖屏录制(2).png in Resources */,
 				71CAFE27198B6EF200E2DC1F /* 竖屏截屏(2).png in Resources */,

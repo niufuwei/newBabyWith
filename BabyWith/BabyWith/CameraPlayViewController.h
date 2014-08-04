@@ -75,6 +75,8 @@
     NSString *imagePath1;
     NSDictionary *insertDict1;
     BOOL hasSavedVideoImage;
+    
+    UIImageView *imageVie;
 }
 
 @property (nonatomic, strong) OpenGLView20 *playView;
