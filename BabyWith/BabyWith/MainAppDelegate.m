@@ -62,8 +62,8 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.backgroundColor  = babywith_background_color;
     
-    
-    
+//    //状态栏 白色
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     //添加本地计时器用来几时验证码
 
     [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"sendCheckMessage"];
