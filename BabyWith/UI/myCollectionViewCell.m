@@ -18,7 +18,7 @@
         _image = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 75.5, 75.5)] autorelease];
         [self addSubview:_image];
         
-        _videoImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start1.png"]] autorelease];
+        _videoImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"播放视频 (4).png"]] autorelease];
         _videoImage.frame = CGRectMake(21.75, 21.75,32, 32);
         [self addSubview:_videoImage];
         

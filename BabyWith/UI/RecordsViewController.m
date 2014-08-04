@@ -47,14 +47,14 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
-    [leftButton setTitle:@"编辑" forState:UIControlStateNormal];
+    [leftButton setBackgroundImage:[UIImage imageNamed:@"编辑.png"] forState:UIControlStateNormal];
     [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [leftButton setBackgroundColor:[UIColor whiteColor]];
     [leftButton addTarget:self action:@selector(Edit:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc] initWithCustomView: leftButton];
     self.navigationItem.leftBarButtonItem = LeftItem;
     
-    [self rightButtonTitle:@"拍照"];
+    [self rightButtonItemWithImageName:@"删除.png"];
     self.delegate = self;
     
     [self titleSet:@"记录"];

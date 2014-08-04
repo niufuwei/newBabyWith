@@ -2472,7 +2472,7 @@ AVAudioPlayer *photoSound;           //播放拍照时候的声音
     if ([[[_imageArray objectAtIndex:indexPath.row] objectForKey:@"is_vedio"] intValue] == 1)
     {
         
-        UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start1.png"]];
+        UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"播放视频 (4).png"]];
         startImage.frame = CGRectMake(16, 2, 32, 32);
         [imageView addSubview:startImage];
         

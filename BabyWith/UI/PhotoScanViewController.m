@@ -116,7 +116,7 @@
         //是视频图片的话要添加开始按钮一样的东西作为普通图片和视频区别
         if ([[dic objectForKey:@"is_vedio"] intValue] ==1)
         {
-            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"start2.png"]] ;
+            UIImageView *startImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"播放视频 (4).png"]] ;
             startImage.frame = CGRectMake(128, 58, 64, 64);
             [imageView addSubview:startImage];
             
