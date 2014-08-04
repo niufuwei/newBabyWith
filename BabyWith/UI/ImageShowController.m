@@ -48,11 +48,11 @@
         [topView addSubview:backBtn];
         
         //右导航--删除按钮
-        UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(240, 15, 74, 36)];
+        UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 15, 74, 36)];
         
         [setButton addTarget:self action:@selector(deletePic) forControlEvents:UIControlEventTouchUpInside];
         [setButton setTitle:@"删除" forState:UIControlStateNormal];
-        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
         setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         setButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         [topView addSubview:setButton];

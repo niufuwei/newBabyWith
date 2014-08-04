@@ -50,13 +50,21 @@
     {
         
         
+//        
+//        UIButton *navButton = [[UIButton alloc] initWithFrame:CGRectMake(30, -30, 20, 20)];
+//        [navButton setImage:[UIImage imageNamed:@"添加"] forState:UIControlStateNormal];
+//        [navButton addTarget:self action:@selector(bind:) forControlEvents:UIControlEventTouchUpInside];
+//        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: navButton];
+//        self.navigationItem.rightBarButtonItem = rightItem;
+        
+        
         //右导航--删除按钮
         UIButton *setButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 74, 36)];
         
         [setButton addTarget:self action:@selector(deletePic) forControlEvents:UIControlEventTouchUpInside];
         [setButton setTitle:@"删除" forState:UIControlStateNormal];
-        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        setButton.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
+        setButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
         setButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView: setButton];
         self.navigationItem.rightBarButtonItem = rightItem;
