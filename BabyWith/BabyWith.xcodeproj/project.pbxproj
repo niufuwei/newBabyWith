@@ -239,10 +239,6 @@
 		EF4A5F1F198B915100A54EB2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E6C198B27F600A54EB2 /* 返回.png */; };
 		EF4A5F20198B915100A54EB2 /* 退出系统-取消显示.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E6E198B27F600A54EB2 /* 退出系统-取消显示.png */; };
 		EF4A5F21198B915100A54EB2 /* 选择 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = EF4A5E70198B27F600A54EB2 /* 选择 (2).png */; };
-		EF4AAF1B198F1DCE00F33F0E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4AAF1A198F1DCE00F33F0E /* AddressBook.framework */; };
-		EF4AAF1D198F1DD500F33F0E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4AAF1C198F1DD500F33F0E /* AddressBookUI.framework */; };
-		EF4AAF1F198F1EE400F33F0E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4AAF1E198F1EE400F33F0E /* CoreImage.framework */; };
-		EF4AAF21198F1EE900F33F0E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4AAF20198F1EE900F33F0E /* ImageIO.framework */; };
 		EF517DA91811340100EB5CED /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = EF517DA81811340100EB5CED /* Icon-80.png */; };
 		EF96F12E18D2E110002C1245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12B18D2E110002C1245 /* Default-568h@2x.png */; };
 		EF96F13018D2E110002C1245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF96F12D18D2E110002C1245 /* Default@2x.png */; };
@@ -616,10 +612,6 @@
 		EF4A5F0F198B90B800A54EB2 /* 更多 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (2).png"; sourceTree = "<group>"; };
 		EF4A5F10198B90B800A54EB2 /* 更多 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (3).png"; sourceTree = "<group>"; };
 		EF4A5F11198B90B800A54EB2 /* 更多 (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多 (4).png"; sourceTree = "<group>"; };
-		EF4AAF1A198F1DCE00F33F0E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		EF4AAF1C198F1DD500F33F0E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		EF4AAF1E198F1EE400F33F0E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		EF4AAF20198F1EE900F33F0E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EF517DA81811340100EB5CED /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		EF96F12B18D2E110002C1245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF96F12C18D2E110002C1245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -2160,7 +2152,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
 				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
@@ -2187,7 +2179,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "E95285DD-EFCF-4BB9-B231-D4653468D687";
+				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
 				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
@@ -2229,6 +2221,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = armv7;
@@ -2271,7 +2264,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-
+				PROVISIONING_PROFILE = "343E5FD1-7F5C-42E2-9F3C-5A74588B023C";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BabyWith/ffmpeg\" \"$(SRCROOT)/BabyWith/ffmpeg/i386\" \"$(SRCROOT)/BabyWith/Classes\"";
 				VALID_ARCHS = "armv7 armv7s arm64";

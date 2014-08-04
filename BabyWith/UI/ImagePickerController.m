@@ -202,7 +202,7 @@
     ImageShowController *imageShow = [[ImageShowController alloc] initWithArray:_imageArray];
     
     [self presentViewController:imageShow animated:YES completion:^{
-        
+        [UIApplication sharedApplication].statusBarHidden = NO;
     }];
     
 }
