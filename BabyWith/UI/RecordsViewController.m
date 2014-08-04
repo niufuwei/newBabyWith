@@ -44,17 +44,20 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadCollentView) name:@"imageCollectionReload" object:nil];
     
-    leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+    leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateNormal];
 //    [navButton setImage:[UIImage imageNamed:@"拍照.png"] forState:UIControlStateHighlighted];
     [leftButton setBackgroundImage:[UIImage imageNamed:@"编辑.png"] forState:UIControlStateNormal];
-    [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [leftButton setBackgroundColor:[UIColor whiteColor]];
+//    [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [leftButton setBackgroundColor:[UIColor whiteColor]];
     [leftButton addTarget:self action:@selector(Edit:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc] initWithCustomView: leftButton];
     self.navigationItem.leftBarButtonItem = LeftItem;
     
-    [self rightButtonItemWithImageName:@"删除.png"];
+    
+    
+    
+    [self rightButtonItemWithImageName:@"拍照.png"];
     self.delegate = self;
     
     [self titleSet:@"记录"];
@@ -75,7 +78,7 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     _sectionArray = [[NSMutableArray alloc] init];
     
     _dateFormatter = [[NSDateFormatter alloc] init];
-    [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [_dateFormatter setDateFormat:@"yyyy.MM.dd"];
     //
     
 //    [appDelegate.sqliteManager getLocalListOfYearCount];
@@ -640,6 +643,7 @@ static NSString * REUSEABLE_CELL_IDENTITY = @"cee";
     
     
     headerView.headerLabel.text = [_dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:[[dic objectForKey:@"time_record"] doubleValue]/1000]];
+    headerView.headerLabel.textColor = [UIColor grayColor];
     
     
     return headerView;
